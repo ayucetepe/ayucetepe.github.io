@@ -1,0 +1,312 @@
+/* --- Global Settings & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --left-bg: #2c3e50;
+    --right-bg: #ffffff;
+    --primary-text: #34495e;
+    --secondary-text: #ecf0f1;
+    --accent-color: #3498db;
+    --border-color: #dddddd;
+    --page-bg: #f0f2f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--primary-text);
+    line-height: 1.7;
+}
+
+/* --- Genel Sayfa Konteyneri --- */
+.page-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    background-color: var(--right-bg);
+}
+
+/* ------ BÖLÜM 1: İKİ KOLONLU YAPI ------ */
+.two-column-layout {
+    display: flex;
+}
+
+/* --- SOL SÜTUN --- */
+.left-column {
+    background-color: var(--left-bg);
+    color: var(--secondary-text);
+    padding: 30px;
+    flex: 0 0 300px;
+}
+.left-column .section {
+    margin-bottom: 35px;
+}
+.left-column .section-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.contact-list {
+    list-style: none;
+    font-size: 0.9em;
+}
+.contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+.contact-list li i {
+    width: 25px;
+    font-size: 1.1em;
+    text-align: center;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+.skills-list {
+    list-style: none;
+}
+.skills-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+.skills-list .dots {
+    display: flex;
+}
+.skills-list .dots span {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.skills-list .dots span.filled {
+    background-color: var(--accent-color);
+}
+.training-list, .certificates-list {
+    list-style: none;
+    font-size: 0.9em;
+}
+.training-list li, .certificates-list li {
+    margin-bottom: 10px;
+}
+.certificates-list li {
+    display: flex;
+    justify-content: space-between;
+}
+.certificates-list li span {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* --- SAĞ SÜTUN --- */
+.right-column {
+    padding: 40px;
+    flex-grow: 1;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.header-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: var(--left-bg);
+    margin-bottom: 5px;
+}
+.header-text h2 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: var(--primary-text);
+}
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30px;
+    border: 4px solid var(--left-bg);
+}
+.content-section {
+    margin-bottom: 35px;
+}
+.section-title-right {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: var(--left-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.content-section p {
+    text-align: justify;
+}
+.content-section ul {
+    list-style: none;
+}
+.content-section ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+.content-section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* ------ BÖLÜM 2: TAM GENİŞLİKLİ YAPI ------ */
+.full-width-layout {
+    padding: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+.section-title-full {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: var(--left-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.job-list {
+    border-left: 2px solid var(--border-color);
+    padding-left: 25px;
+    margin-left: 10px; /* Sadece soldan küçük bir boşluk bırakalım */
+}
+.job-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 0; /* İç boşluğu sıfırlıyoruz */
+}
+.job-item::before {
+    content: '';
+    position: absolute;
+    left: -35.5px;
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--right-bg);
+}
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+.job-header h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: var(--accent-color);
+}
+.job-date {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+.job-company h5 {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.job-company p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+.job-responsibilities {
+    list-style: none;
+    padding-left: 0;
+}
+.job-responsibilities li {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+.job-responsibilities li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ------ REFERANSLAR BÖLÜMÜ ------ */
+.references-section {
+    margin-top: 40px;
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun oluştur */
+    gap: 25px; /* Sütunlar ve satırlar arası boşluk */
+}
+
+.reference-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9fafb; /* Çok hafif bir arka plan rengi */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reference-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.07);
+}
+
+.reference-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--left-bg);
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.reference-item p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.reference-item .phone-number {
+    font-size: 0.95em;
+    color: var(--primary-text);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.reference-item .phone-number i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+/* MOBİL UYUMLULUK (Ekran küçülünce referanslar alt alta gelsin) */
+@media (max-width: 768px) {
+    .references-grid {
+        grid-template-columns: 1fr; /* Tek sütuna düşür */
+    }
+}
