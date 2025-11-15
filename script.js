@@ -117,15 +117,15 @@ const workExperience = [
 
 const referencesData = [
     { en: { name: "ENGIN GUNGORMUS", title: "Project Director" }, phone: "+90 530 425 17 43" },
-    { en: { name: "ALI GURGOZ", title: "GoMAG Energy<br>General Manager" }, phone: "+90 533 422 88 47" },
-    { en: { name: "OZGUR YILDIZ", title: "Tekfen Construction<br>Piping Manager" }, phone: "+994 50 332 03 56" },
+    { en: { name: "ALI GURGOZ", title: "General Manage<br>GoMAG Energy" }, phone: "+90 533 422 88 47" },
+    { en: { name: "OZGUR YILDIZ", title: "Construction Manager<br>Tekfen Construction" }, phone: "+994 50 332 03 56" },
     { en: { name: "CAN KARAMAN", title: "Project Manager" }, phone: "+90 532 761 85 81" },
-    { en: { name: "AHMET FİNCİ", title: "ILK Construction<br>Project Manager" }, phone: "+90 532 596 10 02" },
-    { en: { name: "ALI RIZA TACYILDIZ", title: "ILK ConstructionC<br>onstruction Manager" }, phone: "+90 538 261 39 20" },
-    { en: { name: "DUZGUN YEKLITAS", title: "GoMAG Energy<br>Project Manager" }, phone: "+90 544 517 17 62" },
-    { en: { name: "BULENT UZEL", title: "Tecnicas Reunidas Piping<br>Superintendent" }, phone: "+90 541 714 25 10" },
-    { en: { name: "SELAMI KILIÇ", title: "Caspian Technology Supply<br>Construction Manager" }, phone: "+994 51 449 34 66" },
-    { en: { name: "CAGATAY CAGLAYAN", title: "Ustay Construction<br>Country Manager" }, phone: "+7 926 942 89 62" },
+    { en: { name: "AHMET FİNCİ", title: "Country Manager<br>ILK Construction" }, phone: "+90 532 596 10 02" },
+    { en: { name: "ALI RIZA TACYILDIZ", title: "Project Manager<br>ILK Construction" }, phone: "+90 538 261 39 20" },
+    { en: { name: "DUZGUN YEKLITAS", title: "Construction Manager<br>GoMAG Energy" }, phone: "+90 544 517 17 62" },
+    { en: { name: "BULENT UZEL", title: "Piping Superintendent<br>Tecnicas Reunidas" }, phone: "+90 541 714 25 10" },
+    { en: { name: "SELAMI KILIÇ", title: "Construction Manager<br>Caspian Technology Supply" }, phone: "+994 51 449 34 66" },
+    { en: { name: "CAGATAY CAGLAYAN", title: "Country Manager<br>Ustay Construction" }, phone: "+7 926 942 89 62" },
 ];
 
 
@@ -219,4 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage('en');
 
 });
+
 
