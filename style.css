@@ -173,6 +173,13 @@ body.light-mode {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    /* --- YENİ EKLENEN SATIRLAR --- */
+    display: flex;                /* Flexbox'ı aktif et */
+    flex-direction: column;       /* Öğeleri alt alta diz */
+    justify-content: center;      /* Dikeyde ortala */
+    align-items: center;          /* Yatayda ortala */
+    text-align: center;           /* Metinleri ortala */
+    min-height: 150px;            /* Kartların aynı yükseklikte olmasını sağlar (isteğe bağlı ama güzel görünür) */
 }
 .reference-card .name { font-weight: 600; font-size: 1.1rem; color: var(--text-primary); }
 .reference-card .title { font-size: 0.9rem; color: var(--accent-color); margin-bottom: 10px;}
@@ -285,3 +292,4 @@ body.light-mode {
     margin-top: 0;
 
 }
+
