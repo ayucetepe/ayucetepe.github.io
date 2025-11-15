@@ -2,7 +2,7 @@
 
 const translations = {
     en: {
-        pageTitle: "Aziz Yüçetepe - Welding Supervisor",
+        pageTitle: "Aziz Yucetepe",
         jobTitle: "Welding Supervisor, Welding Inspector",
         contactTitle: "CONTACT",
         skillsTitle: "SKILLS",
@@ -46,7 +46,7 @@ const translations = {
         ],
     },
     tr: {
-        pageTitle: "Aziz Yüçetepe - Kaynak Süpervizörü",
+        pageTitle: "Aziz Yucetepe",
         jobTitle: "Kaynak Süpervizörü, Kaynak Enspektörü",
         contactTitle: "İLETİŞİM",
         skillsTitle: "YETENEKLER",
@@ -219,5 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage('en');
 
 });
+
 
 
