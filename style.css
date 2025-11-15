@@ -1,0 +1,280 @@
+/* --- TEMA DEĞİŞKENLERİ --- */
+:root {
+    --bg-dark: #121826;
+    --card-dark: #1a2233;
+    --accent-color: #00c9a7;
+    --text-primary-dark: #e0e0e0;
+    --text-secondary-dark: #a0a8c4;
+    --border-dark: #2a3652;
+
+    --bg-light: #f4f7fc;
+    --card-light: #ffffff;
+    --text-primary-light: #121826;
+    --text-secondary-light: #555c6f;
+    --border-light: #e6e9f0;
+}
+
+body {
+    --bg-color: var(--bg-dark);
+    --card-color: var(--card-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --border-color: var(--border-dark);
+    
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    --bg-color: var(--bg-light);
+    --card-color: var(--card-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --border-color: var(--border-light);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.cv-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* --- KONTROL DÜĞMELERİ (Dil ve Tema) --- */
+.top-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+#theme-toggle, .language-switcher button {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+#theme-toggle:hover, .language-switcher button:hover, .language-switcher button.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+.fa-moon { display: none; }
+.light-mode .fa-moon { display: inline-block; }
+.light-mode .fa-sun { display: none; }
+
+
+/* --- SOL SÜTUN --- */
+.sidebar {
+    flex: 0 0 320px;
+    background-color: var(--card-color);
+    border-radius: 15px;
+    padding: 30px;
+    height: max-content;
+    position: sticky;
+    top: 40px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+.sidebar h3 {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin: 20px 0 15px 0;
+}
+/* Diğer sidebar stilleri önceki cevaptaki gibi kalabilir... */
+.profile-section { text-align: center; }
+.profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 5px solid var(--accent-color); margin-bottom: 15px; }
+.profile-section h1 { font-size: 1.8rem; color: var(--text-primary); font-weight: 600; }
+.profile-section h2 { font-size: 1rem; color: var(--accent-color); font-weight: 400; margin-bottom: 20px; }
+.contact-section ul { list-style: none; }
+.contact-section li { display: flex; align-items: center; margin-bottom: 10px; }
+.contact-section i { color: var(--accent-color); margin-right: 15px; width: 20px; text-align: center; }
+.contact-section a, .contact-section span { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+.contact-section a:hover { color: var(--accent-color); }
+.download-btn { display: block; width: 100%; background-color: var(--accent-color); color: #fff; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 30px; transition: background-color 0.3s ease; }
+.download-btn:hover { background-color: #00a286; }
+
+
+/* YENİ: Skills (Progress Bar) */
+.skill-item { margin-bottom: 15px; }
+.skill-item p { margin: 0 0 5px 0; font-size: 0.9rem; color: var(--text-secondary); }
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* --- SAĞ SÜTUN --- */
+.main-content { flex: 1; }
+.main-content section {
+    background-color: var(--card-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+.main-content h3 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border-color); }
+.main-content p { color: var(--text-secondary); }
+
+/* YENİ: Technical Skills (Liste) */
+#tech-skills-list {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+}
+#tech-skills-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+#tech-skills-list li::before {
+    content: '\f058'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* YENİ: References (Grid) */
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.reference-card {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+.reference-card .name { font-weight: 600; font-size: 1.1rem; color: var(--text-primary); }
+.reference-card .title { font-size: 0.9rem; color: var(--accent-color); margin-bottom: 10px;}
+.reference-card .phone { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* Deneyim Kartları */
+.experience-card { position: relative; padding-left: 25px; border-left: 2px solid var(--accent-color); margin-bottom: 30px; }
+.experience-card:last-child { margin-bottom: 0; }
+.job-title { font-size: 1.2rem; font-weight: 600; color: var(--text-primary); }
+.job-info { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px; }
+.job-info strong { color: var(--text-primary); font-weight: 500;}
+.job-description { font-size: 0.95rem; color: var(--text-secondary); }
+
+
+/* --- MOBİL UYUMLULUK --- */
+@media (max-width: 992px) {
+    .cv-container {
+        flex-direction: column;
+        margin-top: 80px; 
+    }
+    .sidebar {
+        position: static;
+    }
+    #tech-skills-list {
+        columns: 1;
+    }
+}
+@media (max-width: 576px) {
+    .top-controls {
+        top: 10px;
+        right: 10px;
+    }
+    .references-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* style.css dosyasına eklenecek yeni stiller */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+.certificates-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificates-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* style.css dosyasının en altına bu kodları ekleyin */
+
+/* Sidebar'daki yeni Eğitim ve Sertifika listeleri için stiller */
+#training-list,
+#certificates-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px; /* Başlıkla arasında boşluk */
+}
+
+#training-list li,
+#certificates-list li {
+    position: relative;
+    padding-left: 25px; /* İkon için boşluk */
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Her liste elemanı için özel ikonlar */
+#training-list li::before {
+    content: '\f19d'; /* Font Awesome graduation-cap ikonu */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+#certificates-list li::before {
+    content: '\f0a3'; /* Font Awesome certificate ikonu */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+#certificates-list .cert-group {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 15px;
+}
+
+#certificates-list .cert-group:first-child {
+    margin-top: 0;
+}
