@@ -54,7 +54,7 @@ const translations = {
         certificatesTitle: "SERTİFİKALAR",
         downloadCV: "CV'yi İndir",
         aboutMeTitle: "HAKKIMDA",
-        aboutMeText: `Petrol ve Gaz Endüstrisi - Enerji Endüstrisi - Petrokimya Endüstrisi. Kaynak ve imalat endüstrisinde önemli deneyim kazanılmıştır... (Metnin tam çevirisi buraya eklenebilir)`,
+        aboutMeText: `Petrol ve Gaz Endüstrisi - Enerji Endüstrisi - Petrokimya Endüstrisi. Kaynak ve imalat endüstrisinde önemli deneyim kazanılmıştır. Açık deniz (Offshore) / kara (onshore) enerji santralleri, petrokimya tesisleri, petrol rafinerileri, imalat sahaları ve canlı kurulumlarda çalışılmıştır. Kaynak Operatörü / Kaynak Enspektörü / Süpervizör / Eğitmen (32 Yıl) olarak, sahalarda yapılan üretim kaynaklarının tüm sorumluluğunu üstlenmiş; kaynak ekiplerinin görevlendirilmesi ve onaylanmış kaynak prosedür ve protokollerine uygunluğun sağlanması konularında yetkinlik kazanılmıştır. Müşteri şartnamelerine göre işçilik kalitesini denetlemiş ve güvence altına almıştır. ASME IX / B31.3 EN 287-288 EEMUA 158. API 1104 BS 4515 standartlarına uygun olarak, müşteri şartnamelerine bağlı kalarak onaylı kaynak prosedürünü kullanarak ara ve son N.D.E. kontrollerini talep etmiş ve kaynakçı yeterlilik testlerini gerçekleştirmiştir. İleri düzey güvenlik denetimleri, iş durdurma kartları ve risk değerlendirmesi konularında tecrübelidir. Çok Yönlü Sertifikalı Kaynakçı (15 Yıl) olarak; SMAW, GTAW, SAW, GS-FCAW gibi proseslerde ve Polysoude ve Dimetrics orbital kaynak kafaları kullanılarak yapılan tam otomatik tekniklerde (CSR ve tel beslemeli uygulamalar) yüksek tecrübeye sahiptir.`,
         techSkillsTitle: "TEKNİK BECERİLER",
         experienceTitle: "İŞ DENEYİMİ",
         referencesTitle: "REFERANSLAR",
@@ -216,4 +216,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Sayfa ilk yüklendiğinde varsayılan dili ayarla
     setLanguage('en');
+
 });
