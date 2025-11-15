@@ -119,7 +119,7 @@ const referencesData = [
     { en: { name: "ENGIN GUNGORMUS", title: "Project Director" }, phone: "+90 530 425 17 43" },
     { en: { name: "ALI GURGOZ", title: "General Manage<br>GoMAG Energy" }, phone: "+90 533 422 88 47" },
     { en: { name: "OZGUR YILDIZ", title: "Construction Manager<br>Tekfen Construction" }, phone: "+994 50 332 03 56" },
-    { en: { name: "CAN KARAMAN", title: "Project Manager" }, phone: "+90 532 761 85 81" },
+    { en: { name: "CAN KARAMAN", title: "Projects Manager<br>Hill International, Inc." }, phone: "+90 532 761 85 81" },
     { en: { name: "AHMET FİNCİ", title: "Country Manager<br>ILK Construction" }, phone: "+90 532 596 10 02" },
     { en: { name: "ALI RIZA TACYILDIZ", title: "Project Manager<br>ILK Construction" }, phone: "+90 538 261 39 20" },
     { en: { name: "DUZGUN YEKLITAS", title: "Construction Manager<br>GoMAG Energy" }, phone: "+90 544 517 17 62" },
@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage('en');
 
 });
+
 
 
 
