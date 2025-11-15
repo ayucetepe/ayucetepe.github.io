@@ -191,10 +191,16 @@ body.light-mode {
 @media (max-width: 992px) {
     .cv-container {
         flex-direction: column;
-        margin-top: 80px; 
+        margin-top: 80px;
+        /* --- YENİ EKLENEN ve DEĞİŞEN SATIRLAR --- */
+        max-width: 100%;    /* Maksimum genişlik sınırı olmasın, ekranı doldursun */
+        padding: 0;         /* Kenarlardaki iç boşlukları sıfırla */
+        margin-left: 0;     /* Sol dış boşluğu sıfırla */
+        margin-right: 0;    /* Sağ dış boşluğu sıfırla */
     }
     .sidebar {
         position: static;
+        border-radius: 0; /* Kenar yuvarlaklığını kaldırarak tam oturmasını sağla */
     }
     #tech-skills-list {
         columns: 1;
@@ -277,4 +283,5 @@ body.light-mode {
 
 #certificates-list .cert-group:first-child {
     margin-top: 0;
+
 }
