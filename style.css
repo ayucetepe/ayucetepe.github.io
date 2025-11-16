@@ -404,3 +404,17 @@ details.experience-card .job-description { color: var(--text-secondary); }
     margin-top: 0;
 
 }
+
+/* style.css dosyasının sonuna ekleyin */
+.reference-card .wa-link i.fa-whatsapp {
+    color: #25D366; /* WhatsApp yeşili */
+    font-size: 1.2rem; /* İkonu biraz büyütelim */
+    margin-left: 8px; /* Telefon numarasından biraz ayır */
+    vertical-align: middle; /* Dikey olarak ortala */
+    transition: transform 0.2s ease-in-out;
+}
+
+.reference-card .wa-link:hover i.fa-whatsapp {
+    transform: scale(1.25); /* Üzerine gelince büyüt */
+}
+
