@@ -151,10 +151,14 @@ function loadReferences() {
         const telHref = phoneDigits ? `tel:${phoneDigits}` : '';
         const waHref = waDigits ? `https://wa.me/${waDigits}` : '';
 
-        container.innerHTML += `<div class="reference-card">
+        container.innerHTML += `
+            <div class="reference-card">
                 <div class="name">${ref.name}</div>
                 <div class="title">${ref.title}</div>
-                <div class="phone">${telHref ? `<a href="${telHref}">${rawPhone}</a>` : rawPhone} ${waHref ? `<a class="wa-link" aria-label="WhatsApp ${ref.name}" href="${waHref}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>` : ''}</div>
+                <div class="phone">
+                    ${telHref ? `<a href="${telHref}">${rawPhone}</a>` : rawPhone}
+                    ${waHref ? `<a class="wa-link" aria-label="WhatsApp ${ref.name}" href="${waHref}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>` : ''}
+                </div>
             </div>`;
     });
 }
@@ -190,4 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     setLanguage('en');
+
 });
