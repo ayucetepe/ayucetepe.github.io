@@ -1063,8 +1063,8 @@ nav .desktop-nav li a.active i {
 }
 
 .header-profile-pic {
-    width: 26px; /* LinkedIn standardı küçük resim */
-    height: 26px;
+    width: 36px; /* LinkedIn standardı küçük resim */
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 2px;
