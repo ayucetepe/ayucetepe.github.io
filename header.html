@@ -1,0 +1,122 @@
+<nav>
+    <a href="index.html" class="logo">Aziz Yucetepe</a>
+
+    <!-- MASAÜSTÜ MENÜ (LinkedIn Tarzı) -->
+    <ul class="desktop-nav">
+        <li>
+            <a href="index.html">
+                <!-- Ev İkonu -->
+                <i class="fas fa-home"></i>
+                <span class="nav-text" data-translate="nav_about">About Me</span>
+            </a>
+        </li>
+        <li>
+            <a href="experience.html">
+                <!-- Çanta İkonu -->
+                <i class="fas fa-briefcase"></i>
+                <span class="nav-text" data-translate="nav_experience">Work Experience</span>
+            </a>
+        </li>
+        <li>
+            <a href="certificates.html">
+                <!-- Sertifika İkonu -->
+                <i class="fas fa-certificate"></i>
+                <span class="nav-text" data-translate="nav_certificates">Certificates</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- SAĞ TARAF: PROFİL -->
+    <div class="controls">
+        <div class="profile-menu-container">
+            <!-- Profil Tetikleyici (Sadece Resim ve Ok) -->
+            <div class="profile-trigger" onclick="toggleProfileMenu()">
+                <img src="images/aziz.jpg" alt="Profile" class="header-profile-pic" onerror="this.src='https://via.placeholder.com/40'">
+                <!-- Sadece Ok İşareti -->
+                <i class="fas fa-caret-down profile-arrow"></i>
+            </div>
+
+            <!-- Açılır Menü (Aynı) -->
+            <div class="profile-dropdown" id="profile-dropdown">
+                <div class="dropdown-header">
+                    <img src="images/aziz.jpg" alt="Aziz" onerror="this.src='https://via.placeholder.com/40'">
+                    <div class="header-info">
+                        <h4>Aziz Yucetepe</h4>
+                        <span>Welding Supervisor</span>
+                    </div>
+                </div>
+                <a href="profile.html" class="view-profile-btn">View Profile</a>
+                <hr>
+                <div class="dropdown-section">
+                    <span class="section-title"><i class="fas fa-globe"></i> Language</span>
+                    <div class="custom-select-wrapper" onclick="this.classList.toggle('open')">
+                        <div class="custom-select-trigger">
+                            <span id="desktop-lang-text">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option" onclick="setLanguage('en')">🇺🇸 English</span>
+                            <span class="custom-option" onclick="setLanguage('tr')">🇹🇷 Türkçe</span>
+                            <span class="custom-option" onclick="setLanguage('ru')">🇷🇺 Русский</span>
+                            <span class="custom-option" onclick="setLanguage('ar')">🇦🇪 العربية</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown-section">
+                    <div class="theme-toggle-row">
+                        <span>Dark Mode</span>
+                        <label class="theme-switcher">
+                            <input type="checkbox" id="theme-switcher" class="theme-switcher-checkbox">
+                            <span class="theme-switcher-label"><span class="theme-switcher-slider"></span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="hamburger">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </button>
+</nav>
+
+<ul class="mobile-nav">
+    <li class="mobile-profile-header">
+        <a href="profile.html" class="mobile-profile-link">
+            <img src="images/aziz.jpg" alt="Aziz" onerror="this.src='https://via.placeholder.com/50'">
+            <div class="mobile-profile-info">
+                <span class="name">Aziz Yucetepe</span>
+                <span class="title">View Profile</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </li>
+    <li><a href="index.html"><i class="fas fa-user-circle"></i> <span class="nav-text" data-translate="nav_about">About Me</span></a></li>
+    <li><a href="experience.html"><i class="fas fa-briefcase"></i> <span class="nav-text" data-translate="nav_experience">Work Experience</span></a></li>
+    <li><a href="certificates.html"><i class="fas fa-certificate"></i> <span class="nav-text" data-translate="nav_certificates">Certificates</span></a></li>
+    <li class="mobile-controls-wrapper">
+        <div class="mobile-lang-accordion">
+            <button class="accordion-btn" onclick="toggleMobileLang()">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <i class="fas fa-globe"></i>
+                    <span id="mobile-lang-text">English</span>
+                </div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-content" id="mobile-lang-list">
+                <button onclick="setLanguage('en')">🇺🇸 English</button>
+                <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
+                <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
+                <button onclick="setLanguage('ar')">🇦🇪 العربية</button>
+            </div>
+        </div>
+        <div class="mobile-theme-row">
+            <span>Dark Mode</span>
+            <label class="theme-switcher">
+                <input type="checkbox" id="mobile-theme-switcher" class="theme-switcher-checkbox">
+                <span class="theme-switcher-label"><span class="theme-switcher-slider"></span></span>
+            </label>
+        </div>
+    </li>
+</ul>

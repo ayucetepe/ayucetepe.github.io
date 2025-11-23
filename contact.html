@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aziz Yucetepe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+  <header id="global-header"></header>
+
+    <div class="container">
+        <main>
+            <h1 class="page-title">Get In Touch</h1>
+
+            <div class="contact-page-wrapper card">
+                <!-- Sol Taraf: İletişim Formu -->
+                <div class="contact-form-section">
+                    <h3>Send me a message</h3>
+                    <!--
+                        ÖNEMLİ: Aşağıdaki 'action' kısmını kendi Formspree URL'n ile değiştir!
+                    -->
+                    <!-- Bu bloğu kopyalayıp mevcut formun yerine yapıştır -->
+<form action="https://formspree.io/f/mdkbjozv" method="POST">
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="How can I help you?" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+                </div>
+
+                <!-- Sağ Taraf: Diğer İletişim Bilgileri -->
+                <div class="contact-info-section">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me through any of the following methods. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+
+                    <div class="info-item">
+                        <!-- Email Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <a href="mailto:aziz.yucetepe@gmail.com">aziz.yucetepe@gmail.com</a>
+                    </div>
+
+                    <div class="info-item">
+                         <!-- Phone Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>+994 50 207 40 33</span>
+                    </div>
+
+                     <div class="info-item">
+                        <!-- Location Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Izmir, TR / Baku, AZ</span>
+                    </div>
+
+                    <a href="https://wa.me/994502074033" target="_blank" class="btn btn-whatsapp-small">
+                        <!-- WhatsApp Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 20.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.82-1.26-4.38 0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.14c-.25-.12-1.47-.72-1.7-.82s-.39-.12-.56.12c-.17.25-.64.82-.79.99s-.29.17-.54.05c-.25-.12-1.07-.39-2.04-1.26s-1.45-1.92-1.61-2.24c-.17-.32-.02-.49.1-.64s.25-.29.37-.44c.12-.12.17-.25.25-.41s.04-.29-.02-.41c-.06-.12-.56-1.34-.76-1.84s-.4-.42-.56-.42h-.54c-.17 0-.44.05-.67.29s-.86.84-1.06 2.04c-.2 1.2 0 2.4 1.22 3.62 1.21 1.22 2.67 2.2 4.63 3.01.48.2.86.32 1.15.41.48.15.91.13 1.26-.05.39-.21 1.04-.95 1.19-1.24s.15-.29.1-.41l-.25-.13z"/></svg>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aziz Yucetepe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

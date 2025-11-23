@@ -1,0 +1,186 @@
+{
+  "jobs": [
+    {
+      "job_number": 1,
+      "de": { "title": "Schweißaufsicht", "project": "Basrah-Raffinerie-Modernisierungsprojekt", "company": "Basrah Refinery Upgrading Project", "location": "Basra, Irak", "description": "Leitung und Überwachung von Schweißarbeiten mit Schwerpunkt auf Rohrleitungsfertigung und -montage" },
+      "ru": { "title": "Начальник сварочного участка", "project": "Проект модернизации нефтеперерабатывающего завода в Басре", "company": "Basrah Refinery Upgrading Project", "location": "Басра, Ирак", "description": "Руководство и контроль сварочных работ с акцентом на производство и монтаж трубопроводов" },
+      "ar": { "title": "مشرف اللحام", "project": "مشروع ترقية مصفاة البصرة", "company": "Basrah Refinery Upgrading Project", "location": "البصرة، العراق", "description": "الإشراف على أعمال اللحام مع التركيز على تصنيع وتركيب الأنابيب" },
+      "zh": { "title": "焊接主管", "project": "巴士拉炼油厂升级项目", "company": "Basrah Refinery Upgrading Project", "location": "巴士拉，伊拉克", "description": "焊接作业的领导和监督，重点在管道制造和安装方面" },
+      "it": { "title": "Caposaldatore", "project": "Progetto di ammodernamento della raffineria di Basora", "company": "Basrah Refinery Upgrading Project", "location": "Basora, Iraq", "description": "Supervisione e controllo dei lavori di saldatura con focus su fabbricazione e installazione di tubazioni" }
+    },
+    {
+      "job_number": 2,
+      "de": { "title": "Schweißaufsicht", "project": "HAOR-Modernisierungsprojekt", "company": "HAOR Modernization Project", "location": "Baku, Aserbaidschan", "description": "Leitung von Schweißprozessen in komplexen Rohrleitungssystemen mit Qualitätskontrolle und NDT-Überwachung" },
+      "ru": { "title": "Начальник сварочного участка", "project": "Проект модернизации HAOR", "company": "HAOR Modernization Project", "location": "Баку, Азербайджан", "description": "Руководство сварочными процессами в сложных системах трубопроводов с контролем качества и мониторингом НД" },
+      "ar": { "title": "مشرف اللحام", "project": "مشروع تحديث HAOR", "company": "HAOR Modernization Project", "location": "باكو، أذربيجان", "description": "إدارة عمليات اللحام في أنظمة الأنابيب المعقدة مع مراقبة الجودة ومراقبة الفحص غير الإتلافي" },
+      "zh": { "title": "焊接主管", "project": "HAOR现代化项目", "company": "HAOR Modernization Project", "location": "巴库，阿塞拜疆", "description": "复杂管道系统焊接工艺的领导，包括质量控制和无损检测监督" },
+      "it": { "title": "Caposaldatore", "project": "Progetto di modernizzazione HAOR", "company": "HAOR Modernization Project", "location": "Baku, Azerbaigian", "description": "Direzione dei processi di saldatura in sistemi di tubazioni complessi con controllo della qualità e monitoraggio NDT" }
+    },
+    {
+      "job_number": 3,
+      "de": { "title": "Schweißmeister", "project": "Baku-Olympiastadion-Projekt", "company": "Baku Olympic Stadium Project", "location": "Baku, Aserbaidschan", "description": "Fachliche Leitung von Schweißarbeiten an Stahlkonstruktionen mit Schwerpunkt auf Strukturschweißen und Qualitätssicherung" },
+      "ru": { "title": "Старший сварщик", "project": "Проект Бакинского Олимпийского стадиона", "company": "Baku Olympic Stadium Project", "location": "Баку, Азербайджан", "description": "Техническое руководство сварочными работами на стальных конструкциях с акцентом на конструкционную сварку и обеспечение качества" },
+      "ar": { "title": "رئيس اللحام", "project": "مشروع ملعب باكو الأولمبي", "company": "Baku Olympic Stadium Project", "location": "باكو، أذربيجان", "description": "الإشراف الفني على أعمال اللحام على الهياكل الفولاذية مع التركيز على اللحام الهيكلي وضمان الجودة" },
+      "zh": { "title": "焊接工长", "project": "巴库奥林匹克体育场项目", "company": "Baku Olympic Stadium Project", "location": "巴库，阿塞拜疆", "description": "钢结构焊接作业的技术领导，重点在结构焊接和质量保证方面" },
+      "it": { "title": "Capomastro saldatore", "project": "Progetto dello stadio olimpico di Baku", "company": "Baku Olympic Stadium Project", "location": "Baku, Azerbaigian", "description": "Direzione tecnica dei lavori di saldatura su strutture in acciaio con focus su saldatura strutturale e assicurazione della qualità" }
+    },
+    {
+      "job_number": 4,
+      "de": { "title": "Schweißaufsicht", "project": "OGB-Wasserleitungsprojekt", "company": "OGB Water Pipeline", "location": "Oguz, Aserbaidschan", "description": "Überwachung von Rohrleitungsschweißarbeiten mit Fokus auf Dichtheit und Druckbehälterschweißen nach internationalen Standards" },
+      "ru": { "title": "Начальник сварочного участка", "project": "Проект водопровода OGB", "company": "OGB Water Pipeline", "location": "Огуз, Азербайджан", "description": "Контроль сварочных работ трубопроводов с акцентом на герметичность и сварку под давлением по международным стандартам" },
+      "ar": { "title": "مشرف اللحام", "project": "مشروع خط أنابيب المياه OGB", "company": "OGB Water Pipeline", "location": "أوغوز، أذربيجان", "description": "الإشراف على أعمال لحام الأنابيب مع التركيز على الإحكام والسلامة وفقاً للمعايير الدولية" },
+      "zh": { "title": "焊接主管", "project": "OGB供水管线项目", "company": "OGB Water Pipeline", "location": "欧古兹，阿塞拜疆", "description": "管道焊接作业的监督，重点在密实性和压力容器焊接符合国际标准" },
+      "it": { "title": "Caposaldatore", "project": "Progetto della condotta idrica OGB", "company": "OGB Water Pipeline", "location": "Oguz, Azerbaigian", "description": "Supervisione dei lavori di saldatura della tubazione con focus su tenuta e saldatura sotto pressione secondo gli standard internazionali" }
+    },
+    {
+      "job_number": 5,
+      "de": { "title": "Schweißaufsicht", "project": "Sangachal Terminal 2. Lagertank für Produktwasser", "company": "Sangachal Terminal 2nd Produced Water Tank", "location": "Baku, Aserbaidschan", "description": "Leitung von Schweißarbeiten an großvolumigen Lagerbehältern mit Qualitätskontrolle und Druckprüfungen" },
+      "ru": { "title": "Начальник сварочного участка", "project": "Проект резервуара II очереди Сангачальского терминала", "company": "Sangachal Terminal 2nd Produced Water Tank", "location": "Баку, Азербайджан", "description": "Руководство сварочными работами на крупногабаритных резервуарах хранения с контролем качества и испытаниями под давлением" },
+      "ar": { "title": "مشرف اللحام", "project": "مشروع خزان المياه المنتجة الثاني بمحطة سنجاجال", "company": "Sangachal Terminal 2nd Produced Water Tank", "location": "باكو، أذربيجان", "description": "إدارة أعمال اللحام على خزانات التخزين الكبيرة مع مراقبة الجودة والاختبارات الهيدروليكية" },
+      "zh": { "title": "焊接主管", "project": "桑加查尔油轮码头二期生产水罐项目", "company": "Sangachal Terminal 2nd Produced Water Tank", "location": "巴库，阿塞拜疆", "description": "大容量储存容器的焊接作业领导，包括质量控制和压力测试" },
+      "it": { "title": "Caposaldatore", "project": "Progetto serbatoi di stoccaggio acqua prodotta Sangachal", "company": "Sangachal Terminal 2nd Produced Water Tank", "location": "Baku, Azerbaigian", "description": "Supervisione dei lavori di saldatura su serbatoi di stoccaggio di grande volume con controllo della qualità e test di pressione" }
+    },
+    {
+      "job_number": 6,
+      "de": { "title": "Schweißer", "project": "COP Offshore-Plattformen-Fertigungsprojekt", "company": "COP Offshore Platforms Fabrication", "location": "Baku, Aserbaidschan", "description": "Schweißarbeiten an Offshore-Stahlstrukturen mit SMAW, GTAW und SAW-Verfahren unter strenger Qualitätskontrolle" },
+      "ru": { "title": "Сварщик", "project": "Проект производства морских платформ COP", "company": "COP Offshore Platforms Fabrication", "location": "Баку, Азербайджан", "description": "Сварочные работы на морских стальных конструкциях с применением SMAW, GTAW и SAW методов при строгом контроле качества" },
+      "ar": { "title": "عامل اللحام", "project": "مشروع تصنيع منصات بحرية COP", "company": "COP Offshore Platforms Fabrication", "location": "باكو، أذربيجان", "description": "أعمال اللحام على الهياكل الفولاذية البحرية باستخدام طرق SMAW و GTAW و SAW مع مراقبة جودة صارمة" },
+      "zh": { "title": "焊工", "project": "COP海上平台制造项目", "company": "COP Offshore Platforms Fabrication", "location": "巴库，阿塞拜疆", "description": "海上钢结构的焊接作业，采用SMAW、GTAW和SAW工艺，实施严格的质量控制" },
+      "it": { "title": "Saldatore", "project": "Progetto di fabbricazione piattaforme offshore COP", "company": "COP Offshore Platforms Fabrication", "location": "Baku, Azerbaigian", "description": "Lavori di saldatura su strutture in acciaio offshore con processi SMAW, GTAW e SAW sotto rigoroso controllo della qualità" }
+    },
+    {
+      "job_number": 7,
+      "de": { "title": "Schweißer", "project": "TPG 500 Nordsee-Projekt", "company": "TPG 500 North Sea", "location": "Baku, Aserbaidschan", "description": "Hochleistungs-Schweißarbeiten an Rohrsystemen für extreme Bedingungen mit Duplex und Super-Duplex-Edelstahl" },
+      "ru": { "title": "Сварщик", "project": "Проект TPG 500 Северное море", "company": "TPG 500 North Sea", "location": "Баку, Азербайджан", "description": "Высокопроизводительные сварочные работы на трубных системах в экстремальных условиях с использованием нержавеющей стали Duplex и Super Duplex" },
+      "ar": { "title": "عامل اللحام", "project": "مشروع بحر الشمال TPG 500", "company": "TPG 500 North Sea", "location": "باكو، أذربيجان", "description": "أعمال لحام عالية الأداء على أنظمة الأنابيب في الظروف القاسية باستخدام الفولاذ المقاوم للصدأ ثنائي وفائق الثنائي" },
+      "zh": { "title": "焊工", "project": "TPG 500北海项目", "company": "TPG 500 North Sea", "location": "巴库，阿塞拜疆", "description": "极端条件下管系统的高性能焊接作业，采用双相和超双相不锈钢材料" },
+      "it": { "title": "Saldatore", "project": "Progetto TPG 500 Mare del Nord", "company": "TPG 500 North Sea", "location": "Baku, Azerbaigian", "description": "Lavori di saldatura ad alta prestazione su sistemi di tubazioni per condizioni estreme con acciaio inox duplex e super duplex" }
+    },
+    {
+      "job_number": 8,
+      "de": { "title": "Schweißer", "project": "AGT-Fernleitungsprojekt", "company": "AGT Pipeline", "location": "Baku, Aserbaidschan", "description": "Rohrleitungsschweißen mit Fokus auf Dichtheit, Korrosionsschutz und Einhaltung von API- und ASME-Standards" },
+      "ru": { "title": "Сварщик", "project": "Проект магистрального трубопровода AGT", "company": "AGT Pipeline", "location": "Баку, Азербайджан", "description": "Сварка трубопроводов с акцентом на герметичность, защиту от коррозии и соответствие стандартам API и ASME" },
+      "ar": { "title": "عامل اللحام", "project": "مشروع خط الأنابيب AGT", "company": "AGT Pipeline", "location": "باكو، أذربيجان", "description": "لحام الأنابيب مع التركيز على الإحكام وحماية التآكل والامتثال لمعايير API و ASME" },
+      "zh": { "title": "焊工", "project": "AGT输油管线项目", "company": "AGT Pipeline", "location": "巴库，阿塞拜疆", "description": "管道焊接工作，重点在密实性、防腐和符合API及ASME标准" },
+      "it": { "title": "Saldatore", "project": "Progetto oleodotto AGT", "company": "AGT Pipeline", "location": "Baku, Azerbaigian", "description": "Saldatura di tubazioni con focus su tenuta, protezione dalla corrosione e conformità agli standard API e ASME" }
+    },
+    {
+      "job_number": 9,
+      "de": { "title": "Schweißer", "project": "Sangachal Terminal Expansionsprojekt", "company": "Sangachal Terminal Expansion", "location": "Baku, Aserbaidschan", "description": "Schweißarbeiten an Lagerbehältern und Rohrleitungssystemen mit Qualitätskontrolle und NDT-Inspektionen" },
+      "ru": { "title": "Сварщик", "project": "Проект расширения Сангачальского терминала", "company": "Sangachal Terminal Expansion", "location": "Баку, Азербайджан", "description": "Сварочные работы на резервуарах и системах трубопроводов с контролем качества и инспекциями НД" },
+      "ar": { "title": "عامل اللحام", "project": "مشروع توسيع محطة سنجاجال", "company": "Sangachal Terminal Expansion", "location": "باكو، أذربيجان", "description": "أعمال اللحام على الخزانات وأنظمة الأنابيب مع مراقبة الجودة والفحوصات غير الإتلافية" },
+      "zh": { "title": "焊工", "project": "桑加查尔油轮码头扩建项目", "company": "Sangachal Terminal Expansion", "location": "巴库，阿塞拜疆", "description": "储存容器和管道系统的焊接作业，包括质量控制和无损检测检验" },
+      "it": { "title": "Saldatore", "project": "Progetto di ampliamento terminale Sangachal", "company": "Sangachal Terminal Expansion", "location": "Baku, Azerbaigian", "description": "Lavori di saldatura su serbatoi e sistemi di tubazioni con controllo della qualità e ispezioni NDT" }
+    },
+    {
+      "job_number": 10,
+      "de": { "title": "Schweißer", "project": "Severnaya-Kraftwerk (400 MW) Projekt", "company": "Severnaya Power Plant (400 MW)", "location": "Baku, Aserbaidschan", "description": "Schweißarbeiten an Dampfkesseln und Rohrleitungssystemen mit Hochtemperatur-Stahlblechen unter API-Standards" },
+      "ru": { "title": "Сварщик", "project": "Проект ТЭС Северная (400 МВт)", "company": "Severnaya Power Plant (400 MW)", "location": "Баку, Азербайджан", "description": "Сварочные работы на паровых котлах и системах трубопроводов с высокотемпературной углеродистой сталью по стандартам API" },
+      "ar": { "title": "عامل اللحام", "project": "مشروع محطة توليد كهربائية سيفيرنايا (400 ميجاوات)", "company": "Severnaya Power Plant (400 MW)", "location": "باكو، أذربيجان", "description": "أعمال اللحام على الغلايات البخارية وأنظمة الأنابيب بصلب الكربون عالي الحرارة وفقاً لمعايير API" },
+      "zh": { "title": "焊工", "project": "塞韦尔纳亚电站（400兆瓦）项目", "company": "Severnaya Power Plant (400 MW)", "location": "巴库，阿塞拜疆", "description": "蒸汽锅炉和管道系统的焊接作业，采用高温碳钢，符合API标准" },
+      "it": { "title": "Saldatore", "project": "Progetto centrale termoelettrica Severnaya (400 MW)", "company": "Severnaya Power Plant (400 MW)", "location": "Baku, Azerbaigian", "description": "Lavori di saldatura su caldaie a vapore e sistemi di tubazioni con acciaio al carbonio ad alta temperatura secondo gli standard API" }
+    },
+    {
+      "job_number": 11,
+      "de": { "title": "Schweißer", "project": "Isomerisierungsanlage", "company": "Isomerization Unit", "location": "Izmit, Türkei", "description": "Schweißarbeiten an Druckbehältern und Reaktorgefäßen mit Fokus auf Druckprüfungen und Korrosionsschutz" },
+      "ru": { "title": "Сварщик", "project": "Установка изомеризации", "company": "Isomerization Unit", "location": "Измит, Турция", "description": "Сварочные работы на сосудах высокого давления и реакторных резервуарах с акцентом на гидроиспытания и защиту от коррозии" },
+      "ar": { "title": "عامل اللحام", "project": "وحدة الأيزومرة", "company": "Isomerization Unit", "location": "إزميت، تركيا", "description": "أعمال اللحام على الأوعية والمفاعلات تحت الضغط مع التركيز على الاختبارات الهيدروليكية وحماية التآكل" },
+      "zh": { "title": "焊工", "project": "异构化装置", "company": "Isomerization Unit", "location": "伊兹密特，土耳其", "description": "压力容器和反应器的焊接作业，重点在压力测试和防腐蚀保护" },
+      "it": { "title": "Saldatore", "project": "Impianto di isomerizzazione", "company": "Isomerization Unit", "location": "Izmit, Turchia", "description": "Lavori di saldatura su recipienti in pressione e reattori con focus su test di pressione e protezione dalla corrosione" }
+    },
+    {
+      "job_number": 12,
+      "de": { "title": "Schweißer", "project": "CCR- und Isomerisierungsanlage", "company": "CCR & Isomerization Units", "location": "Izmir, Türkei", "description": "Schweißarbeiten an Katalytischen Reformer- und Isomerisierungseinheiten mit hochlegiertem Stahl und Edelstahl" },
+      "ru": { "title": "Сварщик", "project": "Установки каталитического риформинга и изомеризации", "company": "CCR & Isomerization Units", "location": "Измир, Турция", "description": "Сварочные работы на установках каталитического риформинга и изомеризации с высокоуглеродистой и нержавеющей сталью" },
+      "ar": { "title": "عامل اللحام", "project": "وحدات الإصلاح الحفزي والأيزومرة", "company": "CCR & Isomerization Units", "location": "إزمير، تركيا", "description": "أعمال اللحام على وحدات الإصلاح الحفزي والأيزومرة باستخدام الفولاذ عالي السبيكة والمقاوم للصدأ" },
+      "zh": { "title": "焊工", "project": "催化重整和异构化装置", "company": "CCR & Isomerization Units", "location": "伊兹密尔，土耳其", "description": "催化重整和异构化装置的焊接作业，采用高合金钢和不锈钢材料" },
+      "it": { "title": "Saldatore", "project": "Impianti di riforming catalitico e isomerizzazione", "company": "CCR & Isomerization Units", "location": "Izmir, Turchia", "description": "Lavori di saldatura su unità di riforming catalitico e isomerizzazione con acciaio altamente legato e inossidabile" }
+    },
+    {
+      "job_number": 13,
+      "de": { "title": "Schweißer", "project": "Fergana-Raffinerie", "company": "Fergana Oil Refinery", "location": "Fergana, Usbekistan", "description": "Schweißarbeiten an Rohrleitungsfertigung und Destillationsanlagen mit Druck- und Temperaturbeständigkeit" },
+      "ru": { "title": "Сварщик", "project": "Ферганский нефтеперерабатывающий завод", "company": "Fergana Oil Refinery", "location": "Фергона, Узбекистан", "description": "Сварочные работы на производстве трубопроводов и установках перегонки с выносливостью к давлению и температуре" },
+      "ar": { "title": "عامل اللحام", "project": "مصفاة فرغانة النفطية", "company": "Fergana Oil Refinery", "location": "فرغانة، أوزبكستان", "description": "أعمال اللحام على تصنيع الأنابيب ووحدات التقطير مع مقاومة الضغط والحرارة" },
+      "zh": { "title": "焊工", "project": "费尔干纳油炼厂", "company": "Fergana Oil Refinery", "location": "费尔干纳，乌兹别克斯坦", "description": "管道制造和蒸馏装置的焊接作业，具有压力和温度耐受性" },
+      "it": { "title": "Saldatore", "project": "Raffineria di petrolio di Fergana", "company": "Fergana Oil Refinery", "location": "Fergana, Uzbekistan", "description": "Lavori di saldatura su fabbricazione di tubazioni e impianti di distillazione con resistenza a pressione e temperatura" }
+    },
+    {
+      "job_number": 14,
+      "de": { "title": "Schweißer", "project": "Etilen Polietilen Petkim", "company": "Etilen Polietilen Petkim", "location": "Izmir, Türkei", "description": "Schweißarbeiten an Polymerisationsreaktoren und Rohrleitungssystemen mit Kunststoff- und Stahlkomponenten" },
+      "ru": { "title": "Сварщик", "project": "Этилен полиэтилен Петким", "company": "Etilen Polietilen Petkim", "location": "Измир, Турция", "description": "Сварочные работы на полимеризационных реакторах и системах трубопроводов с пластиковыми и стальными компонентами" },
+      "ar": { "title": "عامل اللحام", "project": "بتروكيم الإيثيلين والبوليإثيلين", "company": "Etilen Polietilen Petkim", "location": "إزمير، تركيا", "description": "أعمال اللحام على مفاعلات البلمرة وأنظمة الأنابيب مع مكونات بلاستيكية وفولاذية" },
+      "zh": { "title": "焊工", "project": "乙烯聚乙烯Petkim", "company": "Etilen Polietilen Petkim", "location": "伊兹密尔，土耳其", "description": "聚合反应器和管道系统的焊接作业，包含塑料和钢铁组件" },
+      "it": { "title": "Saldatore", "project": "Etilene polietilene Petkim", "company": "Etilen Polietilen Petkim", "location": "Izmir, Turchia", "description": "Lavori di saldatura su reattori di polimerizzazione e sistemi di tubazioni con componenti in plastica e acciaio" }
+    },
+    {
+      "job_number": 15,
+      "de": { "title": "Schweißer", "project": "CCR- und ISO-Anlage Tüpraş", "company": "CCR & ISO Unit Tüpraş", "location": "Izmir, Türkei", "description": "Schweißarbeiten an Katalytischen Reformer- und Isomerisierungseinheiten mit fortgeschrittener Qualitätssicherung" },
+      "ru": { "title": "Сварщик", "project": "Установки CCR и ISO Тюпраш", "company": "CCR & ISO Unit Tüpraş", "location": "Измир, Турция", "description": "Сварочные работы на установках каталитического риформинга и изомеризации с продвинутым обеспечением качества" },
+      "ar": { "title": "عامل اللحام", "project": "وحدات CCR و ISO Tüpraş", "company": "CCR & ISO Unit Tüpraş", "location": "إزمير، تركيا", "description": "أعمال اللحام على وحدات الإصلاح الحفزي والأيزومرة مع ضمان جودة متقدم" },
+      "zh": { "title": "焊工", "project": "Tüpraş CCR和ISO装置", "company": "CCR & ISO Unit Tüpraş", "location": "伊兹密尔，土耳其", "description": "催化重整和异构化装置的焊接作业，具有先进的质量保证" },
+      "it": { "title": "Saldatore", "project": "Unità CCR e ISO Tüpraş", "company": "CCR & ISO Unit Tüpraş", "location": "Izmir, Turchia", "description": "Lavori di saldatura su unità di riforming catalitico e isomerizzazione con assicurazione della qualità avanzata" }
+    }
+  ],
+  "technical_terms": {
+    "de": {
+      "piping_fabrication_erection": "Rohrleitungsfertigung und -montage",
+      "quality_control": "Qualitätskontrolle",
+      "supervision_drilling_borehole": "Überwachung von Bohrlochabteufungen",
+      "ndt": "Zerstörungsfreie Prüfung (ZfP)",
+      "qa_qc": "Qualitätssicherung/Qualitätskontrolle",
+      "smaw_gtaw_saw": "SMAW, GTAW, SAW",
+      "low_temperature_carbon_steel": "Kohlenstoffstahl bei niedriger Temperatur",
+      "stainless_steel": "Edelstahl",
+      "duplex_ss": "Duplex-Edelstahl",
+      "super_duplex_ss": "Super-Duplex-Edelstahl"
+    },
+    "ru": {
+      "piping_fabrication_erection": "Производство и монтаж трубопроводов",
+      "quality_control": "Контроль качества",
+      "supervision_drilling_borehole": "Надзор за буровыми скважинами",
+      "ndt": "Неразрушающий контроль (НД)",
+      "qa_qc": "Обеспечение качества/Контроль качества",
+      "smaw_gtaw_saw": "SMAW, GTAW, SAW",
+      "low_temperature_carbon_steel": "Углеродистая сталь низкотемпературная",
+      "stainless_steel": "Нержавеющая сталь",
+      "duplex_ss": "Нержавеющая сталь Duplex",
+      "super_duplex_ss": "Нержавеющая сталь Super Duplex"
+    },
+    "ar": {
+      "piping_fabrication_erection": "تصنيع وتركيب الأنابيب",
+      "quality_control": "مراقبة الجودة",
+      "supervision_drilling_borehole": "الإشراف على حفر الآبار",
+      "ndt": "الفحص غير الإتلافي",
+      "qa_qc": "ضمان الجودة/مراقبة الجودة",
+      "smaw_gtaw_saw": "SMAW و GTAW و SAW",
+      "low_temperature_carbon_steel": "الفولاذ الكربوني منخفض الحرارة",
+      "stainless_steel": "الفولاذ المقاوم للصدأ",
+      "duplex_ss": "الفولاذ المقاوم للصدأ ثنائي",
+      "super_duplex_ss": "الفولاذ المقاوم للصدأ فائق الثنائي"
+    },
+    "zh": {
+      "piping_fabrication_erection": "管道制造和安装",
+      "quality_control": "质量控制",
+      "supervision_drilling_borehole": "钻孔监督",
+      "ndt": "无损检测(NDT)",
+      "qa_qc": "质量保证/质量控制",
+      "smaw_gtaw_saw": "SMAW、GTAW、SAW",
+      "low_temperature_carbon_steel": "低温碳钢",
+      "stainless_steel": "不锈钢",
+      "duplex_ss": "双相不锈钢",
+      "super_duplex_ss": "超双相不锈钢"
+    },
+    "it": {
+      "piping_fabrication_erection": "Fabbricazione e installazione di tubazioni",
+      "quality_control": "Controllo della qualità",
+      "supervision_drilling_borehole": "Supervisione dei fori di perforazione",
+      "ndt": "Controllo non distruttivo (NDT)",
+      "qa_qc": "Assicurazione della qualità/Controllo della qualità",
+      "smaw_gtaw_saw": "SMAW, GTAW, SAW",
+      "low_temperature_carbon_steel": "Acciaio al carbonio a bassa temperatura",
+      "stainless_steel": "Acciaio inossidabile",
+      "duplex_ss": "Acciaio inox duplex",
+      "super_duplex_ss": "Acciaio inox super duplex"
+    }
+  }
+}

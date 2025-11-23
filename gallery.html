@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="pageTitle">Aziz Yucetepe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-controls">
+        <div class="language-switcher">
+            <button id="language-btn" class="dropdown-toggle" aria-expanded="false" aria-label="Select language"><i class="fas fa-globe"></i> EN</button>
+            <div id="language-dropdown" class="dropdown-menu" hidden>
+                <button onclick="setLanguage('en')" data-lang="en" class="dropdown-item active">English</button>
+                <button onclick="setLanguage('tr')" data-lang="tr" class="dropdown-item">Türkçe</button>
+                <button onclick="setLanguage('ar')" data-lang="ar" class="dropdown-item">العربية</button>
+                <button onclick="setLanguage('zh')" data-lang="zh" class="dropdown-item">中文</button>
+                <button onclick="setLanguage('it')" data-lang="it" class="dropdown-item">Italiano</button>
+                <button onclick="setLanguage('de')" data-lang="de" class="dropdown-item">Deutsch</button>
+                <button onclick="setLanguage('ru')" data-lang="ru" class="dropdown-item">Русский</button>
+            </div>
+        </div>
+        <button id="theme-toggle" title="Toggle dark/light mode" aria-pressed="false">
+            <i class="fas fa-sun"></i><i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="cv-container">
+        <!-- SOL SÜTUN (TÜM SAYFALARDA AYNI) -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="images/aziz.jpg" alt="Aziz Yucetepe" class="profile-pic">
+                <h1>Aziz Yucetepe</h1>
+                <h2 data-lang="jobTitle">Welding Supervisor, Welding Inspector</h2>
+            </div>
+            <div class="contact-section">
+                <h3 data-lang="contactTitle">İLETİŞİM</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:aziz.yucetepe@gmail.com">aziz.yucetepe@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i><a href="tel:+994502074033">+994 50 207 40 33</a></li>
+                    <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/994502074033">+994 50 207 40 33</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i><span>Izmir, TR / Baku, AZ</span></li>
+                </ul>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-lang="navHome">Hakkımda</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="navExperience">İş Deneyimi</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-lang="navGallery">Sertifikalar</a></li>
+                    <li><a href="references.html" class="nav-link" data-lang="navReferences">Referanslar</a></li>
+                </ul>
+            </nav>
+            <div class="detailed-skills-section">
+                 <h3 data-lang="skillsTitle">SKILLS</h3>
+                 <div id="skills-list"></div>
+            </div>
+            <a href="Aziz Yucetepe.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> <span data-lang="downloadCV">CV'yi İndir</span>
+            </a>
+        </aside>
+
+        <!-- SAĞ SÜTUN (SAYFAYA ÖZEL İÇERİK) -->
+        <main class="main-content">
+            <section id="gallery">
+                <h3 data-lang="galleryTitle">MY CERTIFICATES</h3>
+                <div class="certificates-grid">
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/idcard.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/idcard.jpg" alt="3.1 ID CARD"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/welding.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/welding.jpg" alt="3.1 WELDING INSPECTOR"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/coating.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/coating.jpg" alt="3.1 COATING INSPECTOR"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/RT.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/RT.jpg" alt="RT CERTIFICATE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/vision.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/vision.jpg" alt="VISION REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/shahdeniz2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/shahdeniz2.jpg" alt="TEKFEN REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/bos.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/bos.jpg" alt="TEKFEN REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/wcpdq.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/wcpdq.jpg" alt="TEKFEN REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/gulf.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/gulf.jpg" alt="GULF REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/ces.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/ces.jpg" alt="CES REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/entrepose.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/entrepose.jpg" alt="ENTREPOSE REFERENCE"></a>
+                    <a href="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/meb.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/images/meb.jpg" alt="MEB CERTIFICATE"></a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Aziz Yucetepe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/aziz.jpg" type="image/jpeg">
+    <script src="translations.js"></script>
+
+    <!-- SOSYAL MEDYA PAYLAŞIM AYARLARI -->
+<meta property="og:title" content="Aziz Yucetepe | Welding Supervisor & Inspector">
+<meta property="og:description" content="20+ years of experience in Oil & Gas, Power Plant, and Petrochemical industries. Available for Welding Supervisor & QA/QC roles.">
+<meta property="og:image" content="https://ayucetepe.github.io/images/aziz.jpg"> <!-- GitHub adresini buraya yazacaksın -->
+<meta property="og:url" content="https://ayucetepe.github.io">
+<meta property="og:type" content="website">
+</head>
+<body>
+  <header id="global-header"></header>
+
+    <div class="container">
+        <main>
+            <!-- PROFİL KARTI -->
+            <div class="profile-header-card card">
+                <!-- Kapak Fotoğrafı -->
+                <div class="cover-photo" style="background-image: url('images/welding.jpg'); /* Buraya güzel bir kaynak resmi koyabilirsin */"></div>
+
+                <div class="profile-content">
+                    <!-- Profil Resmi -->
+                    <div class="profile-avatar-large">
+                        <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+
+                    <div class="profile-text">
+                        <h1>Aziz Yucetepe</h1>
+                        <h2 style="color:var(--primary-color); font-weight:500;">Welding Supervisor & Inspector</h2>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan / Izmir, Turkey</p>
+
+                        <div class="profile-actions">
+                            <!-- Contact Butonu: Tıklayınca aşağıya (#contact-section) gider -->
+                            <a href="#contact-section" class="btn btn-primary">Contact Me</a>
+                            <a href="Aziz Yucetepe.pdf" download class="btn" style="border:1px solid var(--primary-color); color:var(--primary-color)">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAKKINDA -->
+            <div class="card" style="margin-top: 20px;">
+                <h3 data-translate="about_title">About Me</h3>
+                <p style="line-height: 1.8;" data-translate="about_text">
+                    <!-- Javascript burayı dolduracak -->
+                </p>
+            </div>
+
+            <!-- İSTATİSTİKLER -->
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div class="card" style="text-align: center;">
+                    <h2 style="color:var(--primary-color); font-size: 2.5rem;">30+</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h2 style="color:var(--primary-color); font-size: 2.5rem;">+21</h2>
+                    <p>Major Projects</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h2 style="color:var(--primary-color); font-size: 2.5rem;">+5</h2>
+                    <p>Countries Worked</p>
+                </div>
+            </div>
+
+            <!-- İLETİŞİM BÖLÜMÜ (Entegre Edildi) -->
+            <div id="contact-section" class="contact-page-wrapper card" style="margin-top: 30px;">
+                <!-- Sol Taraf: İletişim Formu -->
+                <div class="contact-form-section">
+                    <h3 data-translate="form_header">Send me a message</h3>
+                    <form action="https://formspree.io/f/mdkbjozv" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-translate="form_name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="form_email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="form_message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-translate="form_button">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Sağ Taraf: İletişim Bilgileri -->
+                <div class="contact-info-section">
+                    <h3 data-translate="info_header">Contact Information</h3>
+                    <p data-translate="info_text" style="margin-bottom: 20px;">Feel free to reach out...</p>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope fa-lg"></i>
+                        <a href="mailto:aziz.yucetepe@gmail.com">aziz.yucetepe@gmail.com</a>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone fa-lg"></i>
+                        <span>+994 50 207 40 33</span>
+                    </div>
+
+                     <div class="info-item">
+                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                        <span>Izmir, TR / Baku, AZ</span>
+                    </div>
+
+                    <a href="https://wa.me/994502074033" target="_blank" class="btn btn-whatsapp-small">
+                        <i class="fab fa-whatsapp"></i> <span data-translate="info_whatsapp">Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aziz Yucetepe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
