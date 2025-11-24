@@ -1113,8 +1113,54 @@ nav .desktop-nav li a.active i {
 }
 
 .profile-arrow {
-    font-size: 0.8rem;
-    color: var(--secondary-text-color);
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+
+    /* Daire Boyutu: 18px (İdeal denge) */
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    background-color: #E4E6EB; /* Gri Zemin */
+    color: #050505;            /* Siyah İkon */
+
+    /* Çerçeve (Kesik efekti) */
+    border: 2px solid var(--card-background);
+
+    /* MERKEZLEME */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.profile-arrow i {
+    /* İKON BOYUTU: 9px */
+    font-size: 9px !important;
+
+    /* Sıfırlama */
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    border: none !important;
+
+    /* Tam ortaya gelmesi için milimetrik ayar */
+    transform: translateY(0.5px);
+}
+
+/* Dark Mode Uyumu */
+[data-theme="dark"] .profile-arrow {
+    background-color: #3A3B3C;
+    color: #E4E6EB;
+    border-color: var(--card-background);
+}
+
+/* Resim parlaklık efekti */
+.profile-trigger:hover .header-profile-pic {
+    filter: brightness(0.95);
 }
 
 /* --- MOBİL UYGULAMA GÖRÜNÜMÜ (APP-LIKE UI) --- */
