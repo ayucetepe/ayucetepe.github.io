@@ -1,78 +1,95 @@
 const translations = {
+  // =================================================================
+  // 1. ENGLISH (ORİJİNAL)
+  // =================================================================
   "en": {
     "nav_about": "About Me",
     "nav_experience": "Work Experience",
     "nav_certificates": "Certificates",
     "nav_contact": "Contact",
-
+    "btn_view_profile": "View Profile",
+    "btn_download_cv": "Download CV",
+    "btn_send_message": "Send Message",
+    "btn_view_gallery": "View Project Gallery",
+    "click_to_view": "Click to view certificate",
     "about_title": "About Me",
-    // SENİN GÖNDERDİĞİN METİN (DÜZELTİLMİŞ)
-    "about_text": "<strong>Petroleum & Gas Industry - Power Industry - Petrochemical Industry </strong> <br> Significant experience gained in the welding and fabrication industry. Working Offshore / Onshore Power stations, petrochemical plants, oil refineries at fabrication yards on green field sites and live Installations. <br><br><strong>Welding Opr. / Welding Inspector / Supervisor / Trainer (32 Years)</strong>, taking full responsibility for Production welds made on sites. Deployment of welding crews and compliance of approved welding Procedures and protocols. Oversee and ensure the quality of workmanship as per client specifications. Calling up intermediate and final N.D.E, carrying out welder qualification tests using approved welding procedures in adherence to client specifications in conjunction with <strong>ASME IX / B31.3, EN 287-288, EEMUA 158, API 1104, BS 4515</strong>. Advanced safety Audits, STOP cards, and Risk Assessment.<br><br><strong>Multi Coded Welder (15 Years)</strong> with good hands-on experience on the following processes: SMAW, GTAW, SAW, GS-FCAW and fully automated techniques, using CSR and wire fed application on Polysoude and Dimetrics orbital welding heads.",
-
     "skills_title": "Technical Skills",
-    // SENİN GÖNDERDİĞİN TEKNİK BECERİLER (HTML LİSTE FORMATINDA)
-    "skills_long_text": `
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
-            <li>Experience gained in power plants, refineries, oil & gas process plants, on-shore gas & oil pipelines, process piping, low pressure & storage tanks, and heavy steel structures.</li>
-            <li>Deep experience in fabrication and erection of piping, boilers, pressure vessels, furnaces, tanks, heaters, and structural steels.</li>
-            <li>Expert skills in preparation of spooling, weld maps, pressure test packs, piping & weld log books, and fabrication/erection progress follow-up records.</li>
-            <li>Sound experience with International codes and standards: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API.</strong></li>
-            <li>Exceptional knowledge of multi-national companies' specifications like <strong>BP, Exxon Mobil, Fluor, Technip, TR, Mitsubishi.</strong></li>
-            <li>Experience in quality and welding inspection, NDT testing (VT, PT), and welder's qualification.</li>
-            <li>Closely worked with SMAW, GTAW, GMAW / GS-FCAW, SAW, and fusion cutting processes with their components and consumables.</li>
-            <li>Experience in welding and quality inspection of Carbon Steels, Low Temperature CS, SS, Duplex and Super Duplex Stainless steels, Alloy steels, and their welding consumables.</li>
-            <li>Upper Intermediate verbal & written communication skills in English, Native in Turkish & Fluent in Azerbaijani.</li>
-        </ul>
-    `,
-
     "experience_title": "Work Experience",
-    "certificates_title": "Certificates",
+    "certificates_title": "Certificates & References",
     "contact_title": "Get In Touch",
-
+    "gallery_title": "My Certificates",
     "form_header": "Send me a message",
     "form_name": "Full Name",
     "form_email": "Email Address",
     "form_message": "Your Message",
     "form_button": "Send Message",
     "info_header": "Contact Information",
-    "info_text": "Feel free to reach out regarding welding supervision, inspection, or training opportunities.",
+    "info_text": "Feel free to reach out to me regarding welding supervision, inspection, or training opportunities.",
     "info_whatsapp": "Chat on WhatsApp",
+    "job_title_main": "Welding Supervisor & Inspector",
 
-    // İŞ DENEYİMLERİ (Burayı senin önceki dosyadaki gibi dolduruyoruz)
+    "about_text": "<strong>Petroleum & Gas Industry - Power Industry - Petrochemical Industry </strong> <br> Significant experience gained in the welding and fabrication industry. Working Offshore / Onshore Power stations, petrochemical plants, oil refineries at fabrication yards on green field sites and live Installations. <br><br><strong>Welding Opr. / Welding Inspector / Supervisor / Trainer (32 Years)</strong>, taking full responsibility for Production welds made on sites. Deployment of welding crews and compliance of approved welding Procedures and protocols. Oversee and ensure the quality of workmanship as per client specifications. Calling up intermediate and final N.D.E, carrying out welder qualification tests using approved welding procedures in adherence to client specifications in conjunction with <strong>ASME IX / B31.3, EN 287-288, EEMUA 158, API 1104, BS 4515</strong>. Advanced safety Audits, STOP cards, and Risk Assessment.<br><br><strong>Multi Coded Welder (15 Years)</strong> with good hands-on experience on the following processes: SMAW, GTAW, SAW, GS-FCAW and fully automated techniques, using CSR and wire fed application on Polysoude and Dimetrics orbital welding heads.",
+    "skills_long_text": "<ul style='list-style-type: disc; padding-left: 20px; line-height: 1.8;'><li>Experience gained in power plants, refineries, oil & gas process plants, on-shore gas & oil pipelines, process piping, low pressure & storage tanks, and heavy steel structures.</li><li>Deep experience in fabrication and erection of piping, boilers, pressure vessels, furnaces, tanks, heaters, and structural steels.</li><li>Expert skills in preparation of spooling, weld maps, pressure test packs, piping & weld log books, and fabrication/erection progress follow-up records.</li><li>Sound experience with International codes and standards: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API.</strong></li><li>Exceptional knowledge of multi-national companies' specifications like <strong>BP, Exxon Mobil, Fluor, Technip, TR, Mitsubishi.</strong></li><li>Experience in quality and welding inspection, NDT testing (VT, PT), and welder's qualification.</li><li>Closely worked with SMAW, GTAW, GMAW / GS-FCAW, SAW, and fusion cutting processes with their components and consumables.</li><li>Experience in welding and quality inspection of Carbon Steels, Low Temperature CS, SS, Duplex and Super Duplex Stainless steels, Alloy steels, and their welding consumables.</li><li>Upper Intermediate verbal & written communication skills in English, Native in Turkish & Fluent in Azerbaijani.</li></ul>",
+
     "jobs": {
-        "1": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding...", "project": "Basrah Refinery Upgrading Project (GC2)" },
-        "2": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding...", "project": "HAOR Modernization Project" }
-        // Diğer işler...
+        "1": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding. Organizing material and personnel for all welding activities (piping and plates). Coordination with construction management and QC. Supervision of all welders (SMAW, GTAW)." },
+        "2": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding in HAOR Modernization. Coordination with construction management and QC. Supervision of all welders (SMAW, GTAW). Reporting of QA/QC and NDT." },
+        "3": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding under Tecnicas Reunidas. Responsible for welding activities. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "4": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding at MNPZ HydroCracker Unit. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "5": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding at Azerikimya EP300. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "6": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding at Socar Polymer (PP/HDPE). Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "7": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding at Shah Deniz Stage 2 (Offshore Facilities). Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "8": { "title": "Welding Foreman", "desc": "Supervision on Piping Fabrication & Erection welding at Baku Olympic Stadium. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "9": { "title": "Welding Foreman", "desc": "Supervision on Piping Fabrication & Erection welding at COP-WC-PDQ Topsides. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "10": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding for OGB Water Pipeline Drilling Borehole. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "11": { "title": "Welding Supervisor", "desc": "Supervision on Piping Fabrication & Erection welding for OGB Water Pipeline. Organizing material and personnel. Coordination with QC. Supervision of welders (SMAW, GTAW)." },
+        "12": { "title": "Welding Supervisor", "desc": "Supervision on erection and welding of a 21,000 m3 capacity Produced Water Tank at Sangachal Terminal. Responsible for welding activities. Coordination with QC. Supervision of welders (SMAW, SAW, GTAW)." },
+        "13": { "title": "Welder", "desc": "Working on Fabrication of TPG 500 off-shore platforms. Welding on (GTAW / FCAW-GS / SMAW) processes. Materials: Carbon steel, LTCS, Stainless Steel, Cu-Ni, Duplex SS, Super Duplex SS with Corrosion Test Accepted." },
+        "14": { "title": "Welder", "desc": "Working on Fabrication of TPG 500 off-shore platforms. Welding on (GTAW / FCAW-GS / SMAW). Materials: Carbon steel, LTCS, SS, Cu-Ni, Duplex SS, Super Duplex SS with G48 Corrosion Test Accepted." },
+        "15": { "title": "Welder", "desc": "Working on Fabrication and pipeline of AGT pipeline. 1/2 inch and over welding (GTAW / SMAW) Up-Hill and Down-Hill. Materials: Carbon steel, Low Temperature Carbon Steel, Stainless steel." },
+        "16": { "title": "Welder", "desc": "Working on Fabrication and at site of Expansion Terminal (Sangachal). 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, Stainless Steel, Duplex SS, Super Duplex SS." },
+        "17": { "title": "Welder", "desc": "Working on Fabrication and at site of Severnaya Power Plant. 1/2 Inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, Stainless Steel, P91, P22, P11." },
+        "18": { "title": "Welder", "desc": "Working on Fabrication and at site of Tupras Refinery (Isomerization). 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, Stainless Steel." },
+        "19": { "title": "Welder", "desc": "Working on Fabrication and at site of Tupras (CCR & Isomerization). 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, SS, P91, P22, P11." },
+        "20": { "title": "Welder", "desc": "Working on Fabrication and at site of Fergana Oil Refinery. 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, SS, P91, P22, P11." },
+        "21": { "title": "Welder", "desc": "Working on Fabrication and at site of Petkim (Ethylene Polyethylene). 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, SS, P91, P22, P11." },
+        "22": { "title": "Welder", "desc": "Working on Fabrication and at site of Tupras (CCR & ISO Unit). 1/2 inch and over welding (GTAW / SMAW). Materials: Carbon steel, LTCS, SS, P91, P22, P11." }
+    },
+
+    "certs": {
+        "c1": { "title": "QUALIFICATION CERTIFICATE", "desc": "Welding Inspection ID Card (3.1 Welding Inspector)" },
+        "c2": { "title": "QUALIFICATION CERTIFICATE", "desc": "Welding Inspection Certificate (3.1 Welding Inspector)" },
+        "c3": { "title": "QUALIFICATION CERTIFICATE", "desc": "Coating Inspection Certificate" },
+        "c4": { "title": "QUALIFICATION CERTIFICATE", "desc": "Radiographic Testing (RT) Level II Certificate" },
+        "c5": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from USTAY Construction (2017-2020)" },
+        "c6": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from ATA Consortium (Shah Deniz Stage 2)" },
+        "c7": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from Tekfen Construction (Olympic Stadium)" },
+        "c8": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from ATA Consortium (COP-WC-PDQ)" },
+        "c9": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from CES Consulting (2010-2011)" },
+        "c10": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from CES Consulting (2008-2010)" },
+        "c11": { "title": "COMPANY REFERENCE", "desc": "Reference Letter from Entrepose Contracting" }
     }
   },
 
+  // =================================================================
+  // 2. TÜRKÇE
+  // =================================================================
   "tr": {
     "nav_about": "Hakkımda",
     "nav_experience": "İş Deneyimi",
     "nav_certificates": "Sertifikalar",
     "nav_contact": "İletişim",
-
+    "btn_view_profile": "Profili Gör",
+    "btn_download_cv": "CV İndir",
+    "btn_send_message": "Mesaj Gönder",
+    "btn_view_gallery": "Proje Galerisi",
+    "click_to_view": "Sertifikayı görüntülemek için tıklayın",
     "about_title": "Hakkımda",
-    "about_text": "Petrol & Gaz Endüstrisi - Enerji Endüstrisi - Petrokimya Endüstrisi. Kaynak ve imalat endüstrisinde kazanılmış önemli deneyim. Açık deniz / Kara Enerji santralleri, petrokimya tesisleri, petrol rafinerilerinde, yeni sahalarda ve canlı kurulumlarda çalışma.<br><br><strong>Kaynak Operatörü / Kaynak Müfettişi / Süpervizör / Eğitmen (32 Yıl)</strong> olarak, sahada yapılan üretim kaynaklarının tam sorumluluğunu üstlenme. Kaynak ekiplerinin konuşlandırılması ve onaylanmış kaynak prosedürlerine ve protokollerine uyum. Müşteri şartnamelerine göre işçilik kalitesini denetleme ve sağlama. <strong>ASME IX / B31.3, EN 287-288, EEMUA 158, API 1104, BS 4515</strong> ile bağlantılı olarak onaylanmış kaynak prosedürlerini kullanarak kaynakçı yeterlilik testlerini yürütme, ara ve son N.D.E çağırma. İleri güvenlik Denetimleri, STOP kartları ve Risk Değerlendirmesi.<br><br><strong>Çok Kodlu Kaynakçı (15 Yıl)</strong> olarak şu süreçlerde iyi el becerisi ve deneyim: SMAW, GTAW, SAW, GS-FCAW ve Polysoude ve Dimetrics orbital kaynak başlıklarında CSR ve tel beslemeli uygulama kullanan tam otomatik teknikler.",
-
     "skills_title": "Teknik Beceriler",
-    "skills_long_text": `
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
-            <li>Enerji santralleri, rafineriler, petrol ve gaz işleme tesisleri, kara gaz ve petrol boru hatları, proses borulaması, düşük basınç ve depolama tankları ve ağır çelik yapılarda kazanılan deneyim.</li>
-            <li>Borulama, kazanlar, basınçlı kaplar, fırınlar, tanklar, ısıtıcılar ve yapısal çeliklerin imalatı ve montajında derin deneyim.</li>
-            <li>Spooling hazırlığı, kaynak haritası (weld map), basınç testi paketleri, borulama ve kaynak kayıt defterleri ve imalat ve montaj ilerleme takip kayıtlarında uzman beceriler.</li>
-            <li>Uluslararası kodlar ve standartlarla sağlam deneyim: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API.</strong></li>
-            <li><strong>BP, Exxon Mobil, Fluor, Technip, TR, Mitsubishi</strong> gibi çok uluslu şirketlerin şartnameleri hakkında olağanüstü bilgi.</li>
-            <li>Kalite ve kaynak denetimi, NDT testleri (VT, PT) ve kaynakçı kalifikasyonunda deneyim.</li>
-            <li>SMAW, GTAW, GMAW / GS-FCAW, SAW ve bileşenleri ve sarf malzemeleri ile füzyon kesme işlemleriyle yakından çalışma.</li>
-            <li>Karbon Çelikleri, Düşük Sıcaklık CS, SS, Duplex ve Super Duplex Paslanmaz çelikler, Alaşımlı çelikler ve bunların kaynak sarf malzemelerinin kaynağı ve kalite denetiminde deneyim.</li>
-            <li>İngilizcede Üst Orta seviye sözlü ve yazılı iletişim becerileri, Türkçe (Anadil) ve Azerice (Akıcı).</li>
-        </ul>
-    `,
-
     "experience_title": "İş Deneyimi",
-    "certificates_title": "Sertifikalar",
+    "certificates_title": "Sertifikalar & Referanslar",
     "contact_title": "İletişim",
+    "gallery_title": "Sertifikalarım",
     "form_header": "Bana Mesaj Gönder",
     "form_name": "Adınız Soyadınız",
     "form_email": "E-posta Adresiniz",
@@ -81,60 +98,192 @@ const translations = {
     "info_header": "İletişim Bilgileri",
     "info_text": "Kaynak denetimi, kalite kontrol veya eğitim fırsatları için her zaman ulaşabilirsiniz.",
     "info_whatsapp": "WhatsApp'tan Yaz",
+    "job_title_main": "Kaynak Süpervizörü & Enspektör",
+
+    "about_text": "<strong>Petrol & Gaz Endüstrisi - Enerji Endüstrisi - Petrokimya Endüstrisi</strong><br>Kaynak ve imalat endüstrisinde kazanılmış önemli deneyim. Açık deniz / Kara Enerji santralleri, petrokimya tesisleri, petrol rafinerilerinde, yeni sahalarda ve canlı kurulumlarda çalışma.<br><br><strong>Kaynak Operatörü / Kaynak Müfettişi / Süpervizör / Eğitmen (32 Yıl)</strong> olarak, sahada yapılan üretim kaynaklarının tam sorumluluğunu üstlenme. Kaynak ekiplerinin konuşlandırılması ve onaylanmış kaynak prosedürlerine uyum. Müşteri şartnamelerine göre işçilik kalitesini denetleme ve sağlama. <strong>ASME IX / B31.3, EN 287-288, EEMUA 158, API 1104</strong> ile bağlantılı olarak onaylanmış kaynak prosedürlerini kullanarak kaynakçı yeterlilik testlerini yürütme. İleri güvenlik Denetimleri ve Risk Değerlendirmesi.<br><br><strong>Çok Kodlu Kaynakçı (15 Yıl)</strong> olarak şu süreçlerde iyi el becerisi ve deneyim: SMAW, GTAW, SAW, GS-FCAW ve orbital kaynak.",
+    "skills_long_text": "<ul style='list-style-type: disc; padding-left: 20px; line-height: 1.8;'><li>Enerji santralleri, rafineriler, petrol ve gaz işleme tesisleri, kara gaz ve petrol boru hatlarında deneyim.</li><li>Borulama, kazanlar, basınçlı kaplar, fırınlar, tanklar ve yapısal çeliklerin imalatı ve montajında derin deneyim.</li><li>Spooling hazırlığı, kaynak haritası (weld map), basınç testi paketleri ve kaynak kayıt defterlerinde uzman beceriler.</li><li>Uluslararası kodlar ve standartlarla sağlam deneyim: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API.</strong></li><li><strong>BP, Exxon Mobil, Fluor, Technip, TR, Mitsubishi</strong> gibi şirketlerin şartnameleri hakkında bilgi.</li><li>Kalite ve kaynak denetimi, NDT testleri (VT, PT) ve kaynakçı kalifikasyonunda deneyim.</li><li>Karbon Çelikleri, Düşük Sıcaklık CS, SS, Duplex ve Super Duplex Paslanmaz çelikler, Alaşımlı çelikler konusunda deneyim.</li></ul>",
 
     "jobs": {
-        "1": { "title": "Kaynak Süpervizörü", "desc": "Boru İmalatı ve Montaj kaynağının denetimi...", "project": "Basra Rafinerisi İyileştirme Projesi" },
-        "2": { "title": "Kaynak Süpervizörü", "desc": "Boru İmalatı ve Montaj kaynağının denetimi...", "project": "HAOR Modernizasyon Projesi" }
+        "1": { "title": "Kaynak Süpervizörü", "desc": "Boru İmalatı ve Montaj kaynağının denetimi. Boru ve plaka kaynak faaliyetleri için malzeme ve personelin organizasyonu. İnşaat yönetimi ile koordinasyon ve Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "2": { "title": "Kaynak Süpervizörü", "desc": "HAOR Modernizasyon projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personelin organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi. QA/QC ve NDT raporlaması." },
+        "3": { "title": "Kaynak Süpervizörü", "desc": "Tecnicas Reunidas bünyesinde Boru İmalatı ve Montaj kaynağının denetimi. Kaynak faaliyetlerinin organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "4": { "title": "Kaynak Süpervizörü", "desc": "MNPZ HydroCracker ünitesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "5": { "title": "Kaynak Süpervizörü", "desc": "Azerikimya EP300 projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "6": { "title": "Kaynak Süpervizörü", "desc": "Socar Polymer (PP/HDPE) tesisinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "7": { "title": "Kaynak Süpervizörü", "desc": "Shah Deniz Faz 2 (Açık Deniz Tesisleri) projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "8": { "title": "Kaynak Formeni", "desc": "Bakü Olimpiyat Stadyumu projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "9": { "title": "Kaynak Formeni", "desc": "COP-WC-PDQ Topsides imalatında Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "10": { "title": "Kaynak Süpervizörü", "desc": "OGB Su Boru Hattı Sondaj Kuyusu projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "11": { "title": "Kaynak Süpervizörü", "desc": "OGB Su Boru Hattı projesinde Boru İmalatı ve Montaj kaynağının denetimi. Malzeme ve personel organizasyonu. Kalite Kontrol ile işbirliği. Tüm kaynakçıların (SMAW, GTAW) denetimi." },
+        "12": { "title": "Kaynak Süpervizörü", "desc": "Sangachal Terminali'nde 21.000 m3 kapasiteli Üretim Suyu Tankının montaj ve kaynağının denetimi. Kaynak faaliyetlerinden sorumlu. Kalite Kontrol ile işbirliği. Kaynakçıların (SMAW, SAW, GTAW) denetimi." },
+        "13": { "title": "Kaynakçı", "desc": "TPG 500 açık deniz platformlarının imalatı. (GTAW / FCAW-GS / SMAW) kaynak işlemleri. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik, Cu-Ni, Dubleks, Süper Dubleks (Korozyon Testi Onaylı)." },
+        "14": { "title": "Kaynakçı", "desc": "TPG 500 açık deniz platformlarının imalatı. (GTAW / FCAW-GS / SMAW) kaynak işlemleri. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik, Cu-Ni, Dubleks, Süper Dubleks (G48 Korozyon Testi Onaylı)." },
+        "15": { "title": "Kaynakçı", "desc": "AGT boru hattının imalatı ve hattında çalışma. 1/2 inç ve üzeri (GTAW / SMAW) Yukarı ve Aşağı kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik." },
+        "16": { "title": "Kaynakçı", "desc": "Sangachal Genişleme Terminali imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik, Dubleks, Süper Dubleks." },
+        "17": { "title": "Kaynakçı", "desc": "Severnaya Enerji Santrali imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik, P91, P22, P11." },
+        "18": { "title": "Kaynakçı", "desc": "Tüpraş Rafinerisi (İzomerizasyon) imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, Paslanmaz Çelik." },
+        "19": { "title": "Kaynakçı", "desc": "Tüpraş (CCR & İzomerizasyon) imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, SS, P91, P22, P11." },
+        "20": { "title": "Kaynakçı", "desc": "Fergana Petrol Rafinerisi imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, SS, P91, P22, P11." },
+        "21": { "title": "Kaynakçı", "desc": "Petkim (Etilen Polietilen) imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, SS, P91, P22, P11." },
+        "22": { "title": "Kaynakçı", "desc": "Tüpraş (CCR & ISO Ünitesi) imalatı ve sahası. 1/2 inç ve üzeri (GTAW / SMAW) kaynak. Malzemeler: Karbon Çelik, Düşük Sıcaklık Düşük Sıcaklık Karbon Çeliği, SS, P91, P22, P11." }
+    },
+
+    "certs": {
+        "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Kaynak Enspektörlüğü Kimlik Kartı (3.1 Welding Inspector)" },
+        "c2": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Kaynak Enspektörlüğü Sertifikası (3.1 Welding Inspector)" },
+        "c3": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Kaplama (Coating) Enspektörlüğü Sertifikası" },
+        "c4": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Radyografik Test (RT) Seviye II Sertifikası" },
+        "c5": { "title": "ŞİRKET REFERANSI", "desc": "USTAY İnşaat Referans Mektubu (2017-2020)" },
+        "c6": { "title": "ŞİRKET REFERANSI", "desc": "ATA Konsorsiyumu Referans Mektubu (Shah Deniz Faz 2)" },
+        "c7": { "title": "ŞİRKET REFERANSI", "desc": "Tekfen İnşaat Referans Mektubu (Olimpiyat Stadyumu)" },
+        "c8": { "title": "ŞİRKET REFERANSI", "desc": "ATA Konsorsiyumu Referans Mektubu (COP-WC-PDQ)" },
+        "c9": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting Referans Mektubu (2010-2011)" },
+        "c10": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting Referans Mektubu (2008-2010)" },
+        "c11": { "title": "ŞİRKET REFERANSI", "desc": "Entrepose Contracting Referans Mektubu" }
     }
   },
 
+  // =================================================================
+  // 3. РУССКИЙ (RUSSIAN)
+  // =================================================================
   "ru": {
-      "nav_about": "Обо мне",
-      "nav_experience": "Опыт работы",
-      "nav_certificates": "Сертификаты",
-      "nav_contact": "Контакт",
-      "about_title": "Обо мне",
-      "about_text": "Нефтегазовая промышленность - Энергетика - Нефтехимия. Значительный опыт работы в сварочном и производственном секторах. Работа на морских / береговых электростанциях, нефтехимических заводах, нефтеперерабатывающих заводах...<br><br><strong>Оператор сварки / Инспектор по сварке / Супервайзер / Тренер (32 года)</strong>, полная ответственность за производственные сварные швы на объектах. Внедрение сварочных бригад и соблюдение утвержденных сварочных процедур и протоколов.",
-      "skills_title": "Технические Навыки",
-      "skills_long_text": `<ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;"><li>Опыт работы на электростанциях, НПЗ, объектах переработки нефти и газа...</li><li>Глубокий опыт в изготовлении и монтаже трубопроводов, котлов, сосудов под давлением...</li><li>Экспертные навыки в подготовке карт сварки, пакетов испытаний под давлением...</li><li>Знание международных кодов: <strong>ISO, DIN, EN, ASME, ASTM, API.</strong></li></ul>`,
-      "experience_title": "Опыт работы",
-      "certificates_title": "Сертификаты",
-      "contact_title": "Связаться",
-      "form_header": "Отправить сообщение",
-      "form_name": "Полное имя",
-      "form_email": "Электронная почта",
-      "form_message": "Ваше сообщение",
-      "form_button": "Отправить",
-      "info_header": "Контактная информация",
-      "info_text": "Свяжитесь со мной...",
-      "info_whatsapp": "Чат в WhatsApp",
-      "jobs": {
-        "1": { "title": "Руководитель сварочных работ", "desc": "Надзор за сваркой трубопроводов...", "project": "Проект модернизации НПЗ Басра" }
-      }
+    "nav_about": "Обо мне",
+    "nav_experience": "Опыт работы",
+    "nav_certificates": "Сертификаты",
+    "nav_contact": "Контакт",
+    "btn_view_profile": "Посмотреть профиль",
+    "btn_download_cv": "Скачать резюме",
+    "btn_send_message": "Отправить",
+    "btn_view_gallery": "Галерея проекта",
+    "click_to_view": "Нажмите для просмотра сертификата",
+    "about_title": "Обо мне",
+    "skills_title": "Технические навыки",
+    "experience_title": "Опыт работы",
+    "certificates_title": "Сертификаты и рекомендации",
+    "contact_title": "Связаться",
+    "gallery_title": "Мои сертификаты",
+    "form_header": "Отправить сообщение",
+    "form_name": "Полное имя",
+    "form_email": "Электронная почта",
+    "form_message": "Ваше сообщение",
+    "form_button": "Отправить",
+    "info_header": "Контактная информация",
+    "info_text": "Свяжитесь со мной по вопросам надзора за сваркой, инспекции или обучения.",
+    "info_whatsapp": "Чат в WhatsApp",
+    "job_title_main": "Супервайзер по сварке и инспектор",
+
+    "about_text": "<strong>Нефтегазовая промышленность - Энергетика - Нефтехимия</strong><br>Значительный опыт работы в сварочной и производственной промышленности. Работа на морских / береговых электростанциях, нефтехимических заводах, нефтеперерабатывающих заводах.<br><br><strong>Сварочный оператор / Инспектор / Супервайзер / Тренер (32 года)</strong>. Полная ответственность за производственные сварные швы на объектах. Внедрение сварочных бригад и соблюдение утвержденных процедур сварки. Контроль качества работ в соответствии со спецификациями клиента. <strong>ASME IX / B31.3, EN 287-288, API 1104</strong>.<br><br><strong>Сварщик-универсал (15 лет)</strong> с опытом работы в процессах: SMAW, GTAW, SAW, GS-FCAW и орбитальная сварка.",
+    "skills_long_text": "<ul style='list-style-type: disc; padding-left: 20px; line-height: 1.8;'><li>Опыт работы на электростанциях, НПЗ, объектах переработки нефти и газа, наземных трубопроводах.</li><li>Глубокий опыт в изготовлении и монтаже трубопроводов, котлов, сосудов под давлением, резервуаров.</li><li>Экспертные навыки в подготовке карт сварки, пакетов испытаний под давлением и журналов учета сварки.</li><li>Знание международных стандартов: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API.</strong></li><li>Знание спецификаций компаний: <strong>BP, Exxon Mobil, Fluor, Technip, TR, Mitsubishi.</strong></li><li>Опыт в контроле качества, инспекции сварки и NDT (VT, PT).</li><li>Опыт сварки углеродистых сталей, низкотемпературных сталей, нержавеющих сталей, Duplex, Super Duplex и легированных сталей.</li></ul>",
+
+    "jobs": {
+        "1": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов (Basrah Refinery). Организация материалов и персонала. Координация с QC. Надзор за сварщиками (SMAW, GTAW)." },
+        "2": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов на проекте модернизации HAOR. Организация персонала. Координация с QC. Надзор за сварщиками (SMAW, GTAW). Отчетность QA/QC." },
+        "3": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов (Tecnicas Reunidas / HAOR). Ответственность за сварочные работы. Координация с QC. Надзор за сварщиками." },
+        "4": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов на установке гидрокрекинга MNPZ. Организация материалов. Координация с QC. Надзор за сварщиками (SMAW, GTAW)." },
+        "5": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов на проекте Azerikimya EP300. Организация персонала. Координация с QC. Надзор за сварщиками." },
+        "6": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов на заводе Socar Polymer (PP/HDPE). Организация персонала. Координация с QC. Надзор за сварщиками." },
+        "7": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой трубопроводов на проекте Шах-Дениз Этап 2 (Морские сооружения). Организация персонала. Координация с QC. Надзор за сварщиками." },
+        "8": { "title": "Мастер по сварке", "desc": "Надзор за сваркой трубопроводов на проекте Олимпийского стадиона Баку. Организация персонала. Координация с QC. Надзор за сварщиками." },
+        "9": { "title": "Мастер по сварке", "desc": "Надзор за сваркой трубопроводов при изготовлении верхних строений COP-WC-PDQ. Организация персонала. Координация с QC. Надзор за сварщиками." },
+        "10": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой буровых скважин для водопровода OGB. Организация персонала. Координация с QC. Надзор за сварщиками (SMAW, GTAW)." },
+        "11": { "title": "Супервайзер по сварке", "desc": "Надзор за сваркой водопровода OGB. Организация персонала. Координация с QC. Надзор за сварщиками (SMAW, GTAW)." },
+        "12": { "title": "Супервайзер по сварке", "desc": "Надзор за монтажом и сваркой резервуара для пластовой воды (21 000 м3) на терминале Сангачал. Координация с QC. Надзор за сварщиками (SMAW, SAW, GTAW)." },
+        "13": { "title": "Сварщик", "desc": "Изготовление морских платформ TPG 500. Сварка (GTAW / FCAW-GS / SMAW). Материалы: CS, LTCS, SS, Cu-Ni, Duplex, Super Duplex (тест на коррозию пройден)." },
+        "14": { "title": "Сварщик", "desc": "Изготовление морских платформ TPG 500. Сварка (GTAW / FCAW-GS / SMAW). Материалы: CS, LTCS, SS, Cu-Ni, Duplex, Super Duplex (тест G48 пройден)." },
+        "15": { "title": "Сварщик", "desc": "Изготовление трубопровода AGT. Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: Углеродистая сталь, Низкотемпературная сталь, Нержавеющая сталь." },
+        "16": { "title": "Сварщик", "desc": "Изготовление и монтаж на терминале Сангачал. Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, Duplex, Super Duplex." },
+        "17": { "title": "Сварщик", "desc": "Работа на электростанции Северная. Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, P91, P22, P11." },
+        "18": { "title": "Сварщик", "desc": "Работа на НПЗ Тупраш (Изомеризация). Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS." },
+        "19": { "title": "Сварщик", "desc": "Работа на объекте Тупраш (CCR & Изомеризация). Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, P91, P22, P11." },
+        "20": { "title": "Сварщик", "desc": "Работа на Ферганском НПЗ. Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, P91, P22, P11." },
+        "21": { "title": "Сварщик", "desc": "Работа на заводе Petkim. Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, P91, P22, P11." },
+        "22": { "title": "Сварщик", "desc": "Работа на объекте Тупраш (CCR & ISO). Сварка 1/2 дюйма и более (GTAW / SMAW). Материалы: CS, LTCS, SS, P91, P22, P11." }
+    },
+
+    "certs": {
+        "c1": { "title": "КВАЛИФИКАЦИОННЫЙ СЕРТИФИКАТ", "desc": "Удостоверение инспектора по сварке (3.1)" },
+        "c2": { "title": "КВАЛИФИКАЦИОННЫЙ СЕРТИФИКАТ", "desc": "Сертификат инспектора по сварке (3.1)" },
+        "c3": { "title": "КВАЛИФИКАЦИОННЫЙ СЕРТИФИКАТ", "desc": "Сертификат инспектора по покрытиям" },
+        "c4": { "title": "КВАЛИФИКАЦИОННЫЙ СЕРТИФИКАТ", "desc": "Сертификат радиографического контроля (RT) Уровень II" },
+        "c5": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от USTAY Construction" },
+        "c6": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от ATA Consortium" },
+        "c7": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от Tekfen Construction" },
+        "c8": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от ATA Consortium" },
+        "c9": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от CES Consulting" },
+        "c10": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от CES Consulting" },
+        "c11": { "title": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО", "desc": "Рекомендательное письмо от Entrepose Contracting" }
+    }
   },
 
+  // =================================================================
+  // 4. ARABIC (العربية)
+  // =================================================================
   "ar": {
-      "nav_about": "معلومات عني",
-      "nav_experience": "خبرة العمل",
-      "nav_certificates": "الشهادات",
-      "nav_contact": "اتصل بي",
-      "about_title": "معلومات عني",
-      "about_text": "صناعة النفط والغاز - صناعة الطاقة - صناعة البتروكيماويات. خبرة كبيرة مكتسبة في صناعة اللحام والتصنيع...<br><br><strong>مشغل لحام / مفتش لحام / مشرف / مدرب (32 عامًا)</strong>...",
-      "skills_title": "المهارات التقنية",
-      "skills_long_text": `<ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;"><li>الخبرة المكتسبة في محطات الطاقة والمصافي ومحطات معالجة النفط والغاز...</li><li>خبرة عميقة في تصنيع وتركيب الأنابيب والغلايات وأوعية الضغط...</li><li>معرفة استثنائية بمواصفات الشركات متعددة الجنسيات مثل <strong>BP, Exxon Mobil</strong>...</li></ul>`,
-      "experience_title": "خبرة العمل",
-      "certificates_title": "الشهادات",
-      "contact_title": "تواصل معي",
-      "form_header": "أرسل لي رسالة",
-      "form_name": "الاسم الكامل",
-      "form_email": "البريد الإلكتروني",
-      "form_message": "رسالتك",
-      "form_button": "إرسال الرسالة",
-      "info_header": "معلومات الاتصال",
-      "info_text": "لا تتردد في التواصل معي...",
-      "info_whatsapp": "الدردشة على WhatsApp",
-      "jobs": {
-        "1": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب...", "project": "مشروع ترقية مصفاة البصرة" }
-      }
+    "nav_about": "معلومات عني",
+    "nav_experience": "خبرة العمل",
+    "nav_certificates": "الشهادات",
+    "nav_contact": "اتصل بي",
+    "btn_view_profile": "عرض الملف الشخصي",
+    "btn_download_cv": "تحميل السيرة الذاتية",
+    "btn_send_message": "إرسال رسالة",
+    "btn_view_gallery": "معرض المشروع",
+    "click_to_view": "انقر لعرض الشهادة",
+    "about_title": "معلومات عني",
+    "skills_title": "المهارات التقنية",
+    "experience_title": "خبرة العمل",
+    "certificates_title": "الشهادات والمراجع",
+    "contact_title": "تواصل معي",
+    "gallery_title": "شهاداتي",
+    "form_header": "أرسل لي رسالة",
+    "form_name": "الاسم الكامل",
+    "form_email": "البريد الإلكتروني",
+    "form_message": "رسالتك",
+    "form_button": "إرسال",
+    "info_header": "معلومات الاتصال",
+    "info_text": "لا تتردد في التواصل معي بخصوص الإشراف على اللحام أو الفحص أو فرص التدريب.",
+    "info_whatsapp": "الدردشة على WhatsApp",
+    "job_title_main": "مشرف ومفتش اللحام",
+
+    "about_text": "<strong>صناعة النفط والغاز - صناعة الطاقة - صناعة البتروكيماويات</strong><br>خبرة كبيرة مكتسبة في صناعة اللحام والتصنيع. العمل في محطات الطاقة البحرية / البرية، ومصانع البتروكيماويات، ومصافي النفط.<br><br><strong>مشغل لحام / مفتش لحام / مشرف / مدرب (32 عامًا)</strong>. تحمل المسؤولية الكاملة عن لحامات الإنتاج في المواقع. نشر أطقم اللحام والامتثال لإجراءات وبروتوكولات اللحام المعتمدة. مراقبة وضمان جودة التصنيع حسب مواصفات العميل. <strong>ASME IX / B31.3, EN 287-288, API 1104</strong>. تدقيق السلامة المتقدم وتقييم المخاطر.<br><br><strong>لحام متعدد الرموز (15 عامًا)</strong> خبرة عملية جيدة في العمليات التالية: SMAW، GTAW، SAW، GS-FCAW واللحام المداري.",
+    "skills_long_text": "<ul style='list-style-type: disc; padding-right: 20px; line-height: 1.8;'><li>الخبرة المكتسبة في محطات الطاقة والمصافي ومحطات معالجة النفط والغاز وخطوط الأنابيب البرية.</li><li>خبرة عميقة في تصنيع وتركيب الأنابيب والغلايات وأوعية الضغط والأفران والخزانات.</li><li>مهارات الخبراء في إعداد الخرائط (Weld Maps) وحزم اختبار الضغط وسجلات اللحام.</li><li>خبرة قوية مع المعايير الدولية: <strong>ISO, DIN, EN, ASME, ASTM, API.</strong></li><li>معرفة بمواصفات الشركات مثل: <strong>BP, Exxon Mobil, Fluor, Technip, TR.</strong></li><li>خبرة في فحص الجودة واللحام والاختبارات غير الإتلافية (NDT).</li><li>خبرة في لحام الفولاذ الكربوني، والفولاذ منخفض الحرارة، والفولاذ المقاوم للصدأ، وDuplex.</li></ul>",
+
+    "jobs": {
+        "1": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب (مصفاة البصرة). تنظيم المواد والموظفين لجميع أنشطة اللحام. التنسيق مع إدارة البناء ومراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "2": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في مشروع تحديث HAOR. تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW). تقارير QA/QC و NDT." },
+        "3": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب (Tecnicas Reunidas). تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "4": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في وحدة التكسير الهيدروجيني MNPZ. تنظيم المواد. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "5": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في مشروع Azerikimya EP300. تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "6": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في مصنع Socar Polymer. تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "7": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في مشروع شاه دنيز المرحلة 2 (المنشآت البحرية). تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين." },
+        "8": { "title": "مراقب لحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في ملعب باكو الأولمبي. تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "9": { "title": "مراقب لحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب في الهياكل العلوية لـ COP-WC-PDQ. تنظيم المواد والموظفين. التنسيق مع مراقبة الجودة. الإشراف على اللحامين." },
+        "10": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب لآبار حفر خط أنابيب المياه OGB. تنظيم المواد. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "11": { "title": "مشرف اللحام", "desc": "الإشراف على تصنيع وتركيب الأنابيب لخط أنابيب المياه OGB. تنظيم المواد. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, GTAW)." },
+        "12": { "title": "مشرف اللحام", "desc": "الإشراف على تركيب ولحام خزان مياه منتجة بسعة 21000 م3 في محطة سانجاتشال. مسؤول عن أنشطة اللحام. التنسيق مع مراقبة الجودة. الإشراف على اللحامين (SMAW, SAW, GTAW)." },
+        "13": { "title": "لحام", "desc": "العمل على تصنيع منصات TPG 500 البحرية. عمليات لحام (GTAW / FCAW-GS / SMAW). المواد: فولاذ كربوني، فولاذ منخفض الحرارة، ستانلس ستيل، Cu-Ni، Duplex، Super Duplex (اختبار التآكل مقبول)." },
+        "14": { "title": "لحام", "desc": "العمل على تصنيع منصات TPG 500 البحرية. عمليات لحام (GTAW / FCAW-GS / SMAW). المواد: فولاذ كربوني، فولاذ منخفض الحرارة، ستانلس ستيل، Cu-Ni، Duplex، Super Duplex (اختبار G48 مقبول)." },
+        "15": { "title": "لحام", "desc": "العمل في تصنيع وخط أنابيب AGT. لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، فولاذ منخفض الحرارة، فولاذ مقاوم للصدأ." },
+        "16": { "title": "لحام", "desc": "العمل في تصنيع وموقع محطة التوسع (Sangachal). لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، فولاذ منخفض الحرارة، ستانلس ستيل، Duplex، Super Duplex." },
+        "17": { "title": "لحام", "desc": "العمل في تصنيع وموقع محطة كهرباء سيفيرنايا. لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، P91, P22, P11." },
+        "18": { "title": "لحام", "desc": "العمل في تصنيع وموقع مصفاة توبراش (وحدة الأيزومرة). لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، فولاذ منخفض الحرارة، فولاذ مقاوم للصدأ." },
+        "19": { "title": "لحام", "desc": "العمل في تصنيع وموقع توبراش (CCR). لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، ستانلس ستيل، P91, P22, P11." },
+        "20": { "title": "لحام", "desc": "العمل في تصنيع وموقع مصفاة نفط فرغانة. لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، ستانلس ستيل، P91, P22, P11." },
+        "21": { "title": "لحام", "desc": "العمل في تصنيع وموقع بيتكيم. لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، ستانلس ستيل، P91, P22, P11." },
+        "22": { "title": "لحام", "desc": "العمل في تصنيع وموقع توبراش (CCR & ISO). لحام 1/2 بوصة وما فوق (GTAW / SMAW). المواد: فولاذ كربوني، ستانلس ستيل، P91, P22, P11." }
+    },
+
+    "certs": {
+        "c1": { "title": "شهادة التأهيل", "desc": "بطاقة هوية مفتش اللحام (3.1)" },
+        "c2": { "title": "شهادة التأهيل", "desc": "شهادة مفتش اللحام (3.1)" },
+        "c3": { "title": "شهادة التأهيل", "desc": "شهادة مفتش الطلاء" },
+        "c4": { "title": "شهادة التأهيل", "desc": "شهادة الاختبار الإشعاعي (RT) المستوى الثاني" },
+        "c5": { "title": "مرجع الشركة", "desc": "رسالة توصية من شركة USTAY" },
+        "c6": { "title": "مرجع الشركة", "desc": "رسالة توصية من ائتلاف ATA" },
+        "c7": { "title": "مرجع الشركة", "desc": "رسالة توصية من شركة تيكفين للإنشاءات" },
+        "c8": { "title": "مرجع الشركة", "desc": "رسالة توصية من ائتلاف ATA" },
+        "c9": { "title": "مرجع الشركة", "desc": "رسالة توصية من CES Consulting" },
+        "c10": { "title": "مرجع الشركة", "desc": "رسالة توصية من CES Consulting" },
+        "c11": { "title": "مرجع الشركة", "desc": "رسالة توصية من Entrepose Contracting" }
+    }
   }
 };
