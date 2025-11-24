@@ -1118,8 +1118,8 @@ nav .desktop-nav li a.active i {
     right: -2px;
 
     /* Daire Boyutu: 18px (İdeal denge) */
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 
     border-radius: 50%;
     background-color: #E4E6EB; /* Gri Zemin */
