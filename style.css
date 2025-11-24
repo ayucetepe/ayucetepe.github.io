@@ -1294,3 +1294,95 @@ nav .desktop-nav li a.active i {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* --- MODAL İÇİ KİŞİ LİSTESİ TASARIMI --- */
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Kişiler arası boşluk */
+}
+
+.contact-person-card {
+    background-color: var(--background-color); /* Temaya uygun arka plan */
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color); /* Sol tarafı renkli çizgi */
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between; /* İsim solda, buton sağda */
+    align-items: center;
+    flex-wrap: wrap; /* Mobilde sığmazsa alt satıra geçsin */
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.contact-person-card:hover {
+    transform: translateX(5px); /* Üzerine gelince hafif sağa kaysın */
+    background-color: rgba(0,0,0,0.02);
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* İsim Linki (Altı çizgisiz) */
+.person-name {
+    text-decoration: none !important; /* Alt çizgiyi kaldırır */
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.person-name i {
+    color: #0077B5; /* LinkedIn Mavisi */
+    font-size: 1.1rem;
+}
+
+.person-name:hover {
+    color: var(--primary-color); /* Üzerine gelince tema rengi olsun */
+}
+
+.person-title {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    margin-top: 2px;
+}
+
+/* WhatsApp Butonu */
+.contact-wa-btn {
+    text-decoration: none !important;
+    background-color: #25D366; /* WhatsApp Yeşili */
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s;
+    box-shadow: 0 2px 5px rgba(37, 211, 102, 0.3);
+}
+
+.contact-wa-btn:hover {
+    background-color: #1ebc57;
+    transform: scale(1.05);
+}
+
+/* Mobil için düzenleme */
+@media (max-width: 500px) {
+    .contact-person-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-wa-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
