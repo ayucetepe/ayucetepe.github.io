@@ -23,16 +23,66 @@ document.addEventListener("DOMContentLoaded", function() {
     if (expModal && workCards.length > 0) {
         workCards.forEach(card => {
             card.addEventListener("click", () => {
-                // Verileri HTML'den (veya güncellenmiş attribute'lardan) çek
+                // Verileri HTML'den çek
                 const title = card.getAttribute("data-title") || "";
                 const project = card.getAttribute("data-project") || "";
                 const client = card.getAttribute("data-client") || "";
                 const company = card.getAttribute("data-company") || "";
                 const location = card.getAttribute("data-location") || "";
                 const date = card.getAttribute("data-date") || "";
-                // Description artık çeviri fonksiyonu tarafından güncelleniyor
                 const description = card.getAttribute("data-description") || "";
-                const manager = card.getAttribute("data-manager") || "";
+
+                // --- YENİ KİŞİ SİSTEMİ BAŞLANGIÇ ---
+                const contactsData = card.getAttribute("data-contacts");
+                let contactsHTML = "";
+
+                // Eğer yeni sistem (JSON) veri varsa işle
+                if (contactsData) {
+                    try {
+                        const contacts = JSON.parse(contactsData); // JSON verisini oku
+
+                        contactsHTML = `<div class="contacts-container">`;
+
+                        contacts.forEach(person => {
+                            // WhatsApp Butonu Mantığı
+                            let whatsappButton = "";
+                            if (person.whatsapp && person.whatsapp.trim() !== "") {
+                                // Numarayı temizle (sadece rakam kalsın)
+                                let cleanNumber = person.whatsapp.replace(/\D/g, '');
+                                whatsappButton = `
+                                    <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
+                                        <i class="fab fa-whatsapp"></i> Chat
+                                    </a>`;
+                            }
+
+                            // Kişi Kartı HTML'i
+                            contactsHTML += `
+                                <div class="contact-person-card">
+                                    <div class="person-info">
+                                        <a href="${person.linkedin}" target="_blank" class="person-name">
+                                            ${person.name} <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <span class="person-title">${person.title}</span>
+                                    </div>
+                                    ${whatsappButton}
+                                </div>
+                            `;
+                        });
+
+                        contactsHTML += `</div>`;
+
+                    } catch (e) {
+                        console.error("JSON Hatası (data-contacts):", e);
+                        contactsHTML = "<p style='color:red;'>Contact data error.</p>";
+                    }
+                } else {
+                    // Eski sistem (Eğer data-manager varsa onu kullan - Geriye dönük uyumluluk)
+                    const manager = card.getAttribute("data-manager");
+                    if(manager) {
+                        contactsHTML = `<p>${manager}</p>`;
+                    }
+                }
+                // --- YENİ KİŞİ SİSTEMİ BİTİŞ ---
 
                 // Galeri verisini çek (Varsa virgülle ayrılmış linkler)
                 const galleryData = card.getAttribute("data-gallery");
@@ -55,12 +105,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 if(descEl) descEl.innerHTML = `
                     <p><strong>Project:</strong> ${project}</p>
                     <p><strong>Client:</strong> ${client}</p>
-                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;">
+                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--border-color);">
                     <strong style="color:var(--primary-color); display:block; margin-bottom:5px;">Job Description:</strong>
                     <p>${description}</p>
                     <br>
-                    <strong style="color:var(--primary-color); display:block; margin-bottom:5px;">Project Management / Contact:</strong>
-                    <p>${manager}</p>
+                    <strong style="color:var(--primary-color); display:block; margin-bottom:10px;">Project Management / Contact:</strong>
+                    ${contactsHTML}
                 `;
 
                 // Galeri Butonunu Göster/Gizle (Resim varsa göster)
@@ -246,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // 4. GLOBAL FONKSİYONLAR (Window nesnesine bağlı)
 // ======================================================
 
-// --- DİL DEĞİŞTİRME FONKSİYONU (GÜNCELLENMİŞ HALİ) ---
+// --- DİL DEĞİŞTİRME FONKSİYONU ---
 window.setLanguage = (lang) => {
     // Çeviri dosyası (translations.js) yoksa işlem yapma
     if (typeof translations === 'undefined') return;
@@ -272,7 +322,7 @@ window.setLanguage = (lang) => {
         }
     });
 
-    // 3. İş Deneyimi Kartlarını Güncelle (EN ÖNEMLİ KISIM)
+    // 3. İş Deneyimi Kartlarını Güncelle
     if (translations[lang].jobs) {
         document.querySelectorAll('.work-card').forEach(card => {
             const id = card.getAttribute('data-id'); // Kartın ID'sini al (1, 2, 3...)
@@ -284,17 +334,13 @@ window.setLanguage = (lang) => {
                 if(h3) h3.innerText = jobData.title;
 
                 // Modal için gerekli gizli verileri (Data Attributes) güncelle
-                // Böylece modal açıldığında Türkçe/Rusça metin görünecek
                 card.setAttribute('data-title', jobData.title);
-
                 if(jobData.desc) card.setAttribute('data-description', jobData.desc);
-                // Eğer proje adını da çeviriyorsak:
-                // if(jobData.project) card.setAttribute('data-project', jobData.project);
             }
         });
     }
 
-    // 4. Sertifika Kartlarını Güncelle (YENİ EKLENEN KISIM)
+    // 4. Sertifika Kartlarını Güncelle
     if (translations[lang].certs) {
         document.querySelectorAll('.cert-card').forEach(card => {
             const id = card.getAttribute('data-id'); // c1, c2...
@@ -375,11 +421,9 @@ window.toggleMobileLang = function() {
 window.addEventListener("click", function(e) {
     // Profil Menüsünü Kapat
     const profileMenu = document.getElementById("profile-dropdown");
-    // DÜZELTME: Sadece resme değil, kapsayıcıya (resim+ok) bakıyoruz
     const profileTrigger = document.querySelector(".profile-trigger");
 
     if (profileMenu && profileTrigger) {
-        // Eğer tıklanan yer ne menü ne de tetikleyici buton ise kapat
         if (!profileMenu.contains(e.target) && !profileTrigger.contains(e.target)) {
             profileMenu.classList.remove("active");
         }
