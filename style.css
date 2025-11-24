@@ -1185,3 +1185,21 @@ nav .desktop-nav li a.active i {
         border-top: none !important;
     }
 }
+
+
+/* ================================================== */
+/* MODAL DÜZELTMELERİ (EN ALTA EKLE) */
+/* ================================================== */
+
+/* 1. SERTİFİKA MODALI: Resme göre daralsın/genişlesin (Burası Aynen Kalıyor) */
+#certificateModal .modal-content {
+    width: fit-content;
+    max-width: 95%;
+}
+
+/* 2. İŞ DENEYİMİ MODALI: Sabit genişlikte olsun ki metinler çok yayılmasın */
+#experienceModal .modal-content {
+    width: 90%;           /* Mobilde ekranın %90'ı */
+    max-width: 700px;     /* Masaüstünde 700px'i geçmesin (İdeal okuma genişliği) */
+    display: block;       /* Flex yerine blok olsun, metinler rahat aksın */
+}
