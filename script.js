@@ -350,7 +350,7 @@ window.toggleMobileLang = function() {
 window.addEventListener("click", function(e) {
     // Profil Menüsünü Kapat
     const profileMenu = document.getElementById("profile-dropdown");
-    const profileTrigger = document.querySelector(".header-profile-pic");
+    const profileTrigger = document.querySelector(".profile-trigger");
 
     if (profileMenu && profileTrigger && !profileMenu.contains(e.target) && !profileTrigger.contains(e.target)) {
         profileMenu.classList.remove("active");
