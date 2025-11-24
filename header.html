@@ -30,11 +30,11 @@
     <div class="controls">
         <div class="profile-menu-container">
             <!-- Profil Tetikleyici (Sadece Resim ve Ok) -->
-            <div class="profile-trigger" onclick="toggleProfileMenu()">
-                <img src="images/aziz.jpg" alt="Profile" class="header-profile-pic" onerror="this.src='https://via.placeholder.com/40'">
-                <!-- Sadece Ok İşareti -->
-                <i class="fas fa-caret-down profile-arrow"></i>
-            </div>
+            <!-- onclick="toggleProfileMenu()" RESİMDE DEĞİL, BU DIV'DE OLMALI -->
+<div class="profile-trigger" onclick="toggleProfileMenu()">
+    <img src="images/aziz.jpg" alt="Profile" class="header-profile-pic" ...>
+    <div class="profile-arrow"><i class="fas fa-caret-down"></i></div>
+</div>
 
             <!-- Açılır Menü (Aynı) -->
             <div class="profile-dropdown" id="profile-dropdown">
