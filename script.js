@@ -23,17 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (expModal && workCards.length > 0) {
         workCards.forEach(card => {
             card.addEventListener("click", () => {
-                // Verileri HTML'den çek
+                // Verileri HTML'den (veya güncellenmiş attribute'lardan) çek
                 const title = card.getAttribute("data-title") || "";
                 const project = card.getAttribute("data-project") || "";
                 const client = card.getAttribute("data-client") || "";
                 const company = card.getAttribute("data-company") || "";
                 const location = card.getAttribute("data-location") || "";
                 const date = card.getAttribute("data-date") || "";
+                // Description artık çeviri fonksiyonu tarafından güncelleniyor
                 const description = card.getAttribute("data-description") || "";
                 const manager = card.getAttribute("data-manager") || "";
 
-                // Galeri verisini çek
+                // Galeri verisini çek (Varsa virgülle ayrılmış linkler)
                 const galleryData = card.getAttribute("data-gallery");
                 if (galleryData && galleryData.trim() !== "") {
                     currentProjectImages = galleryData.split(',').map(item => item.trim());
@@ -47,7 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 const descEl = document.getElementById("modal-description");
 
                 if(titleEl) titleEl.innerText = title;
+                // Şirket, Yer ve Tarih bilgisi
                 if(metaEl) metaEl.innerHTML = `<span style="color:var(--primary-color)">${company}</span> | ${location} | ${date}`;
+
+                // Açıklama Kısmı (HTML formatında)
                 if(descEl) descEl.innerHTML = `
                     <p><strong>Project:</strong> ${project}</p>
                     <p><strong>Client:</strong> ${client}</p>
@@ -59,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>${manager}</p>
                 `;
 
-                // Galeri Butonunu Göster/Gizle
+                // Galeri Butonunu Göster/Gizle (Resim varsa göster)
                 if (gallerySection) {
                     gallerySection.style.display = currentProjectImages.length > 0 ? "block" : "none";
                 }
@@ -69,11 +73,12 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
+        // Kapatma Butonu
         if(expCloseBtn) {
             expCloseBtn.addEventListener("click", () => { expModal.style.display = "none"; });
         }
 
-        // Galeri Butonu Tıklama
+        // Galeri Butonu Tıklama (Lightbox'ı açar)
         if(openGalleryBtn) {
             openGalleryBtn.addEventListener("click", () => {
                 if(currentProjectImages.length > 0) {
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-    // PENCERELERİ DIŞARI TIKLAYINCA KAPATMA
+    // PENCERELERİ DIŞARI TIKLAYINCA KAPATMA (Genel Modal Kapatma)
     window.addEventListener("click", (event) => {
         if (expModal && event.target == expModal) expModal.style.display = "none";
         if (certModal && event.target == certModal) certModal.style.display = "none";
@@ -189,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentPath = window.location.pathname.split("/").pop() || "index.html";
         const links = document.querySelectorAll("nav a, .mobile-nav a");
         links.forEach(link => {
+            // Basit eşleşme kontrolü
             if (link.getAttribute("href") === currentPath) {
                 link.classList.add("active");
             }
@@ -240,17 +246,16 @@ document.addEventListener("DOMContentLoaded", function() {
 // 4. GLOBAL FONKSİYONLAR (Window nesnesine bağlı)
 // ======================================================
 
-// --- DİL DEĞİŞTİRME FONKSİYONU ---
+// --- DİL DEĞİŞTİRME FONKSİYONU (GÜNCELLENMİŞ HALİ) ---
 window.setLanguage = (lang) => {
-    // Çeviri dosyası yoksa işlem yapma
+    // Çeviri dosyası (translations.js) yoksa işlem yapma
     if (typeof translations === 'undefined') return;
 
-    // 1. Metinleri Güncelle
+    // 1. Metinleri Güncelle (data-translate)
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
-            // !!! DÜZELTME BURADA YAPILDI !!!
-            // Eğer çeviri 'about_text' veya 'skills_long_text' ise HTML olarak işle
+            // Eğer metin HTML içeriyorsa (Bold, Liste vb.)
             if (key === 'about_text' || key === 'skills_long_text') {
                 el.innerHTML = translations[lang][key];
             } else {
@@ -267,26 +272,47 @@ window.setLanguage = (lang) => {
         }
     });
 
-    // 3. İş Deneyimi Kartlarını Güncelle
+    // 3. İş Deneyimi Kartlarını Güncelle (EN ÖNEMLİ KISIM)
     if (translations[lang].jobs) {
         document.querySelectorAll('.work-card').forEach(card => {
-            const id = card.getAttribute('data-id');
-            const jobData = translations[lang].jobs[id];
+            const id = card.getAttribute('data-id'); // Kartın ID'sini al (1, 2, 3...)
+            const jobData = translations[lang].jobs[id]; // Çeviri dosyasından o ID'yi bul
 
             if (jobData) {
-                // Başlık
+                // Kart üzerindeki görünen Başlığı (H3) değiştir
                 const h3 = card.querySelector('h3');
                 if(h3) h3.innerText = jobData.title;
 
-                // Data attribute'larını güncelle (Modal açılınca doğru veri görünsün)
+                // Modal için gerekli gizli verileri (Data Attributes) güncelle
+                // Böylece modal açıldığında Türkçe/Rusça metin görünecek
                 card.setAttribute('data-title', jobData.title);
+
                 if(jobData.desc) card.setAttribute('data-description', jobData.desc);
-                if(jobData.project) card.setAttribute('data-project', jobData.project);
+                // Eğer proje adını da çeviriyorsak:
+                // if(jobData.project) card.setAttribute('data-project', jobData.project);
             }
         });
     }
 
-    // 4. Görünen Dil İsimlerini Güncelle (EN, TR vb.)
+    // 4. Sertifika Kartlarını Güncelle (YENİ EKLENEN KISIM)
+    if (translations[lang].certs) {
+        document.querySelectorAll('.cert-card').forEach(card => {
+            const id = card.getAttribute('data-id'); // c1, c2...
+            const certData = translations[lang].certs[id];
+
+            if (certData) {
+                // Kart Başlığı (H3)
+                const h3 = card.querySelector('h3');
+                if(h3) h3.innerText = certData.title;
+
+                // Data Attribute'ları güncelle (Modal için)
+                card.setAttribute('data-title', certData.title);
+                card.setAttribute('data-desc', certData.desc);
+            }
+        });
+    }
+
+    // 5. Görünen Dil İsimlerini Güncelle
     const langNames = {
         "en": "English",
         "tr": "Türkçe",
@@ -302,7 +328,7 @@ window.setLanguage = (lang) => {
     const mobileLangText = document.getElementById("mobile-lang-text");
     if(mobileLangText) mobileLangText.innerText = langNames[lang];
 
-    // 5. RTL (Arapça) Desteği
+    // 6. RTL (Arapça) Desteği
     if (lang === 'ar') {
         document.documentElement.setAttribute('dir', 'rtl');
         document.documentElement.lang = 'ar';
@@ -311,16 +337,14 @@ window.setLanguage = (lang) => {
         document.documentElement.lang = lang;
     }
 
-    // 6. Açık Olan Menüleri Kapat
-    // Mobil Dil Listesi
+    // 7. Açık Olan Menüleri Kapat
     const mobileList = document.getElementById("mobile-lang-list");
     if(mobileList) mobileList.classList.remove("open");
 
-    // Masaüstü Custom Select
     const customSelect = document.querySelector(".custom-select-wrapper");
     if(customSelect) customSelect.classList.remove("open");
 
-    // 7. Kaydet
+    // 8. Kaydet
     localStorage.setItem('language', lang);
 };
 
@@ -340,6 +364,7 @@ window.toggleMobileLang = function() {
     if (list) {
         list.classList.toggle("open");
         if(arrow) {
+             // Menü açılınca oku döndür
              arrow.style.transform = list.classList.contains("open") ? "rotate(180deg)" : "rotate(0deg)";
              arrow.style.transition = "transform 0.3s";
         }
@@ -350,10 +375,14 @@ window.toggleMobileLang = function() {
 window.addEventListener("click", function(e) {
     // Profil Menüsünü Kapat
     const profileMenu = document.getElementById("profile-dropdown");
+    // DÜZELTME: Sadece resme değil, kapsayıcıya (resim+ok) bakıyoruz
     const profileTrigger = document.querySelector(".profile-trigger");
 
-    if (profileMenu && profileTrigger && !profileMenu.contains(e.target) && !profileTrigger.contains(e.target)) {
-        profileMenu.classList.remove("active");
+    if (profileMenu && profileTrigger) {
+        // Eğer tıklanan yer ne menü ne de tetikleyici buton ise kapat
+        if (!profileMenu.contains(e.target) && !profileTrigger.contains(e.target)) {
+            profileMenu.classList.remove("active");
+        }
     }
 
     // Masaüstü Dil Dropdown'u Kapat
