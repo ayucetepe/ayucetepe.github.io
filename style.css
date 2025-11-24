@@ -1249,3 +1249,48 @@ nav .desktop-nav li a.active i {
     max-width: 700px;     /* Masaüstünde 700px'i geçmesin (İdeal okuma genişliği) */
     display: block;       /* Flex yerine blok olsun, metinler rahat aksın */
 }
+
+/* --- CSS LOGO TASARIMI --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* O "AY" Yazan Kutu */
+.logo-icon {
+    background: linear-gradient(135deg, #2c3e50, #000000); /* Metalik Koyu Gri */
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; /* Hafif yuvarlak köşe */
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -1px;
+    border-bottom: 3px solid var(--primary-color); /* Altına mavi/turuncu çizgi */
+}
+
+/* A ve Y harflerine efekt */
+.logo-icon span:first-child { color: #fff; }
+.logo-icon span:last-child { color: var(--primary-color); } /* Y harfi renkli olsun */
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.1;
+}
+
+.logo-sub {
+    font-size: 0.65rem;
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
