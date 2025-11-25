@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const location = card.getAttribute("data-location") || "";
                 const date = card.getAttribute("data-date") || "";
                 const description = card.getAttribute("data-description") || "";
-
+                
                 // --- YENİ KİŞİ SİSTEMİ BAŞLANGIÇ ---
                 const contactsData = card.getAttribute("data-contacts");
                 let contactsHTML = "";
@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (contactsData) {
                     try {
                         const contacts = JSON.parse(contactsData); // JSON verisini oku
-
+                        
                         contactsHTML = `<div class="contacts-container">`;
-
+                        
                         contacts.forEach(person => {
                             // WhatsApp Butonu Mantığı
                             let whatsappButton = "";
                             if (person.whatsapp && person.whatsapp.trim() !== "") {
                                 // Numarayı temizle (sadece rakam kalsın)
-                                let cleanNumber = person.whatsapp.replace(/\D/g, '');
+                                let cleanNumber = person.whatsapp.replace(/\D/g, ''); 
                                 whatsappButton = `
                                     <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
                                         <i class="fab fa-whatsapp"></i> Chat
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                             `;
                         });
-
+                        
                         contactsHTML += `</div>`;
-
+                        
                     } catch (e) {
                         console.error("JSON Hatası (data-contacts):", e);
                         contactsHTML = "<p style='color:red;'>Contact data error.</p>";
@@ -419,7 +419,7 @@ window.toggleMobileLang = function() {
 
 // --- DIŞARI TIKLAYINCA MENÜLERİ KAPAT ---
 window.addEventListener("click", function(e) {
-    // Profil Menüsünü Kapat
+    // 1. Profil Menüsünü Kapat
     const profileMenu = document.getElementById("profile-dropdown");
     const profileTrigger = document.querySelector(".profile-trigger");
 
@@ -429,9 +429,21 @@ window.addEventListener("click", function(e) {
         }
     }
 
-    // Masaüstü Dil Dropdown'u Kapat
+    // 2. Masaüstü Dil Dropdown'u Kapat
     const customSelect = document.querySelector(".custom-select-wrapper");
     if (customSelect && !customSelect.contains(e.target)) {
         customSelect.classList.remove("open");
+    }
+
+    // 3. MOBİL MENÜYÜ KAPAT (Menü açıkken dışına tıklanırsa)
+    const mobileNav = document.querySelector(".mobile-nav");
+    const hamburger = document.querySelector(".hamburger");
+
+    // Eğer menü açıksa (active) VE tıklanan yer menü değilse VE tıklanan yer hamburger butonu değilse
+    if (mobileNav && hamburger && mobileNav.classList.contains("active")) {
+        if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+            mobileNav.classList.remove("active");
+            hamburger.classList.remove("active");
+        }
     }
 });
