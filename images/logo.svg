@@ -1,0 +1,32 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Degrade Arka Plan -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Köşeleri Yuvarlatan Maske (Kalıp) -->
+    <clipPath id="round-corner">
+      <rect width="512" height="512" rx="80" ry="80" />
+    </clipPath>
+  </defs>
+
+  <!-- Ana Grup: Tüm şekli yuvarlak köşeli kalıbın içine hapseder -->
+  <g clip-path="url(#round-corner)">
+
+    <!-- 1. Koyu Arka Plan (Tüm alanı kaplar) -->
+    <rect width="512" height="512" fill="url(#grad)" />
+
+    <!-- 2. Alt Mavi Çizgi (Border-bottom efekti) -->
+    <!-- En alta yapışık, tam genişlikte -->
+    <rect x="0" y="432" width="512" height="80" fill="#0077B5" />
+
+  </g>
+
+  <!-- Harfler: Ortalanmış -->
+  <text x="50%" y="48%" font-family="Arial, sans-serif" font-weight="900" font-size="280" text-anchor="middle" dominant-baseline="middle">
+    <!-- 'A' harfi biraz sola, 'Y' biraz sağa -->
+    <tspan fill="#ffffff" dx="-15">A</tspan><tspan fill="#0077B5" dx="15">Y</tspan>
+  </text>
+</svg>
