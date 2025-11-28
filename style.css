@@ -1386,3 +1386,26 @@ nav .desktop-nav li a.active i {
         justify-content: center;
     }
 }
+
+@media print {
+  /* Yazdırırken gereksiz alanları gizle */
+  nav, footer, .contact-form, .scroll-to-top-btn { 
+    display: none !important; 
+  }
+
+  /* Arka plan renklerini koru */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Linklerin yanına URL'lerinin yazılmasını engelle */
+  a[href]:after {
+    content: none !important;
+  }
+  
+  /* Sayfa kesilmelerini düzenle (Yazıların ortadan bölünmemesi için) */
+  section, .card, .experience-item {
+    page-break-inside: avoid;
+  }
+}
