@@ -1409,3 +1409,37 @@ nav .desktop-nav li a.active i {
     page-break-inside: avoid;
   }
 }
+
+/* --- PDF / YAZDIRMA AYARLARI --- */
+@media print {
+  /* Üst menüyü (Navbar) ve en alttaki Footer alanını gizle */
+  nav, .navbar, footer, .social-icons {
+    display: none !important;
+  }
+
+  /* Sayfanın üzerindeki "Resume" veya indirme butonlarını gizle */
+  .btn, button {
+    display: none !important;
+  }
+
+  /* Arka plan renklerinin (Mavi yan panel gibi) çıkmasını sağla */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Yazıların sayfa ortasında kesilmesini engellemeye çalış */
+  section, .resume-item, .p-3 {
+    page-break-inside: avoid;
+  }
+
+  /* Yazı boyutunu kağıda sığacak şekilde hafifçe küçült (İsteğe bağlı) */
+  body {
+    font-size: 12pt;
+  }
+  
+  /* Linklerin yanına URL yazılmasını engelle */
+  a[href]:after {
+    content: none !important;
+  }
+}
