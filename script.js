@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const location = card.getAttribute("data-location") || "";
                 const date = card.getAttribute("data-date") || "";
                 const description = card.getAttribute("data-description") || "";
-                
+
                 // --- YENİ KİŞİ SİSTEMİ BAŞLANGIÇ ---
                 const contactsData = card.getAttribute("data-contacts");
                 let contactsHTML = "";
@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (contactsData) {
                     try {
                         const contacts = JSON.parse(contactsData); // JSON verisini oku
-                        
+
                         contactsHTML = `<div class="contacts-container">`;
-                        
+
                         contacts.forEach(person => {
                             // WhatsApp Butonu Mantığı
                             let whatsappButton = "";
                             if (person.whatsapp && person.whatsapp.trim() !== "") {
                                 // Numarayı temizle (sadece rakam kalsın)
-                                let cleanNumber = person.whatsapp.replace(/\D/g, ''); 
+                                let cleanNumber = person.whatsapp.replace(/\D/g, '');
                                 whatsappButton = `
                                     <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
                                         <i class="fab fa-whatsapp"></i> Chat
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                             `;
                         });
-                        
+
                         contactsHTML += `</div>`;
-                        
+
                     } catch (e) {
                         console.error("JSON Hatası (data-contacts):", e);
                         contactsHTML = "<p style='color:red;'>Contact data error.</p>";
@@ -360,11 +360,14 @@ window.setLanguage = (lang) => {
 
     // 5. Görünen Dil İsimlerini Güncelle
     const langNames = {
-        "en": "English",
-        "tr": "Türkçe",
-        "ru": "Русский",
-        "ar": "العربية"
-    };
+       "en": "English",
+       "tr": "Türkçe",
+       "ru": "Русский",
+       "ar": "العربية",
+       "de": "Deutsch",
+       "az": "Azərbaycanca",
+       "es": "Español"
+   };
 
     // Masaüstü Profil Dropdown içindeki yazı
     const desktopLangText = document.getElementById("desktop-lang-text");
