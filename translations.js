@@ -66,11 +66,11 @@ const translations = {
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervision on Piping Fabrication & Erection welding.</li><li>Responsible for organizing material and personnel for all welding activities.</li><li>Coordination with construction management and cooperation with Quality control.</li><li>Supervision of all the welders (SMAW, GTAW).</li></ul>"
         },
         "10": {
-            "title": "Welding Supervisor",
+            "title": "Piping & Welding Supervisor",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervision on Drilling Borehole Piping Fabrication & Erection.</li><li>Responsible for organizing material and personnel for all welding activities.</li><li>Supervision of all the welders (SMAW, GTAW).</li></ul>"
         },
         "11": {
-            "title": "Welding Supervisor",
+            "title": "Piping & Welding Supervisor",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervision on Drilling Borehole Piping Fabrication & Erection.</li><li>Responsible for organizing material and personnel for all welding activities.</li><li>Coordination with construction management and cooperation with Quality control.</li></ul>"
         },
         "12": {
@@ -200,11 +200,11 @@ const translations = {
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Boru İmalatı ve Montaj kaynağı üzerinde süpervizörlük.</li><li>Tüm kaynak faaliyetleri için malzeme ve personelin organize edilmesinden sorumlu.</li><li>İnşaat yönetimi ile koordinasyon ve Kalite Kontrol ile işbirliği.</li><li>Tüm kaynakçıların (SMAW, GTAW) denetimi.</li></ul>"
         },
         "10": {
-            "title": "Kaynak Süpervizörü",
+            "title": "Borulama ve Kaynak Süpervizörü",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Sondaj Kuyusu Boru İmalatı ve Montajı üzerinde süpervizörlük.</li><li>Tüm kaynak faaliyetleri için malzeme ve personelin organize edilmesinden sorumlu.</li><li>Tüm kaynakçıların (SMAW, GTAW) denetimi.</li></ul>"
         },
         "11": {
-            "title": "Kaynak Süpervizörü",
+            "title": "Borulama ve Kaynak Süpervizörü",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Sondaj Kuyusu Boru İmalatı ve Montajı üzerinde süpervizörlük.</li><li>Tüm kaynak faaliyetleri için malzeme ve personelin organize edilmesinden sorumlu.</li><li>İnşaat yönetimi ile koordinasyon ve Kalite Kontrol ile işbirliği.</li></ul>"
         },
         "12": {
