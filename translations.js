@@ -468,11 +468,11 @@ const translations = {
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Aufsicht über Rohrfertigung und Montageschweißen.</li><li>Verantwortlich für die Organisation von Material und Personal.</li><li>Koordination mit der Bauleitung und Zusammenarbeit mit QC.</li><li>Aufsicht über alle Schweißer (SMAW, GTAW).</li></ul>"
         },
         "10": {
-            "title": "Schweißaufsicht",
+            "title": "Supervisor für Rohrleitungsbau und Schweißen",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Aufsicht über Fertigung und Montage von Bohrlochverrohrungen.</li><li>Verantwortlich für die Organisation von Material und Personal.</li><li>Aufsicht über alle Schweißer (SMAW, GTAW).</li></ul>"
         },
         "11": {
-            "title": "Schweißaufsicht",
+            "title": "Supervisor für Rohrleitungsbau und Schweißen",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Aufsicht über Fertigung und Montage von Bohrlochverrohrungen.</li><li>Verantwortlich für die Organisation von Material und Personal.</li><li>Koordination mit der Bauleitung und Zusammenarbeit mit QC.</li></ul>"
         },
         "12": {
@@ -602,11 +602,11 @@ const translations = {
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Boru İstehsalı və Montajı üzrə qaynaq nəzarəti.</li><li>Material və heyətin təşkili.</li><li>Tikinti rəhbərliyi və QC ilə koordinasiya.</li><li>Bütün qaynaqçıların (SMAW, GTAW) nəzarəti.</li></ul>"
         },
         "10": {
-            "title": "Qaynaq Supervayzeri",
+            "title": "Borulama və Qaynaq Supervayzeri",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Qazma Quyusu Boru İstehsalı və Montajı üzrə nəzarət.</li><li>Material və heyətin təşkili.</li><li>Bütün qaynaqçıların (SMAW, GTAW) nəzarəti.</li></ul>"
         },
         "11": {
-            "title": "Qaynaq Supervayzeri",
+            "title": "Borulama və Qaynaq Supervayzeri",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Qazma Quyusu Boru İstehsalı və Montajı üzrə nəzarət.</li><li>Material və heyətin təşkili.</li><li>Tikinti rəhbərliyi və QC ilə koordinasiya.</li></ul>"
         },
         "12": {
@@ -736,11 +736,11 @@ const translations = {
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervisión de soldadura en Fabricación y Montaje de Tuberías.</li><li>Responsable de organizar material y personal.</li><li>Coordinación con la gestión de construcción y QC.</li><li>Supervisión de todos los soldadores (SMAW, GTAW).</li></ul>"
         },
         "10": {
-            "title": "Supervisor de Soldadura",
+            "title": "Supervisor de Tuberías y Soldadura",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervisión de Fabricación y Montaje de Tuberías de Perforación.</li><li>Responsable de organizar material y personal.</li><li>Supervisión de todos los soldadores (SMAW, GTAW).</li></ul>"
         },
         "11": {
-            "title": "Supervisor de Soldadura",
+            "title": "Supervisor de Tuberías y Soldadura",
             "desc": "<ul style='list-style-type: disc; padding-left: 15px;'><li>Supervisión de Fabricación y Montaje de Tuberías de Perforación.</li><li>Responsable de organizar material y personal.</li><li>Coordinación con la gestión de construcción y QC.</li></ul>"
         },
         "12": {
