@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <!-- MOBİL KARARTMA PERDESİ (BACKDROP) -->
+    <!-- MOBİL KARARTMA PERDESİ -->
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
     <!-- ÜST MENÜ (HEADER) -->
@@ -42,32 +42,31 @@
                         <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
                         <div class="dropdown-user-info">
                             <h4>Aziz Yucetepe</h4>
-                            <p>Welding Supervisor</p>
+                            <p data-translate="user_role">Welding Supervisor</p>
                         </div>
                     </div>
                     <a href="profile.html" class="btn-view-profile" data-translate="nav_profile"><i class="fas fa-user-circle"></i> View Profile & Contact</a>
                     <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
                     <ul class="dropdown-section">
                         <li class="dropdown-item">
-                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span>Language</span></div>
+                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-translate="lbl_language">Language</span></div>
                             <select class="lang-select" onchange="setLanguage(this.value)">
-                                
-<option value="ar">🇦🇪 AR</option>
-<option value="az">🇦🇿 AZ</option>
-<option value="de">🇩🇪 DE</option>
-<option value="en">🇺🇸 EN</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ru">🇷🇺 RU</option>
-<option value="tr">🇹🇷 TR</option>
+                                <option value="ar">🇦🇪 AR</option>
+                                <option value="az">🇦🇿 AZ</option>
+                                <option value="de">🇩🇪 DE</option>
+                                <option value="en">🇺🇸 EN</option>
+                                <option value="es">🇪🇸 ES</option>
+                                <option value="ru">🇷🇺 RU</option>
+                                <option value="tr">🇹🇷 TR</option>
                             </select>
                         </li>
                         <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
-                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span>Display Mode</span></div>
+                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-translate="lbl_display_mode">Display Mode</span></div>
                             <button class="theme-btn"><i class="fas fa-circle-half-stroke"></i></button>
                         </li>
                         <li>
                             <a href="Aziz Yucetepe.pdf" download class="dropdown-item">
-                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span>Download CV</span></div>
+                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-translate="lbl_download_cv">Download CV</span></div>
                                 <i class="fas fa-download" style="font-size: 0.85rem;"></i>
                             </a>
                         </li>
@@ -78,9 +77,9 @@
     </header>
 
     <div class="container">
-        <h1 class="page-title" data-translate="experience_title">Work Experience</h1>
+        <h1 class="page-title" data-translate="experience_title" style="text-align: center; border-left: none;">Work Experience</h1>
         
-        <!-- SOSYAL FİLTRELEME ÇİPLERİ -->
+        <!-- FİLTRELEME ÇİPLERİ -->
         <div class="timeline-filters">
             <button class="filter-chip active" onclick="filterTimeline('all', this)"><i class="fas fa-layer-group"></i> All (23)</button>
             <button class="filter-chip" onclick="filterTimeline('refinery', this)"><i class="fas fa-oil-well"></i> Oil & Gas / Refinery</button>
@@ -89,13 +88,12 @@
             <button class="filter-chip" onclick="filterTimeline('pipeline', this)"><i class="fas fa-route"></i> Pipelines & Tanks</button>
         </div>
 
-        <!-- 23 PROJENİN TÜMÜNÜ İÇEREN LINKEDIN ZAMAN TÜNELİ -->
-        <div class="timeline-container" id="timelineList">
+        <!-- TEK KOLONLU FACEBOOK / LINKEDIN GÖNDERİ AKIŞI -->
+        <div class="feed-container" id="timelineList">
 
             <!-- 0. LACIN (2025) -->
             <div class="timeline-item" data-category="power">
-                <div class="timeline-dot"><i class="fas fa-bolt"></i></div>
-                <div class="timeline-card work-card" data-id="0"
+                <div class="card feed-card work-card" data-id="0"
                      data-gallery="photos/hes/hes1.jpg, photos/hes/hes2.jpg, photos/hes/hes3.jpg, photos/hes/hes4.png"
                      data-title="Mechanical Works Manager"
                      data-project="Malibey, Minkend, Qalaca, Terter HPP"
@@ -104,24 +102,31 @@
                      data-location="Lacin, Azerbaijan"
                      data-date="2025 - Present"
                      data-contacts='[{"name": "ATSIZ KILIÇ", "title": "Country Manager", "linkedin": "https://www.linkedin.com/in/atsizkilic/", "whatsapp": "+994556606267"}, {"name": "ALİ ÖZALTIN", "title": "Project Manager", "linkedin": "https://www.linkedin.com/in/ali-%C3%B6zalt%C4%B1n-a0385543/", "whatsapp": "+994502033497"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Mechanical Works Manager</h3>
-                        <span class="timeline-date-badge">2025 - Present</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Mechanical Works Manager</h3>
+                                <p class="feed-company-sub">Caspian Technology Supply | SIBA CONSULTANCY</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2025 - Present</span>
                     </div>
-                    <div class="timeline-subtitle">Caspian Technology Supply | SIBA CONSULTANCY</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Lacin, Azerbaijan</div>
-                    <div class="timeline-body">Management of all site piping, welding activities, and structural steel erection works. Handover dossiers & logistics.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#HydroPowerPlant #HPP</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Malibey, Minkend, Qalaca, Terter HPP</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Lacin, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Management of all site piping, welding activities, and structural steel erection works. Handover dossiers & logistics.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#HydroPowerPlant #HPP</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 1. BASRAH (2024-2025) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="1"
+                <div class="card feed-card work-card" data-id="1"
                      data-gallery="https://www.oilandgasmiddleeast.com/cloud/2021/08/09/14jgc_1.jpg, https://www.jgc.com/en/projects/img/projects_im021.jpg, https://www.jgc.com/en/projects/img/075_im03.jpg"
                      data-title="Welding Supervisor"
                      data-project="Basrah Refinery Upgrading Project (GC2)"
@@ -130,24 +135,31 @@
                      data-location="Basrah, Iraq"
                      data-date="2024 - 2025"
                      data-contacts='[{"name": "Can Karaman", "title": "Projects Manager", "linkedin": "https://www.linkedin.com/in/can-karaman-88784475/", "whatsapp": "+905327618581"}, {"name": "Zaur Najafzade", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/zaur-najafzade-771716230/", "whatsapp": "+994503235724"}, {"name": "Cankat Sarıçam", "title": "Welding Engineer", "linkedin": "https://www.linkedin.com/in/cankatsaricam/", "whatsapp": "+905313044710"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2024 - 2025</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">JGC / ILK Construction | South Refineries</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2024 - 2025</span>
                     </div>
-                    <div class="timeline-subtitle">JGC / ILK Construction | South Refineries</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Basrah, Iraq</div>
-                    <div class="timeline-body">Supervised piping fabrication and erection welding for the Basrah Refinery Upgrade project. Coordinated with QA/QC.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#OilRefinery #Iraq</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Basrah Refinery Upgrading (GC2)</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Basrah, Iraq</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised piping fabrication and erection welding for the Basrah Refinery Upgrade project. Coordinated with QA/QC.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#OilRefinery #Iraq</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 2. HAOR ILK (2022-2024) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-fire-flame-curved"></i></div>
-                <div class="timeline-card work-card" data-id="2"
+                <div class="card feed-card work-card" data-id="2"
                      data-gallery="photos/haorilk/haorilk1.jpg, photos/haorilk/haorilk2.jpg"
                      data-title="Welding Supervisor"
                      data-project="HAOR Modernization Project"
@@ -156,25 +168,32 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2022 - 2024"
                      data-contacts='[{"name": "Ahmet Finci", "title": "Project Manager", "linkedin": "https://www.linkedin.com/in/ahmet-finci-6a85a0147/"}, {"name": "Ali Rıza Taçyıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ali-r%C4%B1za-ta%C3%A7y%C4%B1ld%C4%B1z-4b0a42b7/", "whatsapp": "+994554550998"}, {"name": "Cemal Kaya", "title": "Meintenance Manager", "linkedin": "https://www.linkedin.com/in/cemal-kaya-b0ba65108/", "whatsapp": "+994103146262"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2022 - 2024</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">ILK Construction | Maire Tecnimont – KT</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2022 - 2024</span>
                     </div>
-                    <div class="timeline-subtitle">ILK Construction | Maire Tecnimont – KT</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">HAOR Refinery Modernization. Organized welder qualifications, material control, and weld mapping.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#Refinery #Modernization</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> HAOR Modernization Project</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">HAOR Refinery Modernization. Organized welder qualifications, material control, and weld mapping.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#Refinery #Modernization</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 3. HAOR GOMAG (2021-2022) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="3"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/haorgomag/haorgomag1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/haorgomag/haorgomag2.jpeg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/haorgomag/haorgomag3.jpeg"
+                <div class="card feed-card work-card" data-id="3"
+                     data-gallery="photos/haorgomag/haorgomag1.jpg, photos/haorgomag/haorgomag2.jpeg, photos/haorgomag/haorgomag3.jpeg"
                      data-title="Welding Supervisor"
                      data-project="HAOR Modernization Project"
                      data-client="Tecnicas Reunidas"
@@ -182,25 +201,32 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2021 - 2022"
                      data-contacts='[{"name": "Ali Gürgöz", "title": "General Manager", "linkedin": "https://www.linkedin.com/in/ali-gurgoz-0a2236289/"}, {"name": "Düzgün Yeklitaş", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/d%C3%BCzg%C3%BCn-yeklitas-12417a84/", "whatsapp": "+905445171762"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2021 - 2022</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">Gomag Energy | Tecnicas Reunidas</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2021 - 2022</span>
                     </div>
-                    <div class="timeline-subtitle">Gomag Energy | Tecnicas Reunidas</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Supervised high-pressure piping fabrication and installation adhering to TR specifications.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#TecnicasReunidas</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> HAOR Modernization Project</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised high-pressure piping fabrication and installation adhering to TR specifications.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#TecnicasReunidas</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 4. MNPZ (2020-2021) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-industry"></i></div>
-                <div class="timeline-card work-card" data-id="4"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/mozyr/mnpz1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/mozyr/mnpz2.jpeg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/mozyr/mnpz3.jpg"
+                <div class="card feed-card work-card" data-id="4"
+                     data-gallery="photos/mozyr/mnpz1.jpg, photos/mozyr/mnpz2.jpeg, photos/mozyr/mnpz3.jpg"
                      data-title="Welding Supervisor"
                      data-project="MNPZ HydroCracker Unit"
                      data-client="MNPZ"
@@ -208,25 +234,32 @@
                      data-location="Mozyr, Belarus"
                      data-date="2020 - 2021"
                      data-contacts='[{"name": "Engin Güngörmüş", "title": "Project Director", "linkedin": "https://www.linkedin.com/in/engin-gungormus-bb13bab/", "whatsapp": "+79858184050"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2020 - 2021</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-industry"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">Socar Construction | MNPZ</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2020 - 2021</span>
                     </div>
-                    <div class="timeline-subtitle">Socar Construction | MNPZ</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Mozyr, Belarus</div>
-                    <div class="timeline-body">Supervised high-pressure piping welding for the HydroCracker unit. Monitored repair rates.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#HydroCracker #Belarus</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> MNPZ HydroCracker Unit</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Mozyr, Belarus</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised high-pressure piping welding for the HydroCracker unit. Monitored repair rates.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#HydroCracker #Belarus</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 5. EP300 (2019-2020) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-atom"></i></div>
-                <div class="timeline-card work-card" data-id="5"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarep300/ep3001.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarep300/ep3002.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarep300/ep3003.jpg"
+                <div class="card feed-card work-card" data-id="5"
+                     data-gallery="photos/socarep300/ep3001.jpg, photos/socarep300/ep3002.jpg, photos/socarep300/ep3003.jpg"
                      data-title="Welding Supervisor"
                      data-project="Azerikimya – EP300"
                      data-client="TechnipFMC"
@@ -234,25 +267,32 @@
                      data-location="Sumqayit, Azerbaijan"
                      data-date="2019 - 2020"
                      data-contacts='[{"name": "Fırat Coşkun", "title": "Piping Manager", "linkedin": "https://www.linkedin.com/in/frtcoskun/", "whatsapp": "+905555971745"}, {"name": "Ozan Çil", "title": "Welding Engineer", "linkedin": "https://www.linkedin.com/in/ozan-%C3%A7il-37a36193/", "whatsapp": "+905447268169"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2019 - 2020</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-atom"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">Ustay Construction | TechnipFMC</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2019 - 2020</span>
                     </div>
-                    <div class="timeline-subtitle">Ustay Construction | TechnipFMC</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Sumqayit, Azerbaijan</div>
-                    <div class="timeline-body">Supervised site welding activities, spool fabrication, and TechnipFMC quality specifications.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#Petrochemical #TechnipFMC</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Azerikimya – EP300</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Sumqayit, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised site welding activities, spool fabrication, and TechnipFMC quality specifications.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#Petrochemical #TechnipFMC</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 6. SOCAR POLYMER (2017-2019) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-vial"></i></div>
-                <div class="timeline-card work-card" data-id="6"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarpolymr/polymr1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarpolymr/polymr2.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/socarpolymr/polymr3.jpg"
+                <div class="card feed-card work-card" data-id="6"
+                     data-gallery="photos/socarpolymr/polymr1.jpg, photos/socarpolymr/polymr2.jpg, photos/socarpolymr/polymr3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Socar Polymer – PP / HDPE"
                      data-client="Maire Tecnimont – KT"
@@ -260,25 +300,32 @@
                      data-location="Sumqayit, Azerbaijan"
                      data-date="2017 - 2019"
                      data-contacts='[{"name": "Engin Güngörmüş", "title": "Project Director", "linkedin": "https://www.linkedin.com/in/engin-gungormus-bb13bab/", "whatsapp": "+79858184050"}, {"name": "Çağatay Çağlayan", "title": "Country Manager", "linkedin": "https://www.linkedin.com/in/cagatay-caglayan-4ba7037a/", "whatsapp": "+79269428962"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2017 - 2019</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-vial"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">Ustay Construction | Maire Tecnimont</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2017 - 2019</span>
                     </div>
-                    <div class="timeline-subtitle">Ustay Construction | Maire Tecnimont</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Sumqayit, Azerbaijan</div>
-                    <div class="timeline-body">Supervised welding activities for PP / HDPE facility construction and QA/QC test packs.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#SocarPolymer #Polypropylene</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Socar Polymer – PP / HDPE</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Sumqayit, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised welding activities for PP / HDPE facility construction and QA/QC test packs.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#SocarPolymer #PP_HDPE</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 7. SHAH DENIZ (2015-2017) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="timeline-dot"><i class="fas fa-water"></i></div>
-                <div class="timeline-card work-card" data-id="7"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/shahdeniz2/ata1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/shahdeniz2/ata2.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/shahdeniz2/ata3.jpg"
+                <div class="card feed-card work-card" data-id="7"
+                     data-gallery="photos/shahdeniz2/ata1.jpg, photos/shahdeniz2/ata2.jpg, photos/shahdeniz2/ata3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Shah-Deniz-Stage-2 (SD2)"
                      data-client="BP Exploration"
@@ -286,24 +333,31 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2015 - 2017"
                      data-contacts='[{"name": "Özgür Yıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ozgur-yildiz-pmp%C2%AE-5430b366/", "whatsapp": "+905446654332"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2015 - 2017</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-water"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">ATA Consortium | BP Exploration</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2015 - 2017</span>
                     </div>
-                    <div class="timeline-subtitle">ATA Consortium | BP Exploration</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan (Offshore)</div>
-                    <div class="timeline-body">Supervised offshore fabrication and erection welding adhering to BP / EEMUA 158 specifications.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#BP #OffshorePlatform</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Shah-Deniz-Stage-2 (SD2) Offshore</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised offshore fabrication and erection welding adhering to BP / EEMUA 158 specifications.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#BP #OffshorePlatform</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 8. STADIUM (2013-2015) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="timeline-dot"><i class="fas fa-building"></i></div>
-                <div class="timeline-card work-card" data-id="8"
+                <div class="card feed-card work-card" data-id="8"
                      data-gallery="photos/stadiom/olimpic1.jpg, photos/stadiom/olimpic2.jpg, photos/stadiom/olimpic3.jpg"
                      data-title="Welding Foreman"
                      data-project="Baku Olympic Stadium Project"
@@ -312,25 +366,32 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2013 - 2015"
                      data-contacts='[{"name": "Özgür Yıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ozgur-yildiz-pmp%C2%AE-5430b366/", "whatsapp": "+905546654332"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Foreman</h3>
-                        <span class="timeline-date-badge">2013 - 2015</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-building"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Foreman</h3>
+                                <p class="feed-company-sub">Tekfen Construction | SOCAR</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2013 - 2015</span>
                     </div>
-                    <div class="timeline-subtitle">Tekfen Construction | SOCAR</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Supervised heavy structural steel and piping welding for Baku Olympic Stadium.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#Tekfen #BakuStadium</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Baku Olympic Stadium Project</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised heavy structural steel and piping welding for Baku Olympic Stadium.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#Tekfen #BakuStadium</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 9. COP-WC (2011-2013) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="timeline-dot"><i class="fas fa-water"></i></div>
-                <div class="timeline-card work-card" data-id="9"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/COP-WC-PDQ/atayard1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/COP-WC-PDQ/atayard2.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/COP-WC-PDQ/atayard3.jpg"
+                <div class="card feed-card work-card" data-id="9"
+                     data-gallery="photos/COP-WC-PDQ/atayard1.jpg, photos/COP-WC-PDQ/atayard2.jpg, photos/COP-WC-PDQ/atayard3.jpg"
                      data-title="Welding Foreman"
                      data-project="COP-WC-PDQ Fabrication"
                      data-client="AIOC"
@@ -338,25 +399,32 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2011 - 2013"
                      data-contacts='[{"name": "Özgür Yıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ozgur-yildiz-pmp%C2%AE-5430b366/", "whatsapp": "+905546654332"}, {"name": "Bülent Uzel", "title": "Piping Engineer", "linkedin": "https://www.linkedin.com/in/b%C3%BClent-uzel-53060440/", "whatsapp": "+905417142510"}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Foreman</h3>
-                        <span class="timeline-date-badge">2011 - 2013</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-water"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Foreman</h3>
+                                <p class="feed-company-sub">ATA Consortium | AIOC</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2011 - 2013</span>
                     </div>
-                    <div class="timeline-subtitle">ATA Consortium | AIOC</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Led welding teams on COP-WC-PDQ Platform Topside offshore platform fabrication.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#Offshore #Topside</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> COP-WC-PDQ Platform Topside</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Led welding teams on COP-WC-PDQ Platform Topside offshore platform fabrication.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#Offshore #Topside</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 10. OGB DRILLING (2010-2011) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="timeline-dot"><i class="fas fa-bore-hole"></i></div>
-                <div class="timeline-card work-card" data-id="10"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/ogb/ogb1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/ogb/ogb2.jpg"
+                <div class="card feed-card work-card" data-id="10"
+                     data-gallery="photos/ogb/ogb1.jpg, photos/ogb/ogb2.jpg"
                      data-title="Piping & Welding Supervisor"
                      data-project="OGB Water Pipeline Drilling"
                      data-client="Azersu"
@@ -364,25 +432,32 @@
                      data-location="Oguz, Azerbaijan"
                      data-date="2010 - 2011"
                      data-contacts='[{"name": "Elkin Rüstemov", "title": "Head of Research Division", "linkedin": "https://www.linkedin.com/in/elkin-r-80747340/", "whatsapp": ""}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Piping & Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2010 - 2011</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-bore-hole"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Piping & Welding Supervisor</h3>
+                                <p class="feed-company-sub">CES Consulting | Azersu</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2010 - 2011</span>
                     </div>
-                    <div class="timeline-subtitle">CES Consulting | Azersu</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Oguz, Azerbaijan</div>
-                    <div class="timeline-body">Supervised deep borehole piping fabrication, welding, and erection. Hydrotesting procedures.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#WaterPipeline #Drilling</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> OGB Water Pipeline Drilling</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Oguz, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised deep borehole piping fabrication, welding, and erection. Hydrotesting procedures.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#WaterPipeline #Drilling</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 11. OGB PIPELINE (2008-2010) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="timeline-dot"><i class="fas fa-route"></i></div>
-                <div class="timeline-card work-card" data-id="11"
-                     data-gallery="https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/ogb/ogb1.jpg, https://raw.githubusercontent.com/ayucetepe/ayucetepe.github.io/refs/heads/main/photos/ogb/ogb2.jpg"
+                <div class="card feed-card work-card" data-id="11"
+                     data-gallery="photos/ogb/ogb1.jpg, photos/ogb/ogb2.jpg"
                      data-title="Piping & Welding Supervisor"
                      data-project="OGB Water Pipeline Transmission Line"
                      data-client="Azersu"
@@ -390,24 +465,31 @@
                      data-location="Oguz, Azerbaijan"
                      data-date="2008 - 2010"
                      data-contacts='[{"name": "Elkin Rüstemov", "title": "Head of Research Division", "linkedin": "https://www.linkedin.com/in/elkin-r-80747340/", "whatsapp": ""}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Piping & Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2008 - 2010</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-route"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Piping & Welding Supervisor</h3>
+                                <p class="feed-company-sub">CES Consulting | Azersu</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2008 - 2010</span>
                     </div>
-                    <div class="timeline-subtitle">CES Consulting | Azersu</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Oguz, Azerbaijan</div>
-                    <div class="timeline-body">Supervised borehole piping and water transmission line fabrication and erection.</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#TransmissionLine</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> OGB Water Transmission Line</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Oguz, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised borehole piping and water transmission line fabrication and erection.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#TransmissionLine</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 12. SANGACHAL TANK (2007-2008) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="timeline-dot"><i class="fas fa-layer-group"></i></div>
-                <div class="timeline-card work-card" data-id="12"
+                <div class="card feed-card work-card" data-id="12"
                      data-gallery="photos/Entrepose/tml1.jpg, photos/Entrepose/tml2.jpg, photos/Entrepose/tml3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Sangachal Terminal Water Tank"
@@ -416,217 +498,325 @@
                      data-location="Baku, Azerbaijan"
                      data-date="2007 - 2008"
                      data-contacts='[{"name": "Sabri Ünlü", "title": "Mechanical Engineer", "linkedin": "https://www.linkedin.com/in/sabri-%C3%BCnl%C3%BC-405b88b6/", "whatsapp": ""}]'>
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Welding Supervisor</h3>
-                        <span class="timeline-date-badge">2007 - 2008</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Welding Supervisor</h3>
+                                <p class="feed-company-sub">Entrepose Contracting | AIOC</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2007 - 2008</span>
                     </div>
-                    <div class="timeline-subtitle">Entrepose Contracting | AIOC</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Supervised site erection welding of 21,000 m³ capacity Produced Water Tank (SMAW, GTAW, SAW).</div>
-                    <div class="timeline-footer">
-                        <span class="timeline-tag">#StorageTank #Sangachal</span>
-                        <span class="timeline-more-btn"><i class="fas fa-images"></i> Details & Gallery</span>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Sangachal Produced Water Tank (21,000 m³)</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Supervised site erection welding of 21,000 m³ capacity Produced Water Tank (SMAW, GTAW, SAW).</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#StorageTank #Sangachal</span>
+                        <span class="feed-btn-more"><i class="fas fa-images"></i> Details & Gallery <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
             <!-- 13. COP-WC WELDER (2006-2007) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="timeline-dot"><i class="fas fa-water"></i></div>
-                <div class="timeline-card work-card" data-id="13"
+                <div class="card feed-card work-card" data-id="13"
                      data-title="Multi-Coded Welder"
                      data-project="COP-WC-PDQ Offshore Platforms"
                      data-company="AIOC | Tekfen Construction"
                      data-location="Baku, Azerbaijan"
                      data-date="2006 - 2007">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Multi-Coded Welder</h3>
-                        <span class="timeline-date-badge">2006 - 2007</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-water"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Multi-Coded Welder</h3>
+                                <p class="feed-company-sub">AIOC | Tekfen Construction</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2006 - 2007</span>
                     </div>
-                    <div class="timeline-subtitle">AIOC | Tekfen Construction</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Offshore TPG 500 fabrication. GTAW/FCAW/SMAW welding on Duplex, Super Duplex, and Cu-Ni.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#MultiCodedWelder</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> COP-WC-PDQ Platforms</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Offshore TPG 500 fabrication. GTAW/FCAW/SMAW welding on Duplex, Super Duplex, and Cu-Ni.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#MultiCodedWelder</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 14. TPG 500 (2005-2006) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="timeline-dot"><i class="fas fa-water"></i></div>
-                <div class="timeline-card work-card" data-id="14"
+                <div class="card feed-card work-card" data-id="14"
                      data-title="Multi-Coded Welder"
                      data-project="TPG 500 outside North Sea"
                      data-company="AIOC | Technip, MQS"
                      data-location="Baku, Azerbaijan"
                      data-date="2005 - 2006">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Multi-Coded Welder</h3>
-                        <span class="timeline-date-badge">2005 - 2006</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-water"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Multi-Coded Welder</h3>
+                                <p class="feed-company-sub">AIOC | Technip / MQS</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2005 - 2006</span>
                     </div>
-                    <div class="timeline-subtitle">AIOC | Technip / MQS</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">TPG 500 Platform fabrication. Process piping welding on specialty alloys using GTAW / FCAW.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#OffshorePlatform</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> TPG 500 Platform Outside North Sea</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">TPG 500 Platform fabrication. Process piping welding on specialty alloys using GTAW / FCAW.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#OffshorePlatform</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 15. AGT PIPELINE (2004-2005) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="timeline-dot"><i class="fas fa-route"></i></div>
-                <div class="timeline-card work-card" data-id="15"
+                <div class="card feed-card work-card" data-id="15"
                      data-title="Pipeline Welder"
                      data-project="AGT Cross-Country Pipeline"
                      data-company="BTC & SCP | CCC"
                      data-location="Baku, Azerbaijan"
                      data-date="2004 - 2005">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Pipeline Welder</h3>
-                        <span class="timeline-date-badge">2004 - 2005</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-route"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Pipeline Welder</h3>
+                                <p class="feed-company-sub">BTC & SCP Pipeline | CCC</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2004 - 2005</span>
                     </div>
-                    <div class="timeline-subtitle">BTC & SCP Pipeline | CCC</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Cross-Country, Azerbaijan</div>
-                    <div class="timeline-body">AGT Cross-Country Pipeline. Uphill & downhill welding on heavy-wall API pipe (GTAW / SMAW).</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#CrossCountryPipeline</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> AGT Cross-Country Pipeline</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Cross-Country, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">AGT Cross-Country Pipeline. Uphill & downhill welding on heavy-wall API pipe (GTAW / SMAW).</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#CrossCountryPipeline</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 16. SANGACHAL EXP (2003-2004) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-industry"></i></div>
-                <div class="timeline-card work-card" data-id="16"
+                <div class="card feed-card work-card" data-id="16"
                      data-title="Specialist Welder"
                      data-project="Sangachal Terminal Expansion"
                      data-company="BP Exploration | Tekfen Construction"
                      data-location="Baku, Azerbaijan"
                      data-date="2003 - 2004">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Specialist Welder</h3>
-                        <span class="timeline-date-badge">2003 - 2004</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-industry"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Specialist Welder</h3>
+                                <p class="feed-company-sub">Tekfen Construction | BP Exploration</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2003 - 2004</span>
                     </div>
-                    <div class="timeline-subtitle">Tekfen Construction | BP Exploration</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">Sangachal Terminal Expansion. GTAW/SMAW welding on Stainless, Duplex, and Super Duplex.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#TerminalExpansion</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Sangachal Terminal Expansion</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Sangachal Terminal Expansion. GTAW/SMAW welding on Stainless, Duplex, and Super Duplex.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#TerminalExpansion</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 17. SEVERNAYA (2001-2003) -->
             <div class="timeline-item" data-category="power">
-                <div class="timeline-dot"><i class="fas fa-bolt"></i></div>
-                <div class="timeline-card work-card" data-id="17"
+                <div class="card feed-card work-card" data-id="17"
                      data-title="Power Plant Welder"
                      data-project="Severnaya 400 MW Combined Cycle Power Plant"
                      data-company="Azerenergy | Epro Energy / TML"
                      data-location="Baku, Azerbaijan"
                      data-date="2001 - 2003">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Power Plant Welder</h3>
-                        <span class="timeline-date-badge">2001 - 2003</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Power Plant Welder</h3>
+                                <p class="feed-company-sub">Epro Energy | Azerenergy</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2001 - 2003</span>
                     </div>
-                    <div class="timeline-subtitle">Epro Energy | Azerenergy</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</div>
-                    <div class="timeline-body">400 MW Combined Cycle Power Plant. High-pressure steam piping welding on P91, P22, and P11.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#PowerPlant #P91Welding</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Severnaya 400 MW CCPP</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Baku, Azerbaijan</span>
+                    </div>
+                    <div class="feed-body timeline-body">400 MW Combined Cycle Power Plant. High-pressure steam piping welding on P91, P22, and P11.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#PowerPlant #P91Welding</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 18. TUPRAS ISOM (2000-2001) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="18"
+                <div class="card feed-card work-card" data-id="18"
                      data-title="Refinery Welder"
                      data-project="Isomerization Unit"
                      data-company="Tüpraş | Epro Energy / Entes"
                      data-location="Izmit, Turkey"
                      data-date="2000 - 2001">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Refinery Welder</h3>
-                        <span class="timeline-date-badge">2000 - 2001</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Refinery Welder</h3>
+                                <p class="feed-company-sub">Tüpraş | Epro Energy / Entes</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">2000 - 2001</span>
                     </div>
-                    <div class="timeline-subtitle">Tüpraş | Epro Energy / Entes</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Izmit, Turkey</div>
-                    <div class="timeline-body">Isomerization unit fabrication and erection welding on high-spec P91, P22, P11 alloys.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#TuprasRefinery</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Tüpraş Isomerization Unit</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Izmit, Turkey</span>
+                    </div>
+                    <div class="feed-body timeline-body">Isomerization unit fabrication and erection welding on high-spec P91, P22, P11 alloys.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#TuprasRefinery</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 19. TUPRAS CCR (1999-2000) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="19"
+                <div class="card feed-card work-card" data-id="19"
                      data-title="Refinery Welder"
                      data-project="CCR & Isomerization units"
                      data-company="Tüpraş | FWI & Gama"
                      data-location="Izmir, Turkey"
                      data-date="1999 - 2000">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Refinery Welder</h3>
-                        <span class="timeline-date-badge">1999 - 2000</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Refinery Welder</h3>
+                                <p class="feed-company-sub">Tüpraş | FWI & Gama Industry</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">1999 - 2000</span>
                     </div>
-                    <div class="timeline-subtitle">Tüpraş | FWI & Gama Industry</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</div>
-                    <div class="timeline-body">CCR & Isomerization units process piping fabrication and site welding using GTAW / SMAW.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#CCRUnit</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> CCR & Isomerization Units</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</span>
+                    </div>
+                    <div class="feed-body timeline-body">CCR & Isomerization units process piping fabrication and site welding using GTAW / SMAW.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#CCRUnit</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 20. FERGANA (1997-1998) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="20"
+                <div class="card feed-card work-card" data-id="20"
                      data-title="Refinery Welder"
                      data-project="Fergana Oil Refinery"
                      data-company="Uzbekneftegas | Tekfen Construction"
                      data-location="Fergana, Uzbekistan"
                      data-date="1997 - 1998">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Refinery Welder</h3>
-                        <span class="timeline-date-badge">1997 - 1998</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Refinery Welder</h3>
+                                <p class="feed-company-sub">Tekfen Construction | Uzbekneftegas</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">1997 - 1998</span>
                     </div>
-                    <div class="timeline-subtitle">Tekfen Construction | Uzbekneftegas</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Fergana, Uzbekistan</div>
-                    <div class="timeline-body">Fergana Oil Refinery modernization. Heavy-wall piping fabrication and high-pressure welding.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#Uzbekistan #Tekfen</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Fergana Oil Refinery</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Fergana, Uzbekistan</span>
+                    </div>
+                    <div class="feed-body timeline-body">Fergana Oil Refinery modernization. Heavy-wall piping fabrication and high-pressure welding.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#Uzbekistan #Tekfen</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 21. PETKIM (1995-1997) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-flask"></i></div>
-                <div class="timeline-card work-card" data-id="21"
+                <div class="card feed-card work-card" data-id="21"
                      data-title="Petrochemical Welder"
                      data-project="Etilen Polietilen Petkim"
                      data-company="Petkim | Engin Makina"
                      data-location="Izmir, Turkey"
                      data-date="1995 - 1997">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Petrochemical Welder</h3>
-                        <span class="timeline-date-badge">1995 - 1997</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-flask"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Petrochemical Welder</h3>
+                                <p class="feed-company-sub">Petkim | Engin Makina</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">1995 - 1997</span>
                     </div>
-                    <div class="timeline-subtitle">Petkim | Engin Makina</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</div>
-                    <div class="timeline-body">Ethylene/Polyethylene plant process piping welding and fabrication on alloy steels.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#PetkimPetrochemical</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Etilen Polietilen Petkim</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</span>
+                    </div>
+                    <div class="feed-body timeline-body">Ethylene/Polyethylene plant process piping welding and fabrication on alloy steels.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#PetkimPetrochemical</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
             <!-- 22. TUPRAS 1991 (1991-1993) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="timeline-dot"><i class="fas fa-oil-well"></i></div>
-                <div class="timeline-card work-card" data-id="22"
+                <div class="card feed-card work-card" data-id="22"
                      data-title="Refinery Welder"
                      data-project="CCR & ISO Unit Tüpraş"
                      data-company="Tüpraş | Atilla Dogan"
                      data-location="Izmir, Turkey"
                      data-date="1991 - 1993">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Refinery Welder</h3>
-                        <span class="timeline-date-badge">1991 - 1993</span>
+                    <div class="feed-header">
+                        <div class="feed-header-left">
+                            <div class="feed-avatar-icon"><i class="fas fa-oil-well"></i></div>
+                            <div class="feed-header-text">
+                                <h3 class="timeline-title">Refinery Welder</h3>
+                                <p class="feed-company-sub">Tüpraş | Atilla Dogan</p>
+                            </div>
+                        </div>
+                        <span class="feed-date-badge">1991 - 1993</span>
                     </div>
-                    <div class="timeline-subtitle">Tüpraş | Atilla Dogan</div>
-                    <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</div>
-                    <div class="timeline-body">Tüpraş Refinery expansion. High-pressure piping fabrication and erection welding.</div>
-                    <div class="timeline-footer"><span class="timeline-tag">#TuprasRefinery</span><span class="timeline-more-btn">View Details <i class="fas fa-arrow-right"></i></span></div>
+                    <div class="feed-meta-row">
+                        <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> CCR & ISO Unit Tüpraş</span>
+                        <span class="feed-meta-item"><i class="fas fa-map-marker-alt"></i> Izmir, Turkey</span>
+                    </div>
+                    <div class="feed-body timeline-body">Tüpraş Refinery expansion. High-pressure piping fabrication and erection welding.</div>
+                    <div class="feed-footer">
+                        <span class="feed-tag">#TuprasRefinery</span>
+                        <span class="feed-btn-more">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
 
@@ -650,7 +840,7 @@
         </div>
     </div>
 
-    <!-- LIGHTBOX (BÜYÜK RESİM GÖRÜNTÜLEYİCİ) -->
+    <!-- LIGHTBOX -->
     <div id="lightbox" class="modal" style="text-align: center;">
         <span class="close-btn" onclick="closeLightbox()" style="color:#fff; z-index:5000;">&times;</span>
         <div style="position: relative; max-width: 90%; max-height: 85vh; margin: 4% auto; display: flex; align-items: center; justify-content: center;">
@@ -663,11 +853,11 @@
     <!-- Scriptler -->
     <script src="locales/en.js"></script>
     <script src="locales/tr.js"></script>
+    <script src="locales/es.js"></script>
     <script src="locales/ru.js"></script>
     <script src="locales/az.js"></script>
     <script src="locales/de.js"></script>
     <script src="locales/ar.js"></script>
-    <script src="locales/es.js"></script>
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
