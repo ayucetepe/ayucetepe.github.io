@@ -1,452 +1,268 @@
+/**
+ * Aziz Yucetepe - Portfolyo Script (Modallar, Galeri & Lightbox, Filtreleme, Sosyal Menü)
+ */
+
+let currentGallery = [];
+let currentSlideIndex = 0;
+
 document.addEventListener("DOMContentLoaded", function() {
+    
+    // =========================================================================
+    // 1. TEMA YÖNETİMİ (DARK / LIGHT MODE)
+    // =========================================================================
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
 
-    // ======================================================
-    // 1. MODAL, GALERİ VE LIGHTBOX İŞLEMLERİ
-    // ======================================================
+    window.toggleTheme = function() {
+        const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    };
 
-    // --- İŞ DENEYİMİ (WORK EXPERIENCE) ---
+    // =========================================================================
+    // 2. AKTİF MENÜ SAYFASINI VURGULA
+    // =========================================================================
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
+    // =========================================================================
+    // 3. İŞ DENEYİMİ DETAY MODALI & GALERİ YÖNETİMİ
+    // =========================================================================
     const expModal = document.getElementById("experienceModal");
-    const workCards = document.querySelectorAll(".work-card");
-    const expCloseBtn = expModal ? expModal.querySelector(".close-btn") : null;
-
-    // Galeri ve Lightbox Elemanları
     const gallerySection = document.getElementById("modal-gallery-section");
     const openGalleryBtn = document.getElementById("open-gallery-btn");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxClose = document.querySelector(".lightbox-close");
 
-    let currentProjectImages = [];
-    let currentImageIndex = 0;
+    if (expModal) {
+        document.querySelectorAll(".work-card").forEach(card => {
+            card.addEventListener("click", function() {
+                const title = this.getAttribute("data-title") || this.querySelector("h3").innerText;
+                const project = this.getAttribute("data-project") || "";
+                const company = this.getAttribute("data-company") || "";
+                const location = this.getAttribute("data-location") || "";
+                const date = this.getAttribute("data-date") || "";
+                const client = this.getAttribute("data-client") || "";
+                const description = this.getAttribute("data-description") || "";
+                const galleryData = this.getAttribute("data-gallery");
 
-    // İş Deneyimi Kartlarına Tıklama
-    if (expModal && workCards.length > 0) {
-        workCards.forEach(card => {
-            card.addEventListener("click", () => {
-                // Verileri HTML'den çek
-                const title = card.getAttribute("data-title") || "";
-                const project = card.getAttribute("data-project") || "";
-                const client = card.getAttribute("data-client") || "";
-                const company = card.getAttribute("data-company") || "";
-                const location = card.getAttribute("data-location") || "";
-                const date = card.getAttribute("data-date") || "";
-                const description = card.getAttribute("data-description") || "";
+                // Galeri Fotoğrafları
+                currentGallery = galleryData ? galleryData.split(",").map(s => s.trim()).filter(s => s) : [];
+                if (gallerySection) {
+                    gallerySection.style.display = currentGallery.length > 0 ? "block" : "none";
+                }
 
-                // --- YENİ KİŞİ SİSTEMİ BAŞLANGIÇ ---
-                const contactsData = card.getAttribute("data-contacts");
+                // Proje Yöneticileri, LinkedIn & WhatsApp
                 let contactsHTML = "";
-
-                // Eğer yeni sistem (JSON) veri varsa işle
+                const contactsData = this.getAttribute("data-contacts");
                 if (contactsData) {
                     try {
-                        const contacts = JSON.parse(contactsData); // JSON verisini oku
-
+                        const contacts = JSON.parse(contactsData);
                         contactsHTML = `<div class="contacts-container">`;
-
                         contacts.forEach(person => {
-                            // WhatsApp Butonu Mantığı
-                            let whatsappButton = "";
-                            if (person.whatsapp && person.whatsapp.trim() !== "") {
-                                // Numarayı temizle (sadece rakam kalsın)
-                                let cleanNumber = person.whatsapp.replace(/\D/g, '');
-                                whatsappButton = `
-                                    <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
-                                        <i class="fab fa-whatsapp"></i> Chat
-                                    </a>`;
-                            }
-
-                            // Kişi Kartı HTML'i
+                            let cleanNumber = person.whatsapp ? person.whatsapp.replace(/\D/g, '') : '';
+                            let waButton = cleanNumber ? `
+                                <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>` : '';
+                            let liButton = person.linkedin ? `
+                                <a href="${person.linkedin}" target="_blank" class="contact-wa-btn" style="background:#0a66c2;">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>` : '';
                             contactsHTML += `
                                 <div class="contact-person-card">
-                                    <div class="person-info">
-                                        <a href="${person.linkedin}" target="_blank" class="person-name">
-                                            ${person.name} <i class="fab fa-linkedin"></i>
-                                        </a>
-                                        <span class="person-title">${person.title}</span>
+                                    <div>
+                                        <strong>${person.name}</strong> 
+                                        <div style="font-size:0.8rem; color:var(--text-muted);">${person.title}</div>
                                     </div>
-                                    ${whatsappButton}
-                                </div>
-                            `;
+                                    <div style="display:flex; gap:6px;">${liButton} ${waButton}</div>
+                                </div>`;
                         });
-
                         contactsHTML += `</div>`;
-
-                    } catch (e) {
-                        console.error("JSON Hatası (data-contacts):", e);
-                        contactsHTML = "<p style='color:red;'>Contact data error.</p>";
+                    } catch(e) {
+                        console.error("Contacts JSON hatası:", e);
                     }
-                } else {
-                    // Eski sistem (Eğer data-manager varsa onu kullan - Geriye dönük uyumluluk)
-                    const manager = card.getAttribute("data-manager");
-                    if(manager) {
-                        contactsHTML = `<p>${manager}</p>`;
-                    }
-                }
-                // --- YENİ KİŞİ SİSTEMİ BİTİŞ ---
-
-                // Galeri verisini çek (Varsa virgülle ayrılmış linkler)
-                const galleryData = card.getAttribute("data-gallery");
-                if (galleryData && galleryData.trim() !== "") {
-                    currentProjectImages = galleryData.split(',').map(item => item.trim());
-                } else {
-                    currentProjectImages = [];
                 }
 
                 // Modal İçeriğini Doldur
-                const titleEl = document.getElementById("modal-title");
-                const metaEl = document.getElementById("modal-meta");
-                const descEl = document.getElementById("modal-description");
+                const modalTitle = document.getElementById("modal-title");
+                const modalMeta = document.getElementById("modal-meta");
+                const modalDesc = document.getElementById("modal-description");
 
-                if(titleEl) titleEl.innerText = title;
-                // Şirket, Yer ve Tarih bilgisi
-                if(metaEl) metaEl.innerHTML = `<span style="color:var(--primary-color)">${company}</span> | ${location} | ${date}`;
-
-                // Açıklama Kısmı (HTML formatında)
-                if(descEl) descEl.innerHTML = `
-                    <p><strong>Project:</strong> ${project}</p>
-                    <p><strong>Client:</strong> ${client}</p>
-                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--border-color);">
-                    <strong style="color:var(--primary-color); display:block; margin-bottom:5px;">Job Description:</strong>
-                    <p>${description}</p>
-                    <br>
-                    <strong style="color:var(--primary-color); display:block; margin-bottom:10px;">Project Management / Contact:</strong>
-                    ${contactsHTML}
-                `;
-
-                // Galeri Butonunu Göster/Gizle (Resim varsa göster)
-                if (gallerySection) {
-                    gallerySection.style.display = currentProjectImages.length > 0 ? "block" : "none";
+                if (modalTitle) modalTitle.innerText = title;
+                if (modalMeta) modalMeta.innerHTML = `<strong>${company}</strong> | ${location} | ${date}`;
+                if (modalDesc) {
+                    modalDesc.innerHTML = `
+                        <p style="margin-bottom:6px;"><strong>Project:</strong> ${project}</p>
+                        ${client ? `<p style="margin-bottom:8px; color:var(--text-muted); font-size:0.88rem;"><strong>Client:</strong> ${client}</p>` : ''}
+                        <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
+                        <div style="line-height: 1.8; margin-bottom: 15px;">${description}</div>
+                        ${contactsHTML ? '<h4 style="color:var(--primary); margin-top:15px; margin-bottom:8px;">Project Contacts & References:</h4>' + contactsHTML : ''}
+                    `;
                 }
 
-                // Modalı Aç
                 expModal.style.display = "block";
             });
         });
 
-        // Kapatma Butonu
-        if(expCloseBtn) {
-            expCloseBtn.addEventListener("click", () => { expModal.style.display = "none"; });
-        }
-
-        // Galeri Butonu Tıklama (Lightbox'ı açar)
-        if(openGalleryBtn) {
-            openGalleryBtn.addEventListener("click", () => {
-                if(currentProjectImages.length > 0) {
-                    currentImageIndex = 0;
-                    if(lightboxImg) lightboxImg.src = currentProjectImages[currentImageIndex];
-                    if(lightbox) lightbox.style.display = "block";
-                }
-            });
+        const closeBtn = expModal.querySelector(".close-btn");
+        if (closeBtn) {
+            closeBtn.onclick = () => { expModal.style.display = "none"; };
         }
     }
 
-    // --- SERTİFİKA (CERTIFICATES) ---
-    const certModal = document.getElementById("certificateModal");
-    const certCards = document.querySelectorAll(".cert-card");
-    const certCloseBtn = certModal ? certModal.querySelector(".close-btn") : null;
+    // Galeri Açma Butonu
+    if (openGalleryBtn) {
+        openGalleryBtn.onclick = function() {
+            if (currentGallery.length > 0) {
+                openLightbox(0);
+            }
+        };
+    }
 
-    if (certModal && certCards.length > 0) {
-        certCards.forEach(card => {
-            card.addEventListener("click", () => {
-                const title = card.getAttribute("data-title") || "";
-                const issuer = card.getAttribute("data-issuer") || "";
-                const date = card.getAttribute("data-date") || "";
-                const desc = card.getAttribute("data-desc") || "";
-                const imagePath = card.getAttribute("data-image") || "";
+    // =========================================================================
+    // 4. SERTİFİKA DETAY MODALI
+    // =========================================================================
+    const certModal = document.getElementById("certificateModal");
+    if (certModal) {
+        document.querySelectorAll(".cert-card").forEach(card => {
+            card.addEventListener("click", function() {
+                const title = this.getAttribute("data-title") || this.querySelector("h3").innerText;
+                const imgPath = this.getAttribute("data-image") || "";
+                const desc = this.getAttribute("data-desc") || "";
 
                 const cTitle = document.getElementById("cert-title");
-                const cMeta = document.getElementById("cert-meta");
-                const cDesc = document.getElementById("cert-desc");
                 const cImg = document.getElementById("cert-img");
+                const cDesc = document.getElementById("cert-desc");
 
-                if(cTitle) cTitle.innerText = title;
-                if(cMeta) cMeta.innerText = `${issuer} | ${date}`;
-                if(cDesc) cDesc.innerText = desc;
-
+                if (cTitle) cTitle.innerText = title;
                 if (cImg) {
-                    if (imagePath && imagePath.trim() !== "") {
-                        cImg.src = imagePath;
-                        cImg.style.display = "block";
-                    } else {
-                        cImg.style.display = "none";
-                    }
+                    cImg.src = imgPath;
+                    cImg.style.display = imgPath ? "block" : "none";
                 }
+                if (cDesc) cDesc.innerText = desc;
 
                 certModal.style.display = "block";
             });
         });
 
-        if(certCloseBtn) {
-            certCloseBtn.addEventListener("click", () => { certModal.style.display = "none"; });
+        const closeBtn = certModal.querySelector(".close-btn");
+        if (closeBtn) {
+            closeBtn.onclick = () => { certModal.style.display = "none"; };
         }
     }
 
-    // --- LIGHTBOX (RESİM SLAYT) ---
-    if(lightbox) {
-        if(lightboxClose) {
-            lightboxClose.addEventListener("click", () => { lightbox.style.display = "none"; });
-        }
-        // Global Slide Değiştirme Fonksiyonu
-        window.changeSlide = (n) => {
-            currentImageIndex += n;
-            if (currentImageIndex >= currentProjectImages.length) currentImageIndex = 0;
-            else if (currentImageIndex < 0) currentImageIndex = currentProjectImages.length - 1;
+    // =========================================================================
+    // 5. SOSYAL MEDYA MOBİL DRAWER KONTROLÜ
+    // =========================================================================
+    const userBtn = document.getElementById("userMenuBtn");
+    const userDrop = document.getElementById("userDropdown");
+    const backdrop = document.getElementById("drawerBackdrop");
 
-            if(lightboxImg) lightboxImg.src = currentProjectImages[currentImageIndex];
-        };
+    function closeDrawer() {
+        if (userDrop) userDrop.classList.remove("show");
+        if (backdrop) backdrop.classList.remove("show");
     }
 
-    // PENCERELERİ DIŞARI TIKLAYINCA KAPATMA (Genel Modal Kapatma)
-    window.addEventListener("click", (event) => {
-        if (expModal && event.target == expModal) expModal.style.display = "none";
-        if (certModal && event.target == certModal) certModal.style.display = "none";
-        if (lightbox && event.target == lightbox) lightbox.style.display = "none";
-    });
-
-
-    // ======================================================
-    // 2. HEADER YÜKLEME VE BAŞLATMA
-    // ======================================================
-    const headerPlaceholder = document.getElementById("global-header");
-
-    if (headerPlaceholder) {
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-                headerPlaceholder.innerHTML = data;
-
-                // Header HTML geldikten sonra fonksiyonları başlat
-                initializeTheme();
-                initializeMobileMenu();
-                highlightActivePage();
-
-                // Kayıtlı dili yükle ve başlat
-                const savedLang = localStorage.getItem('language') || 'en';
-                if (typeof window.setLanguage === 'function') {
-                    window.setLanguage(savedLang);
-                }
-            })
-            .catch(error => console.error("Header yüklenemedi:", error));
-    } else {
-        // Header manuel eklenmişse
-        initializeTheme();
-        const savedLang = localStorage.getItem('language') || 'en';
-        if (typeof window.setLanguage === 'function') {
-            window.setLanguage(savedLang);
-        }
+    function openDrawer() {
+        if (userDrop) userDrop.classList.add("show");
+        if (backdrop) backdrop.classList.add("show");
     }
 
-    // ======================================================
-    // 3. YARDIMCI FONKSİYONLAR
-    // ======================================================
-
-    function highlightActivePage() {
-        const currentPath = window.location.pathname.split("/").pop() || "index.html";
-        const links = document.querySelectorAll("nav a, .mobile-nav a");
-        links.forEach(link => {
-            // Basit eşleşme kontrolü
-            if (link.getAttribute("href") === currentPath) {
-                link.classList.add("active");
-            }
-        });
-    }
-
-    function initializeTheme() {
-        const themeSwitchers = [
-            document.getElementById('theme-switcher'),
-            document.getElementById('mobile-theme-switcher')
-        ];
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            themeSwitchers.forEach(btn => { if(btn) btn.checked = (currentTheme === 'dark'); });
-        }
-        themeSwitchers.forEach(btn => {
-            if(!btn) return;
-            btn.addEventListener('change', function() {
-                const theme = this.checked ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                themeSwitchers.forEach(otherBtn => { if(otherBtn) otherBtn.checked = this.checked; });
-            });
-        });
-    }
-
-    function initializeMobileMenu() {
-        const hamburger = document.querySelector(".hamburger");
-        const mobileNav = document.querySelector(".mobile-nav");
-        if(hamburger && mobileNav) {
-            hamburger.addEventListener("click", () => {
-                hamburger.classList.toggle("active");
-                mobileNav.classList.toggle("active");
-            });
-            // Linke tıklayınca menüyü kapat
-            mobileNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove("active");
-                    mobileNav.classList.remove("active");
-                });
-            });
-        }
-    }
-
-});
-
-// ======================================================
-// 4. GLOBAL FONKSİYONLAR (Window nesnesine bağlı)
-// ======================================================
-
-// --- DİL DEĞİŞTİRME FONKSİYONU ---
-window.setLanguage = (lang) => {
-    // Çeviri dosyası (translations.js) yoksa işlem yapma
-    if (typeof translations === 'undefined') return;
-
-    // 1. Metinleri Güncelle (data-translate)
-    document.querySelectorAll('[data-translate]').forEach(el => {
-        const key = el.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            // Eğer metin HTML içeriyorsa (Bold, Liste vb.)
-            if (key === 'about_text' || key === 'skills_long_text') {
-                el.innerHTML = translations[lang][key];
+    if (userBtn && userDrop) {
+        userBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            if (userDrop.classList.contains("show")) {
+                closeDrawer();
             } else {
-                el.innerText = translations[lang][key];
-            }
-        }
-    });
-
-    // 2. Placeholder (Input) Güncelle
-    document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-translate-placeholder');
-         if (translations[lang] && translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-        }
-    });
-
-    // 3. İş Deneyimi Kartlarını Güncelle
-    if (translations[lang].jobs) {
-        document.querySelectorAll('.work-card').forEach(card => {
-            const id = card.getAttribute('data-id'); // Kartın ID'sini al (1, 2, 3...)
-            const jobData = translations[lang].jobs[id]; // Çeviri dosyasından o ID'yi bul
-
-            if (jobData) {
-                // Kart üzerindeki görünen Başlığı (H3) değiştir
-                const h3 = card.querySelector('h3');
-                if(h3) h3.innerText = jobData.title;
-
-                // Modal için gerekli gizli verileri (Data Attributes) güncelle
-                card.setAttribute('data-title', jobData.title);
-                if(jobData.desc) card.setAttribute('data-description', jobData.desc);
+                openDrawer();
             }
         });
-    }
 
-    // 4. Sertifika Kartlarını Güncelle
-    if (translations[lang].certs) {
-        document.querySelectorAll('.cert-card').forEach(card => {
-            const id = card.getAttribute('data-id'); // c1, c2...
-            const certData = translations[lang].certs[id];
-
-            if (certData) {
-                // Kart Başlığı (H3)
-                const h3 = card.querySelector('h3');
-                if(h3) h3.innerText = certData.title;
-
-                // Data Attribute'ları güncelle (Modal için)
-                card.setAttribute('data-title', certData.title);
-                card.setAttribute('data-desc', certData.desc);
-            }
+        userDrop.addEventListener("click", function(e) {
+            e.stopPropagation();
         });
-    }
 
-    // 5. Görünen Dil İsimlerini Güncelle
-    const langNames = {
-       "en": "English",
-       "tr": "Türkçe",
-       "ru": "Русский",
-       "ar": "العربية",
-       "de": "Deutsch",
-       "az": "Azərbaycanca",
-       "es": "Español"
-   };
-
-    // Masaüstü Profil Dropdown içindeki yazı
-    const desktopLangText = document.getElementById("desktop-lang-text");
-    if(desktopLangText) desktopLangText.innerText = langNames[lang];
-
-    // Mobil Menü (Accordion) içindeki yazı
-    const mobileLangText = document.getElementById("mobile-lang-text");
-    if(mobileLangText) mobileLangText.innerText = langNames[lang];
-
-    // 6. RTL (Arapça) Desteği
-    if (lang === 'ar') {
-        document.documentElement.setAttribute('dir', 'rtl');
-        document.documentElement.lang = 'ar';
-    } else {
-        document.documentElement.setAttribute('dir', 'ltr');
-        document.documentElement.lang = lang;
-    }
-
-    // 7. Açık Olan Menüleri Kapat
-    const mobileList = document.getElementById("mobile-lang-list");
-    if(mobileList) mobileList.classList.remove("open");
-
-    const customSelect = document.querySelector(".custom-select-wrapper");
-    if(customSelect) customSelect.classList.remove("open");
-
-    // 8. Kaydet
-    localStorage.setItem('language', lang);
-};
-
-
-// --- HEADER PROFİL MENÜSÜ AÇ/KAPA ---
-window.toggleProfileMenu = function() {
-    const menu = document.getElementById("profile-dropdown");
-    if (menu) {
-        menu.classList.toggle("active");
-    }
-};
-
-// --- MOBİL DİL MENÜSÜ AÇ/KAPA (Accordion) ---
-window.toggleMobileLang = function() {
-    const list = document.getElementById("mobile-lang-list");
-    const arrow = document.querySelector(".accordion-btn .arrow");
-    if (list) {
-        list.classList.toggle("open");
-        if(arrow) {
-             // Menü açılınca oku döndür
-             arrow.style.transform = list.classList.contains("open") ? "rotate(180deg)" : "rotate(0deg)";
-             arrow.style.transition = "transform 0.3s";
+        if (backdrop) {
+            backdrop.addEventListener("click", closeDrawer);
         }
-    }
-};
-
-// --- DIŞARI TIKLAYINCA MENÜLERİ KAPAT ---
-window.addEventListener("click", function(e) {
-    // 1. Profil Menüsünü Kapat
-    const profileMenu = document.getElementById("profile-dropdown");
-    const profileTrigger = document.querySelector(".profile-trigger");
-
-    if (profileMenu && profileTrigger) {
-        if (!profileMenu.contains(e.target) && !profileTrigger.contains(e.target)) {
-            profileMenu.classList.remove("active");
-        }
+        document.addEventListener("click", closeDrawer);
     }
 
-    // 2. Masaüstü Dil Dropdown'u Kapat
-    const customSelect = document.querySelector(".custom-select-wrapper");
-    if (customSelect && !customSelect.contains(e.target)) {
-        customSelect.classList.remove("open");
-    }
-
-    // 3. MOBİL MENÜYÜ KAPAT (Menü açıkken dışına tıklanırsa)
-    const mobileNav = document.querySelector(".mobile-nav");
-    const hamburger = document.querySelector(".hamburger");
-
-    // Eğer menü açıksa (active) VE tıklanan yer menü değilse VE tıklanan yer hamburger butonu değilse
-    if (mobileNav && hamburger && mobileNav.classList.contains("active")) {
-        if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
-            mobileNav.classList.remove("active");
-            hamburger.classList.remove("active");
-        }
-    }
+    // Modalları dışarı tıklayınca kapatma
+    window.onclick = function(e) {
+        if (expModal && e.target === expModal) expModal.style.display = "none";
+        if (certModal && e.target === certModal) certModal.style.display = "none";
+        const lb = document.getElementById("lightbox");
+        if (lb && e.target === lb) closeLightbox();
+    };
 });
+
+// =============================================================================
+// 6. LIGHTBOX GALERİ FONKSİYONLARI
+// =============================================================================
+function openLightbox(index) {
+    currentSlideIndex = index;
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightbox-img");
+    if (lb && lbImg && currentGallery.length > 0) {
+        lbImg.src = currentGallery[currentSlideIndex];
+        lb.style.display = "block";
+    }
+}
+
+function closeLightbox() {
+    const lb = document.getElementById("lightbox");
+    if (lb) lb.style.display = "none";
+}
+
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    if (currentSlideIndex >= currentGallery.length) currentSlideIndex = 0;
+    if (currentSlideIndex < 0) currentSlideIndex = currentGallery.length - 1;
+    const lbImg = document.getElementById("lightbox-img");
+    if (lbImg) lbImg.src = currentGallery[currentSlideIndex];
+}
+
+// =============================================================================
+// 7. ZAMAN TÜNELİ SOSYAL FİLTRELEME
+// =============================================================================
+window.filterTimeline = function(category, btn) {
+    document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+
+    const items = document.querySelectorAll(".timeline-item");
+    items.forEach(item => {
+        if (category === "all" || item.getAttribute("data-category") === category) {
+            item.style.display = "block";
+            item.style.opacity = "1";
+        } else {
+            item.style.display = "none";
+            item.style.opacity = "0";
+        }
+    });
+};
+
+// =============================================================================
+// 8. SERTİFİKA & REFERANS FİLTRELEME
+// =============================================================================
+window.filterCerts = function(category, btn) {
+    document.querySelectorAll(".timeline-filters .filter-chip").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+
+    const cards = document.querySelectorAll(".cert-card");
+    cards.forEach(card => {
+        if (category === "all" || card.getAttribute("data-category") === category) {
+            card.style.display = "block";
+            card.style.opacity = "1";
+        } else {
+            card.style.display = "none";
+            card.style.opacity = "0";
+        }
+    });
+};
