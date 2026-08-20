@@ -3,77 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Aziz Yucetepe | Welding Supervisor & Inspector</title>
-
-    <!-- CSS -->
+    
+    <!-- CSS & FontAwesome -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="canonical" href="https://ayucetepe.github.io/" />
-
-    <!-- ======================================================= -->
-    <!-- FAVICON AYARLARI (Google + Apple + Tüm Tarayıcılar İçin) -->
-    <!-- ======================================================= -->
-
-    <link rel="icon" type="image/png" href="/favicon.png?v=2" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-192.png?v=2" sizes="192x192">
-<link rel="icon" type="image/png" href="/favicon-512.png?v=2" sizes="512x512">
-<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
-
-
-    <!-- ======================================================= -->
-    <!-- SOSYAL MEDYA PAYLAŞIM (OPEN GRAPH) AYARLARI -->
-    <!-- ======================================================= -->
-
-    <meta property="og:title" content="Aziz Yucetepe | Welding Supervisor & Inspector">
-    <meta name="description" content="Aziz Yucetepe - Welding Supervisor & Inspector. 30+ years of experience in Oil & Gas, Power Plants, and Petrochemical industries. Certified QA/QC and Welding Specialist.">
-
-    <meta property="og:description" content="33+ Years of Experience in Welding & Piping Supervision within Oil & Gas, Power, and Petrochemical Sectors.">
-
-    <!-- Yeni favicon'lar root dizinde olduğu için OG image olarak 512px olanı kullandık -->
-    <meta property="og:image" content="https://ayucetepe.github.io/favicon-512.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-
-    <meta property="og:url" content="https://ayucetepe.github.io">
-    <meta property="og:type" content="website">
-    <meta name="author" content="Aziz Yucetepe">
-
-    <!-- Google Search Console Doğrulaması -->
-    <meta name="google-site-verification" content="kXg8FO1r6Eg36y6xk9iC6-8Jo3bgqQ1k6TuX4EqypTo">
-
-    <!-- Çeviri Scripti -->
-    <script src="translations.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
-  <header id="global-header"></header>
 
-  <div class="container">
-      <main>
-          <!-- SAYFA BAŞLIĞI -->
-          <h1 class="page-title" data-translate="about_title">About Me</h1>
+    <!-- MOBİL KARARTMA PERDESİ (BACKDROP) -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-          <!-- ABOUT ME KARTI (ARTIK KUTU İÇİNDE) -->
-          <div class="card">
-              <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-color);" data-translate="about_text">
-                  <!-- Javascript burayı dolduracak -->
-              </p>
-          </div>
+    <!-- ÜST MENÜ (HEADER) -->
+    <header class="site-header">
+        <div class="navbar">
+            
+            <!-- Masaüstü Logo (Mobilde Otomatik Gizlenir) -->
+            <a href="index.html" class="brand-logo">
+                <span class="brand-badge">AY</span>
+                <span>Aziz Yucetepe</span>
+            </a>
+            
+            <!-- Facebook Stili Sekme Menüsü (Mobilde Sadece İkonlar Kalır) -->
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" title="Home">
+                        <i class="fas fa-house"></i>
+                        <span data-translate="nav_about">About Me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="experience.html" title="Experience">
+                        <i class="fas fa-briefcase"></i>
+                        <span data-translate="nav_experience">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="certificates.html" title="Certificates">
+                        <i class="fas fa-certificate"></i>
+                        <span data-translate="nav_certificates">Certificates</span>
+                    </a>
+                </li>
+            </ul>
 
-          <!-- TECHNICAL SKILLS BAŞLIĞI (Boşluklu) -->
-          <h2 style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-color);" data-translate="skills_title">Technical Skills</h2>
+            <!-- Sağ Taraf: Profil Avatarı & Drawer Menü -->
+            <div class="user-menu-wrapper">
+                <button class="nav-avatar-btn" id="userMenuBtn" title="Hesap ve Ayarlar">
+                    <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/42'" class="nav-avatar-img">
+                </button>
 
-          <!-- TECHNICAL SKILLS KARTI -->
-          <div class="card">
-              <div data-translate="skills_long_text" style="font-size: 1rem; color: var(--text-color);">
-                  <!-- Javascript burayı dolduracak -->
-              </div>
-          </div>
-      </main>
-  </div>
-    <footer><p>&copy; 2025 Aziz Yucetepe. All rights reserved.</p></footer>
+                <!-- Açılır Profil Menüsü / Mobilde Kayan Drawer -->
+                <div class="profile-dropdown" id="userDropdown">
+                    <div class="drawer-handle"></div> <!-- Mobildeki tutma çizgisi -->
+                    
+                    <div class="dropdown-header">
+                        <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
+                        <div class="dropdown-user-info">
+                            <h4>Aziz Yucetepe</h4>
+                            <p>Welding Supervisor</p>
+                        </div>
+                    </div>
+                    <a href="profile.html" class="btn-view-profile" data-translate="nav_profile"><i class="fas fa-user-circle"></i> View Profile & Contact</a>
+
+                    <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
+
+                    <ul class="dropdown-section">
+                        <!-- Dil Seçimi -->
+                        <li class="dropdown-item">
+                            <div class="dropdown-item-left">
+                                <i class="fas fa-globe"></i>
+                                <span>Language</span>
+                            </div>
+                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                                 
+<option value="ar">🇦🇪 AR</option>
+<option value="az">🇦🇿 AZ</option>
+<option value="de">🇩🇪 DE</option>
+<option value="en">🇺🇸 EN</option>
+<option value="es">🇪🇸 ES</option>
+<option value="ru">🇷🇺 RU</option>
+<option value="tr">🇹🇷 TR</option>
+                            </select>
+                        </li>
+
+                        <!-- Gece / Gündüz Modu -->
+                        <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
+                            <div class="dropdown-item-left">
+                                <i class="fas fa-moon"></i>
+                                <span>Display Mode</span>
+                            </div>
+                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
+                        </li>
+
+                        <!-- CV İndir -->
+                        <li>
+                            <a href="Aziz Yucetepe.pdf" download class="dropdown-item">
+                                <div class="dropdown-item-left">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download CV</span>
+                                </div>
+                                <i class="fas fa-download" style="font-size: 0.85rem;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- 1. BÖLÜM: ABOUT ME (HAKKIMDA) -->
+        <div class="card">
+            <h1 class="page-title" data-translate="about_title">About Me</h1>
+            
+            <div data-translate="about_text" style="font-size: 1.02rem; line-height: 1.8;">
+                <p style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">
+                    Petroleum & Gas - Power - Petrochemical Industry
+                </p>
+                <p style="margin-bottom: 14px;">
+                    Significant experience gained in the welding and fabrication industry. Working Offshore/Onshore Power stations, petrochemical plants, and oil refineries at fabrication yards on green field sites and live installations.
+                </p>
+                <p style="margin-bottom: 14px;">
+                    <strong>Welding Opr. / Inspector / Supervisor / Trainer (33 Years)</strong>, taking full responsibility for Production welds made on sites. Expert in deployment of welding crews and compliance with approved Welding Procedures and protocols. Overseeing and ensuring the quality of workmanship as per client specifications.
+                </p>
+                <p>
+                    Proficient in calling up intermediate and final N.D.E, carrying out welder qualification tests using approved welding procedures in adherence to client specifications in conjunction with <strong>ASME IX / B31.3 / EN 287-288 / API 1104 / BS 4515</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. BÖLÜM: TECHNICAL SKILLS (TEKNİK BECERİLER) -->
+        <div class="card">
+            <h2 class="page-title" data-translate="skills_title" style="font-size: 1.4rem;">Technical Skills</h2>
+            
+            <div data-translate="skills_long_text">
+                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.9; font-size: 0.98rem;">
+                    <li style="margin-bottom: 8px;">
+                        Experience gained in power plants, refineries, oil & gas processes plants, on-shore gas & oil pipelines, process piping, low pressure & storage tanks, and heavy steel structures.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Deep experience in fabrication and erection of piping, boilers, pressure vessels, furnaces, tanks, heaters, and structural steels.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Expert skills in preparation of spooling, weld map, pressure test packs, piping & weld log books, and fabrication/erection progress follow-up records.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Sound experience with International codes and standards: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API</strong>.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Hands-on experience with <strong>SMAW, GTAW, GMAW / GS-FCAW, SAW</strong>, and fusion cutting processes.
+                    </li>
+                    <li>
+                        Experience in welding and quality inspection of <strong>Carbon Steels, Low Temperature CS, SS, Duplex and Super Duplex Stainless steels, Alloy steels</strong>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scriptler (Sadece 1'er kez) -->
+    <script src="locales/en.js"></script>
+    <script src="locales/tr.js"></script>
+    <script src="locales/ru.js"></script>
+    <script src="locales/az.js"></script>
+    <script src="locales/de.js"></script>
+    <script src="locales/ar.js"></script>
+    <script src="locales/es.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
