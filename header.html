@@ -1,136 +1,66 @@
-<nav>
-    <a href="index.html" class="logo">
-    <div class="logo-icon">
-        <span>A</span><span>Y</span>
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html" class="logo">
+            <span class="logo-badge">AY</span>
+            <div class="logo-text">
+                <span class="logo-name">Aziz Yucetepe</span>
+                <span class="logo-title">Welding Supervisor</span>
+            </div>
+        </a>
     </div>
-    <div class="logo-text">
-        Aziz Yucetepe
-        <span class="logo-sub">Welding Supervisor</span>
-    </div>
-</a>
 
-    <!-- MASAÜSTÜ MENÜ (LinkedIn Tarzı) -->
+    <!-- SOSYAL MEDYA MASAÜSTÜ MENÜ -->
     <ul class="desktop-nav">
         <li>
             <a href="index.html">
-                <!-- Ev İkonu -->
                 <i class="fas fa-home"></i>
-                <span class="nav-text" data-translate="nav_about">About Me</span>
+                <span data-translate="nav_about">Home</span>
             </a>
         </li>
         <li>
             <a href="experience.html">
-                <!-- Çanta İkonu -->
                 <i class="fas fa-briefcase"></i>
-                <span class="nav-text" data-translate="nav_experience">Work Experience</span>
+                <span data-translate="nav_experience">Experience</span>
             </a>
         </li>
         <li>
             <a href="certificates.html">
-                <!-- Sertifika İkonu -->
                 <i class="fas fa-certificate"></i>
-                <span class="nav-text" data-translate="nav_certificates">Certificates</span>
+                <span data-translate="nav_certificates">Certificates</span>
+            </a>
+        </li>
+        <li>
+            <a href="profile.html">
+                <i class="fas fa-id-card"></i>
+                <span data-translate="nav_profile">Profile & Contact</span>
             </a>
         </li>
     </ul>
 
-    <!-- SAĞ TARAF: PROFİL -->
-    <div class="controls">
-        <div class="profile-menu-container">
-            <!-- Profil Tetikleyici (Sadece Resim ve Ok) -->
-            <!-- onclick="toggleProfileMenu()" RESİMDE DEĞİL, BU DIV'DE OLMALI -->
-<div class="profile-trigger" onclick="toggleProfileMenu()">
-    <img src="images/aziz.jpg" alt="Profile" class="header-profile-pic" ...>
-    <div class="profile-arrow"><i class="fas fa-caret-down"></i></div>
-</div>
+    <!-- SAĞ TARAF: PROFİL & DİL & TEMA -->
+    <div class="nav-right">
+        <div class="lang-selector-wrapper">
+            <i class="fas fa-globe"></i>
+            <select class="lang-dropdown" onchange="i18n.setLanguage(this.value)">
+                <option value="ar">🇦🇪 AR</option>
+<option value="ar">🇦🇪 AR</option>
+<option value="az">🇦🇿 AZ</option>
+<option value="de">🇩🇪 DE</option>
+<option value="en">🇺🇸 EN</option>
+<option value="es">🇪🇸 ES</option>
+<option value="ru">🇷🇺 RU</option>
+<option value="tr">🇹🇷 TR</option>
+            </select>
+        </div>
 
-            <!-- Açılır Menü (Aynı) -->
-            <div class="profile-dropdown" id="profile-dropdown">
-                <div class="dropdown-header">
-                    <img src="images/aziz.jpg" alt="Aziz" onerror="this.src='https://via.placeholder.com/40'">
-                    <div class="header-info">
-                        <h4>Aziz Yucetepe</h4>
-                        <span>Welding Supervisor</span>
-                    </div>
-                </div>
-                <a href="profile.html" class="view-profile-btn">View Profile</a>
-                <hr>
-                <div class="dropdown-section">
-                    <span class="section-title"><i class="fas fa-globe"></i> Language</span>
-                    <div class="custom-select-wrapper" onclick="this.classList.toggle('open')">
-                        <div class="custom-select-trigger">
-                            <span id="desktop-lang-text">English</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="custom-options">
-    <span class="custom-option" onclick="setLanguage('ar')">🇦🇪 العربية</span>
-    <span class="custom-option" onclick="setLanguage('az')">🇦🇿 Azərbaycanca</span>
-    <span class="custom-option" onclick="setLanguage('de')">🇩🇪 Deutsch</span>
-    <span class="custom-option" onclick="setLanguage('en')">🇺🇸 English</span>
-    <span class="custom-option" onclick="setLanguage('es')">🇪🇸 Español</span>
-    <span class="custom-option" onclick="setLanguage('ru')">🇷🇺 Русский</span>
-    <span class="custom-option" onclick="setLanguage('tr')">🇹🇷 Türkçe</span>
-</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="dropdown-section">
-                    <div class="theme-toggle-row">
-                        <span>Dark Mode</span>
-                        <label class="theme-switcher">
-                            <input type="checkbox" id="theme-switcher" class="theme-switcher-checkbox">
-                            <span class="theme-switcher-label"><span class="theme-switcher-slider"></span></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="nav-profile-trigger">
+            <a href="profile.html">
+                <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/35'" class="nav-avatar">
+            </a>
         </div>
     </div>
-
-    <button class="hamburger">
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-    </button>
 </nav>
-
-<ul class="mobile-nav">
-    <li class="mobile-profile-header">
-        <a href="profile.html" class="mobile-profile-link">
-            <img src="images/aziz.jpg" alt="Aziz" onerror="this.src='https://via.placeholder.com/50'">
-            <div class="mobile-profile-info">
-                <span class="name">Aziz Yucetepe</span>
-                <span class="title">View Profile</span>
-            </div>
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </li>
-    <li><a href="index.html"><i class="fas fa-user-circle"></i> <span class="nav-text" data-translate="nav_about">About Me</span></a></li>
-    <li><a href="experience.html"><i class="fas fa-briefcase"></i> <span class="nav-text" data-translate="nav_experience">Work Experience</span></a></li>
-    <li><a href="certificates.html"><i class="fas fa-certificate"></i> <span class="nav-text" data-translate="nav_certificates">Certificates</span></a></li>
-    <li class="mobile-controls-wrapper">
-        <div class="mobile-lang-accordion">
-            <button class="accordion-btn" onclick="toggleMobileLang()">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <i class="fas fa-globe"></i>
-                    <span id="mobile-lang-text">English</span>
-                </div>
-                <i class="fas fa-chevron-down arrow"></i>
-            </button>
-            <div class="accordion-content" id="mobile-lang-list">
-              <button onclick="setLanguage('en')">🇺🇸 English</button>
-              <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
-              <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
-              <button onclick="setLanguage('ar')">🇦🇪 العربية</button>
-              <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
-              <button onclick="setLanguage('az')">🇦🇿 Azərbaycanca</button>
-              <button onclick="setLanguage('es')">🇪🇸 Español</button>
-            </div>
-        </div>
-        <div class="mobile-theme-row">
-            <span>Dark Mode</span>
-            <label class="theme-switcher">
-                <input type="checkbox" id="mobile-theme-switcher" class="theme-switcher-checkbox">
-                <span class="theme-switcher-label"><span class="theme-switcher-slider"></span></span>
-            </label>
-        </div>
-    </li>
-</ul>
