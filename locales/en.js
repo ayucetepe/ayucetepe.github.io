@@ -78,8 +78,8 @@ window.translations['en'] = {
 
   // 11 Certificates & References
   "certs": {
-    "c1": { "title": "QUALIFICATION CERTIFICATE", "desc": "CSWIP 3.1 International Welding Inspector ID Card (2021)" },
-    "c2": { "title": "QUALIFICATION CERTIFICATE", "desc": "CSWIP 3.1 Welding Inspection Certificate (2021)" },
+    "c1": { "title": "QUALIFICATION CERTIFICATE", "desc": "3.1 International Welding Inspector ID Card (2021)" },
+    "c2": { "title": "QUALIFICATION CERTIFICATE", "desc": "3.1 Welding Inspection Certificate (2021)" },
     "c3": { "title": "QUALIFICATION CERTIFICATE", "desc": "International Coating Inspector Certificate (2021)" },
     "c4": { "title": "QUALIFICATION CERTIFICATE", "desc": "Radiographic Testing Level-II (ASNT-CP-189 / EN 473) Certificate" },
     "c5": { "title": "COMPANY REFERENCE", "desc": "USTAY Construction - Project Reference Letter (2017 - 2020)" },
