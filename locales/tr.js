@@ -79,8 +79,8 @@ window.translations['tr'] = {
 
     // 11 Sertifika ve Referansın Çevirisi
   "certs": {
-    "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Uluslararası Kaynak Enspektörü Kimlik Kartı (2021)" },
-    "c2": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Kaynak Enspektörlüğü Sertifikası (2021)" },
+    "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "3.1 Uluslararası Kaynak Enspektörü Kimlik Kartı (2021)" },
+    "c2": { "title": "YETERLİLİK SERTİFİKASI", "desc": "3.1 Kaynak Enspektörlüğü Sertifikası (2021)" },
     "c3": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Uluslararası Boya ve Kaplama (Coating) Enspektörü Sertifikası (2021)" },
     "c4": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Radyografik Test Seviye-II (ASNT-CP-189 / EN 473) Sertifikası" },
     "c5": { "title": "ŞİRKET REFERANSI", "desc": "USTAY İnşaat - Proje Referans Mektubu (2017 - 2020)" },
