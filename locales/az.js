@@ -78,8 +78,8 @@ window.translations['az'] = {
 
   // 11 Sertifikat və İstinadlar
   "certs": {
-    "c1": { "title": "İXTİSAS SERTİFİKATI", "desc": "CSWIP 3.1 Beynəlxalq Qaynaq İnspektoru Vəsiqəsi (2021)" },
-    "c2": { "title": "İXTİSAS SERTİFİKATI", "desc": "CSWIP 3.1 Qaynaq İnspektoru Sertifikatı (2021)" },
+    "c1": { "title": "İXTİSAS SERTİFİKATI", "desc": "CERTIFICATE 3.1 Beynəlxalq Qaynaq İnspektoru Vəsiqəsi (2021)" },
+    "c2": { "title": "İXTİSAS SERTİFİKATI", "desc": "CERTIFICATE 3.1 Qaynaq İnspektoru Sertifikatı (2021)" },
     "c3": { "title": "İXTİSAS SERTİFİKATI", "desc": "Beynəlxalq Örtük və Boya (Coating) İnspektoru Sertifikatı (2021)" },
     "c4": { "title": "İXTİSAS SERTİFİKATI", "desc": "Radioloji Sınaq RT Səviyyə-II (ASNT-CP-189 / EN 473) Sertifikatı" },
     "c5": { "title": "ŞİRKƏT İSTİNADI", "desc": "USTAY Construction - Layihə İstinad Məktubu (2017 - 2020)" },
