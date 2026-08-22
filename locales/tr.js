@@ -74,9 +74,10 @@ window.translations['tr'] = {
     "21": { "title": "Petrokimya Kaynakçısı", "desc": "Petkim Etilen Polietilen tesisinde proses borulama kaynağı." },
     "22": { "title": "Rafineri Kaynakçısı", "desc": "Tüpraş CCR & ISO Ünitesi rafineri genişletme işlerinde yüksek basınç boru kaynağı." },
     "23": { "title": "Borulama Süpervizörü (Piping Supervisor)", "desc": "Sitalçay S1 projesinde tüm borulama imalatı, montajı ve kaynak faaliyetlerinin denetimi. Ana yüklenici Kolin ve müşavir Proyapı standartlarına uygun kalite kontrol, NDT ve test süreçlerinin yönetimi." }
+
   },
 
-  // 11 Sertifika ve Referansın Çevirisi
+    // 11 Sertifika ve Referansın Çevirisi
   "certs": {
     "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Uluslararası Kaynak Enspektörü Kimlik Kartı (2021)" },
     "c2": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Kaynak Enspektörlüğü Sertifikası (2021)" },
@@ -89,5 +90,25 @@ window.translations['tr'] = {
     "c9": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting - OGB Su Boru Hattı Referans Mektubu (2010 - 2011)" },
     "c10": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting - OGB Su Boru Hattı Referans Mektubu (2008 - 2010)" },
     "c11": { "title": "ŞİRKET REFERANSI", "desc": "Entrepose Contracting - Sangaçal Su Tankı Referans Mektubu (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "Hepsi (24)",
+  "filter_refinery": "Petrol & Gaz / Rafineri",
+  "filter_offshore": "Offshore Platformlar",
+  "filter_power": "Enerji Santralleri",
+  "filter_pipeline": "Boru Hatları & Tanklar",
+  "lbl_project": "Proje",
+  "lbl_client": "İşveren",
+  "lbl_contacts": "Proje İletişim & Referansları:",
+  "lbl_present": "Günümüz",
+  "btn_view_gallery": "Proje Galerisini Görüntüle",
+  "btn_details_gallery": "Detaylar & Galeri",
+
+  "cert_filter_all": "Tüm Belgeler (11)",
+  "cert_filter_qual": "Yeterlilikler (Sertifika / NDT)",
+  "cert_filter_ref": "Şirket Referans Mektupları",
+  "badge_qualification": "Yeterlilik",
+  "badge_reference": "Referans",
+  "btn_click_to_view": "Görüntülemek İçin Tıklayın"
 };
