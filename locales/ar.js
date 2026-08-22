@@ -89,5 +89,25 @@ window.translations['ar'] = {
     "c9": { "title": "مرجع الشركة", "desc": "شركة CES Consulting - خطاب تزكية مشروع خط مياه OGB (2010 - 2011)" },
     "c10": { "title": "مرجع الشركة", "desc": "شركة CES Consulting - خطاب تزكية مشروع خط مياه OGB (2008 - 2010)" },
     "c11": { "title": "مرجع الشركة", "desc": "شركة Entrepose Contracting - خطاب تزكية خزان مياه سانجاتشال (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "الكل (24)",
+  "filter_refinery": "النفط والغاز / المصافي",
+  "filter_offshore": "المنصات البحرية",
+  "filter_power": "محطات الطاقة",
+  "filter_pipeline": "خطوط الأنابيب والخزانات",
+  "lbl_project": "المشروع",
+  "lbl_client": "العميل",
+  "lbl_contacts": "جهات الاتصال والمراجع للمشروع:",
+  "lbl_present": "حتى الآن",
+  "btn_view_gallery": "عرض معرض المشروع",
+  "btn_details_gallery": "التفاصيل والمعرض",
+
+  "cert_filter_all": "جميع المستندات (11)",
+  "cert_filter_qual": "المؤهلات (الشهادات / NDT)",
+  "cert_filter_ref": "خطابات التزكية للشركات",
+  "badge_qualification": "مؤهل",
+  "badge_reference": "مرجع",
+  "btn_click_to_view": "انقر للعرض"
 };
