@@ -78,8 +78,8 @@ window.translations['es'] = {
 
   // 11 Certificados y Referencias
   "certs": {
-    "c1": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Carnet de Inspector Internacional de Soldadura CSWIP 3.1 (2021)" },
-    "c2": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Certificado de Inspección de Soldadura CSWIP 3.1 (2021)" },
+    "c1": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Carnet de Inspector Internacional de Soldadura 3.1 (2021)" },
+    "c2": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Certificado de Inspección de Soldadura 3.1 (2021)" },
     "c3": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Certificado de Inspector Internacional de Recubrimientos (2021)" },
     "c4": { "title": "CERTIFICADO DE CUALIFICACIÓN", "desc": "Certificado de Ensayo Radiográfico RT Nivel-II (ASNT-CP-189 / EN 473)" },
     "c5": { "title": "REFERENCIA DE EMPRESA", "desc": "USTAY Construction - Carta de Referencia de Proyecto (2017 - 2020)" },
