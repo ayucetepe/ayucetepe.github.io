@@ -89,5 +89,25 @@ window.translations['en'] = {
     "c9": { "title": "COMPANY REFERENCE", "desc": "CES Consulting - OGB Water Pipeline Reference Letter (2010 - 2011)" },
     "c10": { "title": "COMPANY REFERENCE", "desc": "CES Consulting - OGB Water Pipeline Reference Letter (2008 - 2010)" },
     "c11": { "title": "COMPANY REFERENCE", "desc": "Entrepose Contracting - Sangachal Water Tank Reference Letter (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "All (24)",
+  "filter_refinery": "Oil & Gas / Refinery",
+  "filter_offshore": "Offshore Platforms",
+  "filter_power": "Power Plants",
+  "filter_pipeline": "Pipelines & Tanks",
+  "lbl_project": "Project",
+  "lbl_client": "Client",
+  "lbl_contacts": "Project Contacts & References:",
+  "lbl_present": "Present",
+  "btn_view_gallery": "View Project Gallery",
+  "btn_details_gallery": "Details & Gallery",
+  
+  "cert_filter_all": "All Documents (11)",
+  "cert_filter_qual": "Qualifications (Certificate / NDT)",
+  "cert_filter_ref": "Company Reference Letters",
+  "badge_qualification": "Qualification",
+  "badge_reference": "Reference",
+  "btn_click_to_view": "Click to View"
 };
