@@ -78,8 +78,8 @@ window.translations['de'] = {
 
   // 11 Zertifikate & Referenzen
   "certs": {
-    "c1": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "CERTIFICATE 3.1 Internationaler Schweißprüfer-Ausweis (2021)" },
-    "c2": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "CERTIFICATE 3.1 Schweißprüfer-Zertifikat (2021)" },
+    "c1": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "3.1 Internationaler Schweißprüfer-Ausweis (2021)" },
+    "c2": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "3.1 Schweißprüfer-Zertifikat (2021)" },
     "c3": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "Internationales Beschichtungsprüfer-Zertifikat (2021)" },
     "c4": { "title": "QUALIFIKATIONSZERTIFIKAT", "desc": "Durchstrahlungsprüfung RT Level-II (ASNT-CP-189 / EN 473)" },
     "c5": { "title": "UNTERNEHMENSREFERENZ", "desc": "USTAY Construction - Projektreferenzschreiben (2017 - 2020)" },
