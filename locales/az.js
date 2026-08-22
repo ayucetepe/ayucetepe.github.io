@@ -89,5 +89,25 @@ window.translations['az'] = {
     "c9": { "title": "ŞİRKƏT İSTİNADI", "desc": "CES Consulting - OGB Su Kəməri İstinad Məktubu (2010 - 2011)" },
     "c10": { "title": "ŞİRKƏT İSTİNADI", "desc": "CES Consulting - OGB Su Kəməri İstinad Məktubu (2008 - 2010)" },
     "c11": { "title": "ŞİRKƏT İSTİNADI", "desc": "Entrepose Contracting - Səngəçal Su Çəni İstinad Məktubu (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "Hamısı (24)",
+  "filter_refinery": "Neft və Qaz / Emal Zavodu",
+  "filter_offshore": "Offshore Platformalar",
+  "filter_power": "Elektrik Stansiyaları",
+  "filter_pipeline": "Boru Kəmərləri və Çənlər",
+  "lbl_project": "Layihə",
+  "lbl_client": "Sifarişçi",
+  "lbl_contacts": "Layihə Əlaqələri və İstinadlar:",
+  "lbl_present": "Hal-hazırda",
+  "btn_view_gallery": "Layihə Qalereyasına Bax",
+  "btn_details_gallery": "Detallar və Qalereya",
+
+  "cert_filter_all": "Bütün Sənədlər (11)",
+  "cert_filter_qual": "İxtisaslar (Sertifikat / NDT)",
+  "cert_filter_ref": "Şirkət İstinad Məktubları",
+  "badge_qualification": "İxtisas",
+  "badge_reference": "İstinad",
+  "btn_click_to_view": "Baxmaq üçün klikləyin"
 };
