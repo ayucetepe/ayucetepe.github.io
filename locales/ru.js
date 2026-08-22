@@ -89,5 +89,25 @@ window.translations['ru'] = {
     "c9": { "title": "РЕКОМЕНДАЦИЯ КОМПАНИИ", "desc": "CES Consulting - Водопровод OGB (2010 - 2011)" },
     "c10": { "title": "РЕКОМЕНДАЦИЯ КОМПАНИИ", "desc": "CES Consulting - Водопровод OGB (2008 - 2010)" },
     "c11": { "title": "РЕКОМЕНДАЦИЯ КОМПАНИИ", "desc": "Entrepose Contracting - Резервуар Сангачал (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "Все (24)",
+  "filter_refinery": "Нефть и Газ / НПЗ",
+  "filter_offshore": "Морские платформы",
+  "filter_power": "Электростанции",
+  "filter_pipeline": "Трубопроводы и резервуары",
+  "lbl_project": "Проект",
+  "lbl_client": "Заказчик",
+  "lbl_contacts": "Контакты и рекомендации проекта:",
+  "lbl_present": "Наст. время",
+  "btn_view_gallery": "Посмотреть галерею проекта",
+  "btn_details_gallery": "Подробнее и галерея",
+
+  "cert_filter_all": "Все документы (11)",
+  "cert_filter_qual": "Квалификации (Сертификаты / NDT)",
+  "cert_filter_ref": "Рекомендательные письма компаний",
+  "badge_qualification": "Квалификация",
+  "badge_reference": "Рекомендация",
+  "btn_click_to_view": "Нажмите для просмотра"
 };
