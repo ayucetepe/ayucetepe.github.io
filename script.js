@@ -1,5 +1,5 @@
 /**
- * Aziz Yucetepe - Portfolyo Script (Modallar, Galeri & Lightbox, Filtreleme, Sosyal Menü)
+ * Aziz Yucetepe - Portfolyo Script (Modallar, Galeri & Lightbox, Filtreleme, Sosyal Menü, i18n Entegrasyonu)
  */
 
 let currentGallery = [];
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // =========================================================================
-    // 3. İŞ DENEYİMİ DETAY MODALI & GALERİ YÖNETİMİ
+    // 3. İŞ DENEYİMİ DETAY MODALI & GALERİ YÖNETİMİ (DİLE DUYARLI)
     // =========================================================================
     const expModal = document.getElementById("experienceModal");
     const gallerySection = document.getElementById("modal-gallery-section");
@@ -42,14 +42,23 @@ document.addEventListener("DOMContentLoaded", function() {
     if (expModal) {
         document.querySelectorAll(".work-card").forEach(card => {
             card.addEventListener("click", function() {
+                // Aktif dil paketini al
+                const lang = localStorage.getItem("selected_lang") || "en";
+                const t = (window.translations && window.translations[lang]) ? window.translations[lang] : {};
+
                 const title = this.getAttribute("data-title") || this.querySelector("h3").innerText;
                 const project = this.getAttribute("data-project") || "";
                 const company = this.getAttribute("data-company") || "";
                 const location = this.getAttribute("data-location") || "";
-                const date = this.getAttribute("data-date") || "";
+                let date = this.getAttribute("data-date") || "";
                 const client = this.getAttribute("data-client") || "";
-                const description = this.getAttribute("data-description") || "";
+                const description = this.getAttribute("data-description") || (this.querySelector(".timeline-body") ? this.querySelector(".timeline-body").innerHTML : "");
                 const galleryData = this.getAttribute("data-gallery");
+
+                // Tarihteki "Present" ifadesini seçili dile göre çevir
+                if (t.lbl_present && date.includes("Present")) {
+                    date = date.replace("Present", t.lbl_present);
+                }
 
                 // Galeri Fotoğrafları
                 currentGallery = galleryData ? galleryData.split(",").map(s => s.trim()).filter(s => s) : [];
@@ -63,31 +72,39 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (contactsData) {
                     try {
                         const contacts = JSON.parse(contactsData);
-                        contactsHTML = `<div class="contacts-container">`;
-                        contacts.forEach(person => {
-                            let cleanNumber = person.whatsapp ? person.whatsapp.replace(/\D/g, '') : '';
-                            let waButton = cleanNumber ? `
-                                <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp
-                                </a>` : '';
-                            let liButton = person.linkedin ? `
-                                <a href="${person.linkedin}" target="_blank" class="contact-wa-btn" style="background:#0a66c2;">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>` : '';
-                            contactsHTML += `
-                                <div class="contact-person-card">
-                                    <div>
-                                        <strong>${person.name}</strong> 
-                                        <div style="font-size:0.8rem; color:var(--text-muted);">${person.title}</div>
-                                    </div>
-                                    <div style="display:flex; gap:6px;">${liButton} ${waButton}</div>
-                                </div>`;
-                        });
-                        contactsHTML += `</div>`;
+                        if (contacts.length > 0) {
+                            contactsHTML = `<div class="contacts-container">`;
+                            contacts.forEach(person => {
+                                let cleanNumber = person.whatsapp ? person.whatsapp.replace(/\D/g, '') : '';
+                                let waButton = cleanNumber ? `
+                                    <a href="https://wa.me/${cleanNumber}" target="_blank" class="contact-wa-btn">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </a>` : '';
+                                let liButton = person.linkedin ? `
+                                    <a href="${person.linkedin}" target="_blank" class="contact-wa-btn" style="background:#0a66c2;">
+                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>` : '';
+                                contactsHTML += `
+                                    <div class="contact-person-card">
+                                        <div>
+                                            <strong>${person.name}</strong> 
+                                            <div style="font-size:0.8rem; color:var(--text-muted);">${person.title}</div>
+                                        </div>
+                                        <div style="display:flex; gap:6px;">${liButton} ${waButton}</div>
+                                    </div>`;
+                            });
+                            contactsHTML += `</div>`;
+                        }
                     } catch(e) {
                         console.error("Contacts JSON hatası:", e);
                     }
                 }
+
+                // Çeviri Başlık Etiketleri
+                const lblProject = t.lbl_project || "Project";
+                const lblClient = t.lbl_client || "Client";
+                const lblContacts = t.lbl_contacts || "Project Contacts & References:";
+                const btnGallery = t.btn_view_gallery || "View Project Gallery";
 
                 // Modal İçeriğini Doldur
                 const modalTitle = document.getElementById("modal-title");
@@ -98,12 +115,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (modalMeta) modalMeta.innerHTML = `<strong>${company}</strong> | ${location} | ${date}`;
                 if (modalDesc) {
                     modalDesc.innerHTML = `
-                        <p style="margin-bottom:6px;"><strong>Project:</strong> ${project}</p>
-                        ${client ? `<p style="margin-bottom:8px; color:var(--text-muted); font-size:0.88rem;"><strong>Client:</strong> ${client}</p>` : ''}
+                        <p style="margin-bottom:6px;"><strong>${lblProject}:</strong> ${project}</p>
+                        ${client ? `<p style="margin-bottom:8px; color:var(--text-muted); font-size:0.88rem;"><strong>${lblClient}:</strong> ${client}</p>` : ''}
                         <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
                         <div style="line-height: 1.8; margin-bottom: 15px;">${description}</div>
-                        ${contactsHTML ? '<h4 style="color:var(--primary); margin-top:15px; margin-bottom:8px;">Project Contacts & References:</h4>' + contactsHTML : ''}
+                        ${contactsHTML ? `<h4 style="color:var(--primary); margin-top:15px; margin-bottom:8px;">${lblContacts}</h4>` + contactsHTML : ''}
                     `;
+                }
+
+                // Galeri Buton Metnini Güncelle
+                if (openGalleryBtn) {
+                    openGalleryBtn.innerHTML = `<i class="fas fa-images"></i> ${btnGallery}`;
                 }
 
                 expModal.style.display = "block";
@@ -158,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // =========================================================================
-    // 5. SOSYAL MEDYA MOBİL DRAWER KONTROLÜ
+    // 5. MOBİL AÇILIR MENÜ (DRAWER) KONTROLÜ
     // =========================================================================
     const userBtn = document.getElementById("userMenuBtn");
     const userDrop = document.getElementById("userDropdown");
@@ -230,10 +252,10 @@ function changeSlide(direction) {
 }
 
 // =============================================================================
-// 7. ZAMAN TÜNELİ SOSYAL FİLTRELEME
+// 7. ZAMAN TÜNELİ KATEGORİ FİLTRELEME
 // =============================================================================
 window.filterTimeline = function(category, btn) {
-    document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".timeline-filters .filter-chip").forEach(c => c.classList.remove("active"));
     btn.classList.add("active");
 
     const items = document.querySelectorAll(".timeline-item");
