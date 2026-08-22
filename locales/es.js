@@ -89,5 +89,25 @@ window.translations['es'] = {
     "c9": { "title": "REFERENCIA DE EMPRESA", "desc": "CES Consulting - Acueducto OGB (2010 - 2011)" },
     "c10": { "title": "REFERENCIA DE EMPRESA", "desc": "CES Consulting - Acueducto OGB (2008 - 2010)" },
     "c11": { "title": "REFERENCIA DE EMPRESA", "desc": "Entrepose Contracting - Tanque de Agua Sangachal (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "Todos (24)",
+  "filter_refinery": "Petróleo y Gas / Refinería",
+  "filter_offshore": "Plataformas Offshore",
+  "filter_power": "Centrales Eléctricas",
+  "filter_pipeline": "Tuberías y Tanques",
+  "lbl_project": "Proyecto",
+  "lbl_client": "Cliente",
+  "lbl_contacts": "Contactos y Referencias del Proyecto:",
+  "lbl_present": "Presente",
+  "btn_view_gallery": "Ver Galería del Proyecto",
+  "btn_details_gallery": "Detalles y Galería",
+
+  "cert_filter_all": "Todos los Documentos (11)",
+  "cert_filter_qual": "Cualificaciones (Certificados / END)",
+  "cert_filter_ref": "Cartas de Referencia de Empresas",
+  "badge_qualification": "Cualificación",
+  "badge_reference": "Referencia",
+  "btn_click_to_view": "Haga clic para ver"
 };
