@@ -89,5 +89,25 @@ window.translations['de'] = {
     "c9": { "title": "UNTERNEHMENSREFERENZ", "desc": "CES Consulting - OGB Wasserleitung (2010 - 2011)" },
     "c10": { "title": "UNTERNEHMENSREFERENZ", "desc": "CES Consulting - OGB Wasserleitung (2008 - 2010)" },
     "c11": { "title": "UNTERNEHMENSREFERENZ", "desc": "Entrepose Contracting - Sangachal Wassertank (2007 - 2008)" }
-  }
+  },
+
+  // Yeni eklenenler
+  "filter_all": "Alle (24)",
+  "filter_refinery": "Öl & Gas / Raffinerie",
+  "filter_offshore": "Offshore-Plattformen",
+  "filter_power": "Kraftwerke",
+  "filter_pipeline": "Pipelines & Tanks",
+  "lbl_project": "Projekt",
+  "lbl_client": "Kunde",
+  "lbl_contacts": "Projektkontakte & Referenzen:",
+  "lbl_present": "Heute",
+  "btn_view_gallery": "Projektgalerie ansehen",
+  "btn_details_gallery": "Details & Galerie",
+
+  "cert_filter_all": "Alle Dokumente (11)",
+  "cert_filter_qual": "Qualifikationen (Zertifikate / ZfP)",
+  "cert_filter_ref": "Unternehmensreferenzschreiben",
+  "badge_qualification": "Qualifikation",
+  "badge_reference": "Referenz",
+  "btn_click_to_view": "Klicken zum Anzeigen"
 };
