@@ -26,12 +26,12 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-translate="nav_about">About Me</span></a></li>
-                <li><a href="experience.html" title="Experience"><i class="fas fa-briefcase"></i> <span data-translate="nav_experience">Experience</span></a></li>
-                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate"></i> <span data-translate="nav_certificates">Certificates</span></a></li>
+                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-i18n="nav.about">About Me</span></a></li>
+                <li><a href="experience.html" title="Experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Work Experience</span></a></li>
+                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificates</span></a></li>
             </ul>
 
-            <!-- Sağ Taraf: Profil Dropdown -->
+            <!-- Sağ Taraf: Profil Avatarı & Dropdown -->
             <div class="user-menu-wrapper">
                 <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings">
                     <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/42'" class="nav-avatar-img">
@@ -43,32 +43,33 @@
                         <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
                         <div class="dropdown-user-info">
                             <h4>Aziz Yucetepe</h4>
-                            <p data-translate="user_role">Welding Supervisor</p>
+                            <p data-i18n="common.user_role">Welding Supervisor</p>
                         </div>
                     </div>
-                    <a href="profile.html" class="btn-view-profile" data-translate="nav_profile"><i class="fas fa-user-circle"></i> View Profile & Contact</a>
+                    <a href="profile.html" class="btn-view-profile">
+                        <i class="fas fa-user-circle"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
+                    </a>
                     <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
                     <ul class="dropdown-section">
                         <li class="dropdown-item">
-                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-translate="lbl_language">Language</span></div>
-                            <select class="lang-select" onchange="setLanguage(this.value)">
-                                
-<option value="ar">🇦🇪 AR</option>
-<option value="az">🇦🇿 AZ</option>
-<option value="de">🇩🇪 DE</option>
-<option value="en">🇺🇸 EN</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ru">🇷🇺 RU</option>
-<option value="tr">🇹🇷 TR</option>
+                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-i18n="common.language">Language</span></div>
+                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                                <option value="en">🇺🇸 EN</option>
+                                <option value="tr">🇹🇷 TR</option>
+                                <option value="az">🇦🇿 AZ</option>
+                                <option value="de">🇩🇪 DE</option>
+                                <option value="ru">🇷🇺 RU</option>
+                                <option value="es">🇪🇸 ES</option>
+                                <option value="ar">🇦🇪 AR</option>
                             </select>
                         </li>
                         <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
-                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-translate="lbl_display_mode">Display Mode</span></div>
-                            <button class="theme-btn"><i class="fas fa-circle-half-stroke"></i></button>
+                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-i18n="common.display_mode">Display Mode</span></div>
+                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
                         </li>
                         <li>
                             <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item">
-                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-translate="lbl_download_cv">Download CV</span></div>
+                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-i18n="common.download_cv">Download CV</span></div>
                                 <i class="fas fa-download" style="font-size: 0.85rem;"></i>
                             </a>
                         </li>
@@ -80,84 +81,114 @@
 
     <div class="container">
         
-        <!-- 1. PROFİL BİLGİ KARTI -->
+        <!-- 1. TEMİZ VE DENGELİ PROFİL KARTI -->
         <div class="card profile-card">
             <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/140'" class="profile-img">
+            
             <h1 class="profile-name">Aziz Yucetepe</h1>
-            <p class="profile-title" data-translate="profile_subtitle">Welding Supervisor & Certified Inspector (33+ Years)</p>
-            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">
-                <i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> <span data-translate="profile_location">Izmir, Turkey / Baku, Azerbaijan</span>
+            <p class="profile-title" data-i18n="profile.subtitle">Welding Supervisor & Certified Inspector (33+ Years)</p>
+            
+            <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom: 14px;">
+                <i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> <span data-i18n="common.location">Izmir, TR / Baku, AZ</span>
             </p>
+
+            <!-- Uzmanlık Rozetleri -->
+            <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
+                <span class="timeline-tag"><i class="fas fa-certificate"></i> CSWIP 3.1</span>
+                <span class="timeline-tag"><i class="fas fa-bolt"></i> ASME / API / EN</span>
+                <span class="timeline-tag"><i class="fas fa-globe"></i> International Mobility</span>
+                <span class="timeline-tag"><i class="fas fa-shield-alt"></i> QA/QC & NDT</span>
+            </div>
             
             <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-                <a href="#contact-section" class="btn btn-primary"><i class="fas fa-envelope"></i> <span data-translate="btn_send_msg">Send Message</span></a>
-                <a href="Aziz Yucetepe CV English.pdf" download class="btn btn-outline"><i class="fas fa-download"></i> <span data-translate="btn_download_pdf">Download CV (PDF)</span></a>
+                <a href="#contact-section" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> <span data-i18n="common.send_message">Send Message</span>
+                </a>
+                <a href="Aziz Yucetepe CV English.pdf" download class="btn btn-outline">
+                    <i class="fas fa-download"></i> <span data-i18n="common.download_cv_pdf">Download CV (PDF)</span>
+                </a>
             </div>
         </div>
 
-        <!-- 2. İSTATİSTİKLER (SAYAÇLAR) -->
+        <!-- 2. İSTATİSTİK SAYAÇLARI -->
         <div class="stats-grid">
             <div class="stat-box">
+                <i class="fas fa-award" style="font-size: 1.8rem; color: var(--primary); margin-bottom: 8px;"></i>
                 <h2>33+</h2>
-                <p data-translate="stat_years">Years Field Experience</p>
+                <p data-i18n="profile.stat_years">Years Field Experience</p>
             </div>
             <div class="stat-box">
+                <i class="fas fa-diagram-project" style="font-size: 1.8rem; color: var(--primary); margin-bottom: 8px;"></i>
                 <h2>+25</h2>
-                <p data-translate="stat_projects">Major Projects Completed</p>
+                <p data-i18n="profile.stat_projects">Major Projects Completed</p>
             </div>
             <div class="stat-box">
+                <i class="fas fa-earth-americas" style="font-size: 1.8rem; color: var(--primary); margin-bottom: 8px;"></i>
                 <h2>+5</h2>
-                <p data-translate="stat_countries">Countries Worked Worldwide</p>
+                <p data-i18n="profile.stat_countries">Countries Worked Worldwide</p>
             </div>
         </div>
 
         <!-- 3. İLETİŞİM FORMU & DİĞER BİLGİLER -->
         <div id="contact-section" class="card contact-grid">
             
-            <!-- Sol Taraf: İletişim Formu -->
+            <!-- Sol Taraf: İletişim Formu (Formspree) -->
             <div>
-                <h2 style="color:var(--primary); margin-bottom:15px; font-size:1.3rem;" data-translate="form_header">Send a Message</h2>
+                <h2 style="color:var(--primary); margin-bottom:15px; font-size:1.3rem;" data-i18n="form.header">Send a Message</h2>
                 <form action="https://formspree.io/f/mdkbjozv" method="POST">
                     <div class="form-group">
-                        <label data-translate="form_name">Full Name</label>
-                        <input type="text" name="name" required data-translate-placeholder="ph_name" placeholder="Your Full Name">
+                        <label data-i18n="form.name">Full Name</label>
+                        <input type="text" name="name" required data-i18n-placeholder="form.ph_name" placeholder="Your Full Name">
                     </div>
                     <div class="form-group">
-                        <label data-translate="form_email">Email Address</label>
-                        <input type="email" name="email" required data-translate-placeholder="ph_email" placeholder="your.email@example.com">
+                        <label data-i18n="form.email">Email Address</label>
+                        <input type="email" name="email" required data-i18n-placeholder="form.ph_email" placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
-                        <label data-translate="form_message">Message</label>
-                        <textarea name="message" rows="5" required data-translate-placeholder="ph_message" placeholder="How can I help you?"></textarea>
+                        <label data-i18n="form.message">Message</label>
+                        <textarea name="message" rows="5" required data-i18n-placeholder="form.ph_message" placeholder="How can I help you?"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" data-translate="form_button" style="border-radius:6px; width:100%;">Send Message</button>
+                    <button type="submit" class="btn btn-primary" style="border-radius:6px; width:100%;">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="form.button">Send Message</span>
+                    </button>
                 </form>
             </div>
 
             <!-- Sağ Taraf: İletişim Detayları & WhatsApp -->
-            <div style="border-left: 1px solid var(--border); padding-left: 1.5rem;">
-                <h2 style="color:var(--primary); margin-bottom:15px; font-size:1.3rem;" data-translate="info_header">Contact Info</h2>
-                <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;" data-translate="info_text">
-                    Available for international Welding Supervision, Quality Inspection, and QA/QC management roles.
-                </p>
-                
-                <div style="display:flex; flex-direction:column; gap:14px; font-size:0.95rem;">
-                    <div>
-                        <i class="fas fa-envelope" style="color:var(--primary); width:22px;"></i> 
-                        <a href="mailto:aziz.yucetepe@gmail.com" style="color:var(--text); text-decoration:none; font-weight:600;">aziz.yucetepe@gmail.com</a>
-                    </div>
-                    <div>
-                        <i class="fas fa-phone" style="color:var(--primary); width:22px;"></i> 
-                        <span style="font-weight:600;">+994 50 207 40 33</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-map-marker-alt" style="color:var(--primary); width:22px;"></i> 
-                        <span data-translate="profile_location">Izmir, TR / Baku, AZ</span>
+            <div style="border-left: 1px solid var(--border); padding-left: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h2 style="color:var(--primary); margin-bottom:15px; font-size:1.3rem;" data-i18n="contact.header">Contact Information</h2>
+                    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;" data-i18n="contact.info_text">
+                        Available for international Welding Supervision, Quality Inspection, and QA/QC management roles.
+                    </p>
+                    
+                    <div style="display:flex; flex-direction:column; gap:16px; font-size:0.95rem;">
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <div class="feed-avatar-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Email</div>
+                                <a href="mailto:aziz.yucetepe@gmail.com" style="color:var(--text); text-decoration:none; font-weight:600;">aziz.yucetepe@gmail.com</a>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <div class="feed-avatar-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Phone</div>
+                                <span style="font-weight:600;">+994 50 207 40 33</span>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <div class="feed-avatar-icon" style="width: 38px; height: 38px; font-size: 1rem;"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Location</div>
+                                <span style="font-weight:600;" data-i18n="common.location">Izmir, TR / Baku, AZ</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <a href="https://wa.me/994502074033" target="_blank" class="btn btn-whatsapp" style="width:100%;">
-                    <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i> <span data-translate="info_whatsapp">Chat on WhatsApp</span>
+                <a href="https://wa.me/994502074033" target="_blank" class="btn btn-whatsapp" style="width:100%; margin-top: 25px;">
+                    <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i> <span data-i18n="contact.whatsapp_btn">Chat on WhatsApp</span>
                 </a>
             </div>
             
@@ -165,14 +196,7 @@
 
     </div>
 
-    <!-- Scriptler -->
-    <script src="locales/en.js"></script>
-    <script src="locales/tr.js"></script>
-    <script src="locales/ru.js"></script>
-    <script src="locales/az.js"></script>
-    <script src="locales/de.js"></script>
-    <script src="locales/ar.js"></script>
-    <script src="locales/es.js"></script>
+    <!-- Optimize Edilmiş Scriptler -->
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>

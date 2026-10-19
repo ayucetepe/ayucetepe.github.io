@@ -26,9 +26,9 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-translate="nav_about">About Me</span></a></li>
-                <li><a href="experience.html" class="active" title="Experience"><i class="fas fa-briefcase"></i> <span data-translate="nav_experience">Experience</span></a></li>
-                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate"></i> <span data-translate="nav_certificates">Certificates</span></a></li>
+                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-i18n="nav.about">About Me</span></a></li>
+                <li><a href="experience.html" class="active" title="Experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Work Experience</span></a></li>
+                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificates</span></a></li>
             </ul>
 
             <div class="user-menu-wrapper">
@@ -42,31 +42,33 @@
                         <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
                         <div class="dropdown-user-info">
                             <h4>Aziz Yucetepe</h4>
-                            <p data-translate="user_role">Welding Supervisor</p>
+                            <p data-i18n="common.user_role">Welding Supervisor</p>
                         </div>
                     </div>
-                    <a href="profile.html" class="btn-view-profile" data-translate="nav_profile"><i class="fas fa-user-circle"></i> View Profile & Contact</a>
+                    <a href="profile.html" class="btn-view-profile">
+                        <i class="fas fa-user-circle"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
+                    </a>
                     <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
                     <ul class="dropdown-section">
                         <li class="dropdown-item">
-                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-translate="lbl_language">Language</span></div>
-                            <select class="lang-select" onchange="setLanguage(this.value)">
-                                <option value="ar">🇦🇪 AR</option>
+                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-i18n="common.language">Language</span></div>
+                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                                <option value="en">🇺🇸 EN</option>
+                                <option value="tr">🇹🇷 TR</option>
                                 <option value="az">🇦🇿 AZ</option>
                                 <option value="de">🇩🇪 DE</option>
-                                <option value="en">🇺🇸 EN</option>
-                                <option value="es">🇪🇸 ES</option>
                                 <option value="ru">🇷🇺 RU</option>
-                                <option value="tr">🇹🇷 TR</option>
+                                <option value="es">🇪🇸 ES</option>
+                                <option value="ar">🇦🇪 AR</option>
                             </select>
                         </li>
                         <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
-                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-translate="lbl_display_mode">Display Mode</span></div>
-                            <button class="theme-btn"><i class="fas fa-circle-half-stroke"></i></button>
+                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-i18n="common.display_mode">Display Mode</span></div>
+                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
                         </li>
                         <li>
-                            <a href="Aziz Yucetepe.pdf" download class="dropdown-item">
-                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-translate="lbl_download_cv">Download CV</span></div>
+                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item">
+                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-i18n="common.download_cv">Download CV</span></div>
                                 <i class="fas fa-download" style="font-size: 0.85rem;"></i>
                             </a>
                         </li>
@@ -77,15 +79,15 @@
     </header>
 
     <div class="container">
-        <h1 class="page-title" data-translate="experience_title" style="text-align: center; border-left: none;">Work Experience</h1>
+        <h1 class="page-title" data-i18n="experience.page_title" style="text-align: center; border-left: none;">Work Experience</h1>
         
         <!-- FİLTRELEME ÇİPLERİ -->
         <div class="timeline-filters">
-            <button class="filter-chip active" onclick="filterTimeline('all', this)"><i class="fas fa-layer-group"></i> All (24)</button>
-            <button class="filter-chip" onclick="filterTimeline('refinery', this)"><i class="fas fa-oil-well"></i> Oil & Gas / Refinery</button>
-            <button class="filter-chip" onclick="filterTimeline('offshore', this)"><i class="fas fa-water"></i> Offshore Platforms</button>
-            <button class="filter-chip" onclick="filterTimeline('power', this)"><i class="fas fa-bolt"></i> Power Plants</button>
-            <button class="filter-chip" onclick="filterTimeline('pipeline', this)"><i class="fas fa-route"></i> Pipelines & Tanks</button>
+            <button class="filter-chip active" onclick="filterTimeline('all', this)"><i class="fas fa-layer-group"></i> <span data-i18n="experience.filter_all">All (24)</span></button>
+            <button class="filter-chip" onclick="filterTimeline('refinery', this)"><i class="fas fa-oil-well"></i> <span data-i18n="experience.filter_refinery">Oil & Gas / Refinery</span></button>
+            <button class="filter-chip" onclick="filterTimeline('offshore', this)"><i class="fas fa-water"></i> <span data-i18n="experience.filter_offshore">Offshore Platforms</span></button>
+            <button class="filter-chip" onclick="filterTimeline('power', this)"><i class="fas fa-bolt"></i> <span data-i18n="experience.filter_power">Power Plants</span></button>
+            <button class="filter-chip" onclick="filterTimeline('pipeline', this)"><i class="fas fa-route"></i> <span data-i18n="experience.filter_pipeline">Pipelines & Tanks</span></button>
         </div>
 
         <!-- TEK KOLONLU FACEBOOK / LINKEDIN GÖNDERİ AKIŞI -->
@@ -145,7 +147,7 @@
                                 <p class="feed-company-sub">Caspian Technology Supply | SIBA CONSULTANCY</p>
                             </div>
                         </div>
-                        <span class="feed-date-badge">2025 -2025 </span>
+                        <span class="feed-date-badge">2025 - 2025</span>
                     </div>
                     <div class="feed-meta-row">
                         <span class="feed-meta-item"><i class="fas fa-diagram-project"></i> Malibey, Minkend, Qalaca, Terter HPP</span>
@@ -202,7 +204,7 @@
                      data-company="ILK Construction"
                      data-location="Baku, Azerbaijan"
                      data-date="2022 - 2024"
-                     data-contacts='[{"name": "Ahmet Finci", "title": "Project Manager", "linkedin": "https://www.linkedin.com/in/ahmet-finci-6a85a0147/"}, {"name": "Ali Rıza Taçyıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ali-r%C4%B1za-ta%C3%A7y%C4%B1ld%C4%B1z-4b0a42b7/", "whatsapp": "+994554550998"}, {"name": "Cemal Kaya", "title": "Meintenance Manager", "linkedin": "https://www.linkedin.com/in/cemal-kaya-b0ba65108/", "whatsapp": "+994103146262"}]'>
+                     data-contacts='[{"name": "Ahmet Finci", "title": "Project Manager", "linkedin": "https://www.linkedin.com/in/ahmet-finci-6a85a0147/"}, {"name": "Ali Rıza Taçyıldız", "title": "Construction Manager", "linkedin": "https://www.linkedin.com/in/ali-r%C4%B1za-ta%C3%A7y%C4%B1ld%C4%B1z-4b0a42b7/", "whatsapp": "+994554550998"}, {"name": "Cemal Kaya", "title": "Maintenance Manager", "linkedin": "https://www.linkedin.com/in/cemal-kaya-b0ba65108/", "whatsapp": "+994103146262"}]'>
                     <div class="feed-header">
                         <div class="feed-header-left">
                             <div class="feed-avatar-icon"><i class="fas fa-fire-flame-curved"></i></div>
@@ -869,7 +871,7 @@
             <!-- Galeri Butonu -->
             <div id="modal-gallery-section" style="display:none; margin-top: 18px; border-top: 1px solid var(--border); padding-top: 15px; text-align: center;">
                 <button id="open-gallery-btn" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-images"></i> View Project Gallery
+                    <i class="fas fa-images"></i> <span data-i18n="common.view_gallery">View Project Gallery</span>
                 </button>
             </div>
         </div>
@@ -885,14 +887,7 @@
         </div>
     </div>
 
-    <!-- Scriptler -->
-    <script src="locales/en.js"></script>
-    <script src="locales/tr.js"></script>
-    <script src="locales/es.js"></script>
-    <script src="locales/ru.js"></script>
-    <script src="locales/az.js"></script>
-    <script src="locales/de.js"></script>
-    <script src="locales/ar.js"></script>
+    <!-- Temiz ve Optimize Scriptler -->
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>

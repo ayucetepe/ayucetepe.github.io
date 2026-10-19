@@ -26,11 +26,12 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-translate="nav_about">About Me</span></a></li>
-                <li><a href="experience.html" title="Experience"><i class="fas fa-briefcase"></i> <span data-translate="nav_experience">Experience</span></a></li>
-                <li><a href="certificates.html" class="active" title="Certificates"><i class="fas fa-certificate"></i> <span data-translate="nav_certificates">Certificates</span></a></li>
+                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-i18n="nav.about">About Me</span></a></li>
+                <li><a href="experience.html" title="Experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Work Experience</span></a></li>
+                <li><a href="certificates.html" class="active" title="Certificates"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificates</span></a></li>
             </ul>
 
+            <!-- Sağ Taraf: Profil Avatarı & Dropdown -->
             <div class="user-menu-wrapper">
                 <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings">
                     <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/42'" class="nav-avatar-img">
@@ -42,32 +43,33 @@
                         <img src="images/aziz.jpg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
                         <div class="dropdown-user-info">
                             <h4>Aziz Yucetepe</h4>
-                            <p data-translate="user_role">Welding Supervisor</p>
+                            <p data-i18n="common.user_role">Welding Supervisor</p>
                         </div>
                     </div>
-                    <a href="profile.html" class="btn-view-profile" data-translate="nav_profile"><i class="fas fa-user-circle"></i> View Profile & Contact</a>
+                    <a href="profile.html" class="btn-view-profile">
+                        <i class="fas fa-user-circle"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
+                    </a>
                     <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
                     <ul class="dropdown-section">
                         <li class="dropdown-item">
-                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-translate="lbl_language">Language</span></div>
-                            <select class="lang-select" onchange="setLanguage(this.value)">
-                                
-<option value="ar">🇦🇪 AR</option>
-<option value="az">🇦🇿 AZ</option>
-<option value="de">🇩🇪 DE</option>
-<option value="en">🇺🇸 EN</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ru">🇷🇺 RU</option>
-<option value="tr">🇹🇷 TR</option>
+                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-i18n="common.language">Language</span></div>
+                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                                <option value="en">🇺🇸 EN</option>
+                                <option value="tr">🇹🇷 TR</option>
+                                <option value="az">🇦🇿 AZ</option>
+                                <option value="de">🇩🇪 DE</option>
+                                <option value="ru">🇷🇺 RU</option>
+                                <option value="es">🇪🇸 ES</option>
+                                <option value="ar">🇦🇪 AR</option>
                             </select>
                         </li>
                         <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
-                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-translate="lbl_display_mode">Display Mode</span></div>
-                            <button class="theme-btn"><i class="fas fa-circle-half-stroke"></i></button>
+                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-i18n="common.display_mode">Display Mode</span></div>
+                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
                         </li>
                         <li>
-                            <a href="Aziz Yucetepe.pdf" download class="dropdown-item">
-                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-translate="lbl_download_cv">Download CV</span></div>
+                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item">
+                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-i18n="common.download_cv">Download CV</span></div>
                                 <i class="fas fa-download" style="font-size: 0.85rem;"></i>
                             </a>
                         </li>
@@ -78,248 +80,188 @@
     </header>
 
     <div class="container">
-        <h1 class="page-title" data-translate="certificates_title">Certificates & References</h1>
-        
-        <!-- FİLTRELEME ÇİPLERİ -->
+        <h1 class="page-title" style="text-align: center; border-left: none;">Certificates & References</h1>
+
+        <!-- KATEGORİ FİLTRELEME ÇİPLERİ -->
         <div class="timeline-filters">
-            <button class="filter-chip active" onclick="filterCerts('all', this)"><i class="fas fa-layer-group"></i> All Documents (11)</button>
-            <button class="filter-chip" onclick="filterCerts('qualification', this)"><i class="fas fa-stamp"></i> Qualifications (CSWIP / NDT)</button>
-            <button class="filter-chip" onclick="filterCerts('reference', this)"><i class="fas fa-file-signature"></i> Company Reference Letters</button>
+            <button class="filter-chip active" onclick="filterCerts('all', this)"><i class="fas fa-layer-group"></i> All (11)</button>
+            <button class="filter-chip" onclick="filterCerts('qualification', this)"><i class="fas fa-stamp"></i> Qualifications (4)</button>
+            <button class="filter-chip" onclick="filterCerts('reference', this)"><i class="fas fa-building"></i> Company References (7)</button>
         </div>
 
-        <!-- MODERN BELGE KARTLARI -->
-        <div class="card-grid" id="certGrid">
+        <!-- MODERN SERTİFİKA VE REFERANS KARTLARI GRİDİ -->
+        <div class="card-grid" id="certsList">
 
-            <!-- 1. CSWIP 3.1 ID CARD (c1) -->
-            <div class="card cert-card" data-category="qualification" data-id="c1"
-                 data-title="QUALIFICATION CERTIFICATE"
-                 data-issuer="CSWIP - TWI Certification Scheme"
-                 data-date="2021"
-                 data-desc="CSWIP 3.1 International Welding Inspector ID Card (TWI Certification Scheme)."
-                 data-image="images/idcard.jpg">
+            <!-- C1: ID Card -->
+            <div class="cert-card" data-id="c1" data-category="qualification" data-image="images/idcard.jpg" data-title="QUALIFICATION CERTIFICATE" data-desc="Welding Inspection ID Card (3.1)">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-id-card-clip"></i></div>
                     <span class="cert-badge-type cert-badge-qualification">Qualification</span>
+                    <i class="fas fa-id-card" style="color:var(--primary); font-size:1.2rem;"></i>
                 </div>
-                <h3>CSWIP 3.1 ID Card</h3>
-                <div class="job-meta">TWI Scheme | 2021</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/idcard.jpg" alt="CSWIP ID" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=CSWIP+ID+Card'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/idcard.jpg" alt="CSWIP 3.1 ID Card" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=ID+Card'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>QUALIFICATION CERTIFICATE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Welding Inspection ID Card (3.1)</p>
             </div>
 
-            <!-- 2. CSWIP 3.1 WELDING INSPECTOR (c2) -->
-            <div class="card cert-card" data-category="qualification" data-id="c2"
-                 data-title="QUALIFICATION CERTIFICATE"
-                 data-issuer="TWI Certification"
-                 data-date="2021"
-                 data-desc="CSWIP 3.1 Welding Inspection Certificate."
-                 data-image="images/welding.jpg">
+            <!-- C2: CSWIP Certificate -->
+            <div class="cert-card" data-id="c2" data-category="qualification" data-image="images/welding.jpg" data-title="QUALIFICATION CERTIFICATE" data-desc="Welding Inspection Certificate (3.1)">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-award"></i></div>
                     <span class="cert-badge-type cert-badge-qualification">Qualification</span>
+                    <i class="fas fa-certificate" style="color:var(--primary); font-size:1.2rem;"></i>
                 </div>
-                <h3>Welding Inspector 3.1</h3>
-                <div class="job-meta">CSWIP - TWI | 2021</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/welding.jpg" alt="Welding Inspector" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Welding+Inspector+Certificate'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/welding.jpg" alt="CSWIP Certificate" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Certificate'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>QUALIFICATION CERTIFICATE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Welding Inspection Certificate (3.1)</p>
             </div>
 
-            <!-- 3. COATING INSPECTOR (c3) -->
-            <div class="card cert-card" data-category="qualification" data-id="c3"
-                 data-title="QUALIFICATION CERTIFICATE"
-                 data-issuer="Protective Coatings Certification"
-                 data-date="2021"
-                 data-desc="Certification for Coating Inspector."
-                 data-image="images/coating.jpg">
+            <!-- C3: Coating Inspector -->
+            <div class="cert-card" data-id="c3" data-category="qualification" data-image="images/coating.jpg" data-title="QUALIFICATION CERTIFICATE" data-desc="Coating Inspection Certificate">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-paint-roller"></i></div>
                     <span class="cert-badge-type cert-badge-qualification">Qualification</span>
+                    <i class="fas fa-paint-roller" style="color:var(--primary); font-size:1.2rem;"></i>
                 </div>
-                <h3>Coating Inspector</h3>
-                <div class="job-meta">Protective Coatings | 2021</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/coating.jpg" alt="Coating Inspector" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Coating+Inspector+Certificate'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/coating.jpg" alt="Coating Inspector" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Coating'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>QUALIFICATION CERTIFICATE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Coating Inspection Certificate</p>
             </div>
 
-            <!-- 4. RT LEVEL II (c4) -->
-            <div class="card cert-card" data-category="qualification" data-id="c4"
-                 data-title="QUALIFICATION CERTIFICATE"
-                 data-issuer="TUV / ASNT-CP-189"
-                 data-date="2008 / 2013"
-                 data-desc="Radiographic Testing (RT) Level-II Certificate (EN 473 / ASNT-CP-189)."
-                 data-image="images/RT.jpg">
+            <!-- C4: RT Level-II -->
+            <div class="cert-card" data-id="c4" data-category="qualification" data-image="images/RT.jpg" data-title="QUALIFICATION CERTIFICATE" data-desc="RT Level-II Certificate">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-radiation"></i></div>
                     <span class="cert-badge-type cert-badge-qualification">Qualification</span>
+                    <i class="fas fa-radiation" style="color:var(--primary); font-size:1.2rem;"></i>
                 </div>
-                <h3>RT Level-II Certificate</h3>
-                <div class="job-meta">Radiographic Testing (ASNT/TUV)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/RT.jpg" alt="RT Level II" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=RT+Level+II+Certificate'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/RT.jpg" alt="RT Level-II" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=RT+Level-II'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>QUALIFICATION CERTIFICATE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">RT Level-II Certificate</p>
             </div>
 
-            <!-- 5. USTAY CONSTRUCTION (c5) -->
-            <div class="card cert-card" data-category="reference" data-id="c5"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="USTAY Construction"
-                 data-date="2017 - 2020"
-                 data-desc="Reference Letter from USTAY Construction for Socar Polymer & Azerikimya projects."
-                 data-image="images/vision.jpg">
+            <!-- C5: USTAY Reference -->
+            <div class="cert-card" data-id="c5" data-category="reference" data-image="images/vision.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from USTAY Construction">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>USTAY Construction</h3>
-                <div class="job-meta">Socar Polymer & Azerikimya (2017-2020)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/vision.jpg" alt="USTAY Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=USTAY+Reference+Letter'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/vision.jpg" alt="USTAY Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from USTAY Construction</p>
             </div>
 
-            <!-- 6. ATA CONSORTIUM SD2 (c6) -->
-            <div class="card cert-card" data-category="reference" data-id="c6"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="ATA Consortium (Amec - Tekfen - Azfen)"
-                 data-date="2015 - 2017"
-                 data-desc="Reference Letter from ATA Consortium for Shah Deniz Stage 2 Project."
-                 data-image="images/shahdeniz2.jpg">
+            <!-- C6: ATA Shah Deniz 2 -->
+            <div class="cert-card" data-id="c6" data-category="reference" data-image="images/shahdeniz2.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from ATA Consortium">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>ATA Consortium (BP SD2)</h3>
-                <div class="job-meta">Shah Deniz 2 Project (2015-2017)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/shahdeniz2.jpg" alt="ATA SD2 Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=ATA+Consortium+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/shahdeniz2.jpg" alt="Shah Deniz 2 Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from ATA Consortium</p>
             </div>
 
-            <!-- 7. TEKFEN CONSTRUCTION (c7) -->
-            <div class="card cert-card" data-category="reference" data-id="c7"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="Tekfen Construction"
-                 data-date="2013 - 2015"
-                 data-desc="Reference Letter from Tekfen Construction for Baku Olympic Stadium Project."
-                 data-image="images/bos.jpg">
+            <!-- C7: Tekfen BOS -->
+            <div class="cert-card" data-id="c7" data-category="reference" data-image="images/bos.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from Tekfen Construction">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>Tekfen Construction</h3>
-                <div class="job-meta">Baku Olympic Stadium (2013-2015)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/bos.jpg" alt="Tekfen BOS Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Tekfen+Stadium+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/bos.jpg" alt="Tekfen BOS Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from Tekfen Construction</p>
             </div>
 
-            <!-- 8. ATA CONSORTIUM COP-WC (c8) -->
-            <div class="card cert-card" data-category="reference" data-id="c8"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="ATA Consortium"
-                 data-date="2011 - 2013"
-                 data-desc="Reference Letter from ATA Consortium for COP-WC-PDQ Offshore Project."
-                 data-image="images/wcpdq.jpg">
+            <!-- C8: ATA COP-WC -->
+            <div class="cert-card" data-id="c8" data-category="reference" data-image="images/wcpdq.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from ATA Consortium">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>ATA Consortium (COP-WC)</h3>
-                <div class="job-meta">Offshore Project Reference (2011-2013)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/wcpdq.jpg" alt="ATA COP-WC Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=ATA+Offshore+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/wcpdq.jpg" alt="ATA COP-WC Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from ATA Consortium</p>
             </div>
 
-            <!-- 9. CES CONSULTING GULF (c9) -->
-            <div class="card cert-card" data-category="reference" data-id="c9"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="CES Consulting"
-                 data-date="2010 - 2011"
-                 data-desc="Reference Letter from CES Consulting for OGB Water Pipeline Drilling."
-                 data-image="images/gulf.jpg">
+            <!-- C9: CES Consulting -->
+            <div class="cert-card" data-id="c9" data-category="reference" data-image="images/gulf.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from CES Consulting">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>CES Consulting (OGB)</h3>
-                <div class="job-meta">Pipeline Project (2010-2011)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/gulf.jpg" alt="CES Gulf Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=CES+Consulting+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/gulf.jpg" alt="CES Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from CES Consulting</p>
             </div>
 
-            <!-- 10. CES CONSULTING ARSAN (c10) -->
-            <div class="card cert-card" data-category="reference" data-id="c10"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="CES Consulting"
-                 data-date="2008 - 2010"
-                 data-desc="Reference Letter from CES Consulting for OGB Water Pipeline Project."
-                 data-image="images/ces.jpg">
+            <!-- C10: CES Consulting 2 -->
+            <div class="cert-card" data-id="c10" data-category="reference" data-image="images/ces.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from CES Consulting">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>CES Consulting</h3>
-                <div class="job-meta">Water Transmission Line (2008-2010)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/ces.jpg" alt="CES Arsan Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=CES+Pipeline+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/ces.jpg" alt="CES Reference 2" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from CES Consulting</p>
             </div>
 
-            <!-- 11. ENTREPOSE CONTRACTING (c11) -->
-            <div class="card cert-card" data-category="reference" data-id="c11"
-                 data-title="COMPANY REFERENCE"
-                 data-issuer="Entrepose Contracting"
-                 data-date="2007 - 2008"
-                 data-desc="Reference Letter from Entrepose Contracting for Sangachal Water Tank Construction."
-                 data-image="images/entrepose.jpg">
+            <!-- C11: Entrepose Contracting -->
+            <div class="cert-card" data-id="c11" data-category="reference" data-image="images/entrepose.jpg" data-title="COMPANY REFERENCE" data-desc="Reference from Entrepose Contracting">
                 <div class="cert-card-header">
-                    <div class="cert-icon-wrapper"><i class="fas fa-file-contract"></i></div>
-                    <span class="cert-badge-type cert-badge-reference">Reference</span>
+                    <span class="cert-badge-type cert-badge-reference">Company Reference</span>
+                    <i class="fas fa-file-contract" style="color:#107c41; font-size:1.2rem;"></i>
                 </div>
-                <h3>Entrepose Contracting</h3>
-                <div class="job-meta">Sangachal Water Tank (2007-2008)</div>
                 <div class="cert-preview-wrapper">
-                    <img src="images/entrepose.jpg" alt="Entrepose Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Entrepose+Reference'">
-                    <div class="cert-overlay"><i class="fas fa-magnifying-glass-plus"></i> Click to View</div>
+                    <img src="images/entrepose.jpg" alt="Entrepose Reference" class="cert-preview-img" onerror="this.src='https://via.placeholder.com/300x140?text=Reference'">
+                    <div class="cert-overlay"><i class="fas fa-search-plus"></i> View Document</div>
                 </div>
+                <h3>COMPANY REFERENCE</h3>
+                <p class="cert-desc" style="color:var(--text-muted); font-size:0.88rem;">Reference from Entrepose Contracting</p>
             </div>
 
         </div>
     </div>
 
-    <!-- SERTİFİKA VE BELGE BÜYÜTME MODALI -->
+    <!-- SERTİFİKA DETAY MODALI -->
     <div id="certificateModal" class="modal">
-        <div class="modal-content" style="text-align: center;">
+        <div class="modal-content" style="max-width: 800px; text-align: center;">
             <span class="close-btn">&times;</span>
-            <h2 id="cert-title" style="color:var(--primary); margin-bottom: 12px; font-size: 1.25rem;"></h2>
-            <img id="cert-img" src="" alt="Document Preview" style="max-width: 100%; max-height: 72vh; border-radius: 8px; box-shadow: var(--shadow); object-fit: contain; margin: 10px 0;">
-            <p id="cert-desc" style="margin-top: 12px; color:var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+            <h2 id="cert-title" style="color:var(--primary); margin-bottom: 8px;"></h2>
+            <p id="cert-desc" style="color:var(--text-muted); font-size:0.95rem; margin-bottom: 15px;"></p>
+            <div style="max-height: 75vh; overflow-y: auto; border-radius: 8px; border: 1px solid var(--border);">
+                <img id="cert-img" src="" alt="Certificate Large Preview" style="width: 100%; height: auto; display: block;">
+            </div>
         </div>
     </div>
 
-    <!-- Scriptler -->
-    <script src="locales/en.js"></script>
-    <script src="locales/tr.js"></script>
-    <script src="locales/es.js"></script>
-    <script src="locales/ru.js"></script>
-    <script src="locales/az.js"></script>
-    <script src="locales/de.js"></script>
-    <script src="locales/ar.js"></script>
+    <!-- Optimize Edilmiş Scriptler -->
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>

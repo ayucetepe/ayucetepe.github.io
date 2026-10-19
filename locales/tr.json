@@ -1,0 +1,178 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "experience": "İş Deneyimi",
+    "certificates": "Sertifikalar",
+    "profile": "Profil & İletişim"
+  },
+  "common": {
+    "user_name": "Aziz Yucetepe",
+    "user_role": "Kaynak Süpervizörü",
+    "language": "Dil Seçimi",
+    "display_mode": "Görünüm Modu",
+    "download_cv": "CV İndir",
+    "download_cv_pdf": "CV İndir (PDF)",
+    "send_message": "Mesaj Gönder",
+    "location": "İzmir, Türkiye / Bakü, Azerbaycan",
+    "view_gallery": "Proje Galerisini Görüntüle",
+    "details_gallery": "Detaylar & Galeri",
+    "view_details": "Detayları Gör"
+  },
+  "about": {
+    "title": "Mesleki Özet",
+    "subtitle": "Petrol ve Gaz Endüstrisi - Enerji - Petrokimya",
+    "p1": "Kaynak ve imalat sektöründe 33 yılı aşkın saha tecrübesi. Açık deniz (Offshore) ve kara (Onshore) enerji santralleri, rafineriler, petrokimya tesisleri ve canlı kurulumlarda çalışma.",
+    "p2": "<strong>Kaynak Operatörü / Enspektör / Süpervizör / Eğitmen (33 Yıl)</strong> olarak, sahalardaki üretim kaynaklarının tam sorumluluğunu üstlenmiş; ekiplerin yönetimi ve onaylı prosedürlere (WPS/PQR) uygunluğun sağlanmasında uzmanlaşmıştır. Müşteri şartnamelerine göre işçilik kalitesini denetlemiş ve güvence altına almıştır.",
+    "p3": "<strong>ASME IX / B31.3 / EN 287-288 / API 1104 / BS 4515</strong> standartlarına uygun olarak müşteri şartnamelerine bağlı kalarak onaylı kaynak prosedürünü kullanarak ara ve son N.D.E. kontrollerini talep etmiş ve kaynakçı yeterlilik testlerini gerçekleştirmiştir."
+  },
+  "skills": {
+    "title": "Teknik Beceriler & Yetkinlikler",
+    "item1": "Enerji santralleri, rafineriler, petrol ve gaz proses tesisleri, kara boru hatları, proses borulama, depolama tankları ve ağır çelik yapılarda deneyim.",
+    "item2": "Boru, kazan, basınçlı kaplar, fırınlar, tanklar, ısıtıcılar ve yapısal çeliklerin imalat ve montajında derin uzmanlık.",
+    "item3": "Spooling, kaynak haritası (Weld Map), basınç testi paketleri (Test Pack), boru/kaynak kütüğü ve ilerleme takip kayıtlarının hazırlanması.",
+    "item4": "Uluslararası kod ve standartlar: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API</strong>.",
+    "item5": "<strong>SMAW, GTAW, GMAW / GS-FCAW, SAW</strong> ve füzyon kesme proseslerinde üst düzey saha tecrübesi.",
+    "item6": "<strong>Karbon Çelikleri, Düşük Sıcaklık CS, Paslanmaz Çelikler, Dubleks ve Süper Dubleks, Alaşımlı Çelikler (P11, P22, P91, Cu-Ni)</strong> kaynak ve kalite denetimi."
+  },
+  "experience": {
+    "page_title": "İş Deneyimi",
+    "filter_all": "Tümü (24)",
+    "filter_refinery": "Petrol & Gaz / Rafineri",
+    "filter_offshore": "Açık Deniz Platformları",
+    "filter_power": "Enerji Santralleri",
+    "filter_pipeline": "Boru Hatları & Tanklar"
+  },
+  "profile": {
+    "title": "Profil ve İletişim",
+    "subtitle": "Kaynak Süpervizörü & Sertifikalı Enspektör (33+ Yıl)",
+    "stat_years": "Yıllık Saha Tecrübesi",
+    "stat_projects": "Tamamlanan Büyük Proje",
+    "stat_countries": "Çalışılan Farklı Ülke"
+  },
+  "form": {
+    "header": "Mesaj Gönderin",
+    "name": "Ad Soyad",
+    "email": "E-posta Adresi",
+    "message": "Mesajınız",
+    "button": "Mesajı Gönder",
+    "ph_name": "Adınız ve Soyadınız",
+    "ph_email": "ornek.email@gmail.com",
+    "ph_message": "Nasıl yardımcı olabilirim?"
+  },
+  "contact": {
+    "header": "İletişim Bilgileri",
+    "info_text": "Uluslararası Kaynak Süpervizörlüğü, Enspektörlük ve QA/QC yönetim pozisyonları için iletişime geçebilirsiniz.",
+    "whatsapp_btn": "WhatsApp ile İletişim"
+  },
+  "jobs": {
+    "23": {
+      "title": "Borulama Süpervizörü (Piping Supervisor)",
+      "desc": "Sitalçay S1 projesinde tüm borulama imalatı, montajı ve kaynak faaliyetlerinin denetimi. Ana yüklenici Kolin ve müşavir Proyapı standartlarına uygun kalite kontrol, NDT ve test süreçlerinin yönetimi."
+    },
+    "0": {
+      "title": "Mekanik İşler Müdürü",
+      "desc": "Sahadaki tüm borulama, kaynak faaliyetleri ve yapısal çelik montaj işlerinin yönetimi. Mekanik tamamlama, hidrotest paketleri ve teslim süreçlerinin koordinasyonu."
+    },
+    "1": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "Basra Rafineri Yükseltme Projesi boru imalat ve montaj kaynağı denetimi. Tüm kaynak faaliyetleri için malzeme ve personel organizasyonu, QA/QC ve NDT takibi."
+    },
+    "2": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "HAOR Modernizasyon Projesi boru imalat ve montaj kaynağı denetimi. Malzeme ve personel organizasyonu, test paketlerinin onaylanması."
+    },
+    "3": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "HAOR Modernizasyon Projesi boru imalat ve montaj kaynağı denetimi. Tecnicas Reunidas kalite şartnamelerine uyum ve NDT takibi."
+    },
+    "4": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "MNPZ HydroCracker Ünitesi yüksek basınç boru imalat ve montaj kaynağı denetimi. Kaynakçı performans takibi ve tamir oranlarının düşürülmesi."
+    },
+    "5": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "Azerikimya EP300 projesi boru imalat ve montaj kaynağı denetimi. TechnipFMC kalite şartnamelerine tam uyumun sağlanması."
+    },
+    "6": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "Socar Polymer PP / HDPE Üretim Tesisi boru imalat ve montaj kaynağı denetimi. QA/QC dokümantasyonunun hazırlanması ve teslimi."
+    },
+    "7": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "Şah Deniz Aşama 2 (SD2) açık deniz platformu boru imalat ve montaj kaynağı denetimi. BP ve EEMUA 158 şartnamelerine tam uyumun sağlanması."
+    },
+    "8": {
+      "title": "Kaynak Formeni",
+      "desc": "Bakü Olimpiyat Stadyumu ağır çelik konstrüksiyon ve borulama kaynağı denetimi. Kaynakçı yeterliliklerinin takibi ve günlük imalat kontrolü."
+    },
+    "9": {
+      "title": "Kaynak Formeni",
+      "desc": "COP-WC-PDQ Platform Topsides açık deniz imalatı kaynak denetimi. NDE faaliyetlerinin koordinasyonu ve İSG kurallarına uyum."
+    },
+    "10": {
+      "title": "Borulama ve Kaynak Süpervizörü",
+      "desc": "OGB Su Boru Hattı derin sondaj kuyusu boru imalatı ve montaj denetimi. Malzeme lojistiği, hidrotest süreçleri ve kalite kontrol takibi."
+    },
+    "11": {
+      "title": "Borulama ve Kaynak Süpervizörü",
+      "desc": "OGB Su Boru Hattı iletim hattı borulama imalatı ve montaj denetimi."
+    },
+    "12": {
+      "title": "Kaynak Süpervizörü",
+      "desc": "Sangaçal Terminali 21.000 m³ Üretilmiş Su Tankının montaj kaynağı denetimi (SMAW, GTAW, SAW)."
+    },
+    "13": {
+      "title": "Multi-Coded Kaynakçı",
+      "desc": "TPG 500 açık deniz platformu Dubleks, Süper Dubleks, Cu-Ni borularda (GTAW/FCAW/SMAW) korozyon testli kaynaklar."
+    },
+    "14": {
+      "title": "Multi-Coded Kaynakçı",
+      "desc": "TPG 500 platformu özel alaşımlı proses borularda (GTAW/FCAW/SMAW) kaynak işlemleri."
+    },
+    "15": {
+      "title": "Boru Hattı Kaynakçısı",
+      "desc": "AGT Boru Hattı API borularda Yokuş Yukarı ve Yokuş Aşağı (GTAW / SMAW) kaynakları."
+    },
+    "16": {
+      "title": "Uzman Kaynakçı",
+      "desc": "Sangaçal Terminali Genişletme Projesinde Paslanmaz ve Dubleks borularda (GTAW / SMAW) kaynak işlemleri."
+    },
+    "17": {
+      "title": "Santral Kaynakçısı",
+      "desc": "Severnaya 400 MW Santrali P91, P22, P11 alaşımlı çeliklerde (GTAW / SMAW) buhar borusu kaynağı."
+    },
+    "18": {
+      "title": "Rafineri Kaynakçısı",
+      "desc": "Tüpraş İzomerizasyon Ünitesi P91, P22, P11 ve Paslanmaz borularda (GTAW / SMAW) kaynak işlemleri."
+    },
+    "19": {
+      "title": "Rafineri Kaynakçısı",
+      "desc": "Tüpraş CCR & İzomerizasyon Üniteleri proses borulama kaynağı."
+    },
+    "20": {
+      "title": "Rafineri Kaynakçısı",
+      "desc": "Fergana Petrol Rafinerisi boru imalat ve yüksek basınç montaj kaynağı."
+    },
+    "21": {
+      "title": "Petrokimya Kaynakçısı",
+      "desc": "Petkim Etilen Polietilen tesisinde proses borulama kaynağı."
+    },
+    "22": {
+      "title": "Rafineri Kaynakçısı",
+      "desc": "Tüpraş CCR & ISO Ünitesi rafineri genişletme işlerinde yüksek basınç boru kaynağı."
+    }
+  },
+  "certs": {
+    "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Uluslararası Kaynak Enspektörü Kimlik Kartı (2021)" },
+    "c2": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Kaynak Enspektörlüğü Sertifikası (2021)" },
+    "c3": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Uluslararası Boya ve Kaplama (Coating) Enspektörü Sertifikası (2021)" },
+    "c4": { "title": "YETERLİLİK SERTİFİKASI", "desc": "Radyografik Test Seviye-II (ASNT-CP-189 / EN 473) Sertifikası" },
+    "c5": { "title": "ŞİRKET REFERANSI", "desc": "USTAY İnşaat - Proje Referans Mektubu (2017 - 2020)" },
+    "c6": { "title": "ŞİRKET REFERANSI", "desc": "ATA Konsorsiyumu Şah Deniz 2 Referans Mektubu (2015 - 2017)" },
+    "c7": { "title": "ŞİRKET REFERANSI", "desc": "Tekfen İnşaat - Bakü Olimpiyat Stadyumu Referans Mektubu (2013 - 2015)" },
+    "c8": { "title": "ŞİRKET REFERANSI", "desc": "ATA Konsorsiyumu - COP-WC-PDQ Referans Mektubu (2011 - 2013)" },
+    "c9": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting - OGB Su Boru Hattı Referans Mektubu (2010 - 2011)" },
+    "c10": { "title": "ŞİRKET REFERANSI", "desc": "CES Consulting - OGB Su Boru Hattı Referans Mektubu (2008 - 2010)" },
+    "c11": { "title": "ŞİRKET REFERANSI", "desc": "Entrepose Contracting - Sangaçal Su Tankı Referans Mektubu (2007 - 2008)" }
+  }
+}
