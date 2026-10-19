@@ -18,6 +18,25 @@
     "details_gallery": "Detalles y Galería",
     "view_details": "Ver Detalles"
   },
+  "modal": {
+    "project": "Proyecto:",
+    "client": "Cliente / Contratista Principal:",
+    "contacts": "Contactos del Proyecto y Referencias:",
+    "view_gallery": "Ver Galería del Proyecto"
+  },
+  "certs_ui": {
+    "filter_all": "Todos (11)",
+    "filter_qual": "Certificados de Cualificación (4)",
+    "filter_ref": "Referencias de Empresas (7)",
+    "badge_qual": "Cualificación",
+    "badge_ref": "Referencia de Empresa",
+    "view_doc": "Ver Documento"
+  },
+  "contact_ui": {
+    "lbl_email": "Correo Electrónico",
+    "lbl_phone": "Teléfono",
+    "lbl_location": "Ubicación"
+  },
   "about": {
     "title": "Resumen Profesional",
     "subtitle": "Industria de Petróleo y Gas - Energía - Petroquímica",

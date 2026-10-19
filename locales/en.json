@@ -18,6 +18,25 @@
     "details_gallery": "Details & Gallery",
     "view_details": "View Details"
   },
+  "modal": {
+    "project": "Project:",
+    "client": "Client:",
+    "contacts": "Project Contacts & References:",
+    "view_gallery": "View Project Gallery"
+  },
+  "certs_ui": {
+    "filter_all": "All (11)",
+    "filter_qual": "Qualifications (4)",
+    "filter_ref": "Company References (7)",
+    "badge_qual": "Qualification",
+    "badge_ref": "Company Reference",
+    "view_doc": "View Document"
+  },
+  "contact_ui": {
+    "lbl_email": "Email",
+    "lbl_phone": "Phone",
+    "lbl_location": "Location"
+  },
   "about": {
     "title": "About Me",
     "subtitle": "Petroleum & Gas - Power - Petrochemical Industry",

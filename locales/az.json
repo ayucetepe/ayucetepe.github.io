@@ -18,6 +18,25 @@
     "details_gallery": "Detallar & Qalereya",
     "view_details": "Detallara Bax"
   },
+  "modal": {
+    "project": "Layihə:",
+    "client": "Müştəri / Baş Podratçı:",
+    "contacts": "Layihə Rəhbərləri və İstinadlar:",
+    "view_gallery": "Layihə Qalereyasına Bax"
+  },
+  "certs_ui": {
+    "filter_all": "Hamısı (11)",
+    "filter_qual": "İxtisas Sertifikatları (4)",
+    "filter_ref": "Şirkət İstinadları (7)",
+    "badge_qual": "İxtisas",
+    "badge_ref": "Şirkət İstinadı",
+    "view_doc": "Sənədə Bax"
+  },
+  "contact_ui": {
+    "lbl_email": "E-poçt",
+    "lbl_phone": "Telefon",
+    "lbl_location": "Məkan"
+  },
   "about": {
     "title": "Peşəkar Xülasə",
     "subtitle": "Neft və Qaz Sənayesi - Enerji - Neft-Kimya",

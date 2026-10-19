@@ -18,6 +18,25 @@
     "details_gallery": "التفاصيل والمعرض",
     "view_details": "عرض التفاصيل"
   },
+  "modal": {
+    "project": "المشروع:",
+    "client": "العميل / المقاول الرئيسي:",
+    "contacts": "مسؤولو المشروع والمراجع:",
+    "view_gallery": "عرض معرض المشروع"
+  },
+  "certs_ui": {
+    "filter_all": "الكل (11)",
+    "filter_qual": "شهادات التأهيل (4)",
+    "filter_ref": "مراجع الشركات (7)",
+    "badge_qual": "تأهيل",
+    "badge_ref": "مرجع الشركة",
+    "view_doc": "عرض المستند"
+  },
+  "contact_ui": {
+    "lbl_email": "البريد الإلكتروني",
+    "lbl_phone": "الهاتف",
+    "lbl_location": "الموقع"
+  },
   "about": {
     "title": "الملخص المهني",
     "subtitle": "صناعة النفط والغاز - الطاقة - البتروكيماويات",
