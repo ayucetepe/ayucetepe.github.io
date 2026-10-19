@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ==========================================================================
-   1. RENKLER & TEMA (AÇIK / KOYU LINKEDIN PALETİ)
+   1. RENKLER & TEMA (AÇIK / KOYU PALET)
    ========================================================================== */
 :root, [data-theme="light"] {
     --primary: #0a66c2;
@@ -30,7 +30,16 @@
 /* ==========================================================================
    2. TEMEL SIFIRLAMA (RESET)
    ========================================================================== */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-tap-highlight-color: transparent;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 body { 
     font-family: 'Poppins', sans-serif; 
     background-color: var(--bg); 
@@ -38,7 +47,11 @@ body {
     line-height: 1.6; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.container { max-width: 1120px; margin: 1.5rem auto; padding: 0 1rem; }
+.container { 
+    max-width: 1120px; 
+    margin: 1.5rem auto; 
+    padding: 0 1rem; 
+}
 
 /* ==========================================================================
    3. ÜST MENÜ (HEADER & NAVBAR)
@@ -48,9 +61,9 @@ body {
     border-bottom: 1px solid var(--border); 
     position: sticky; 
     top: 0; 
-    z-index: 2100; /* Perdenin ve diğer elemanların üstünde kalması için */
-    height: 65px; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    z-index: 2100;
+    height: 60px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
 }
 .navbar { 
     max-width: 1120px; 
@@ -116,14 +129,13 @@ body {
 }
 
 /* ==========================================================================
-   4. SOSYAL MEDYA TARZI PROFİL DROPDOWN (LinkedIn / Facebook Stili)
+   4. PROFİL MENÜSÜ & DROPDOWN
    ========================================================================== */
 .user-menu-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
-
 .nav-avatar-btn {
     background: none;
     border: none;
@@ -132,48 +144,35 @@ body {
     display: flex;
     align-items: center;
     border-radius: 50%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.nav-avatar-btn:hover {
-    transform: scale(1.05);
-}
-
 .nav-avatar-img {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary);
-    box-shadow: var(--shadow);
 }
-
-/* Masaüstü Açılır Menü Penceresi */
 .profile-dropdown {
     position: absolute;
-    top: 58px;
+    top: 55px;
     right: 0;
     width: 290px;
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     padding: 1rem;
     display: none;
     z-index: 3000;
     animation: dropdownFadeIn 0.2s ease-out;
 }
-
-.profile-dropdown.show {
-    display: block;
-}
+.profile-dropdown.show { display: block; }
 
 @keyframes dropdownFadeIn {
     from { opacity: 0; transform: translateY(-8px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Dropdown İçi Profil Başlığı */
 .dropdown-header {
     display: flex;
     align-items: center;
@@ -182,27 +181,9 @@ body {
     border-bottom: 1px solid var(--border);
     margin-bottom: 10px;
 }
-
-.dropdown-avatar {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.dropdown-user-info h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--text);
-    margin: 0;
-    line-height: 1.2;
-}
-
-.dropdown-user-info p {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin: 0;
-}
+.dropdown-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.dropdown-user-info h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin: 0; }
+.dropdown-user-info p { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
 
 .btn-view-profile {
     display: block;
@@ -218,19 +199,9 @@ body {
     margin-top: 8px;
     transition: all 0.2s;
 }
+.btn-view-profile:hover { background: var(--primary); color: #fff; }
 
-.btn-view-profile:hover {
-    background: var(--primary);
-    color: #fff;
-}
-
-/* Menü Öğeleri Listesi */
-.dropdown-section {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0;
-}
-
+.dropdown-section { list-style: none; padding: 0; margin: 8px 0; }
 .dropdown-item {
     display: flex;
     align-items: center;
@@ -240,24 +211,10 @@ body {
     text-decoration: none;
     font-size: 0.88rem;
     border-radius: 8px;
-    transition: background 0.2s;
 }
-
-.dropdown-item:hover {
-    background: var(--bg);
-}
-
-.dropdown-item-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.dropdown-item i {
-    width: 18px;
-    color: var(--text-muted);
-    font-size: 1rem;
-}
+.dropdown-item:hover { background: var(--bg); }
+.dropdown-item-left { display: flex; align-items: center; gap: 10px; }
+.dropdown-item i { width: 18px; color: var(--text-muted); font-size: 1rem; }
 
 .lang-select { 
     background: var(--bg); 
@@ -269,17 +226,10 @@ body {
     font-size: 0.85rem; 
     cursor: pointer; 
 }
-
-.theme-btn { 
-    background: none; 
-    border: none; 
-    font-size: 1.1rem; 
-    cursor: pointer; 
-    color: var(--text); 
-}
+.theme-btn { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text); }
 
 /* ==========================================================================
-   5. KARTLAR & GENEL DÜZEN
+   5. KARTLAR & GENEL DÜZEN (DESKTOP)
    ========================================================================== */
 .card { 
     background: var(--card-bg); 
@@ -298,11 +248,8 @@ body {
     padding-left: 12px;
 }
 
-/* Profil Sayfası */
-.profile-card { 
-    text-align: center; 
-    padding: 2.5rem 1.5rem; 
-}
+/* Profil */
+.profile-card { text-align: center; padding: 2.5rem 1.5rem; }
 .profile-img { 
     width: 140px; 
     height: 140px; 
@@ -334,7 +281,7 @@ body {
 .stat-box h2 { font-size: 2.2rem; color: var(--primary); font-weight: 700; }
 .stat-box p { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
 
-/* İletişim Bölümü */
+/* İletişim */
 .contact-grid { 
     display: grid; 
     grid-template-columns: 1.4fr 1fr; 
@@ -353,539 +300,15 @@ body {
 }
 
 /* ==========================================================================
-   6. İŞ DENEYİMİ & SERTİFİKALAR GRID
+   6. AKIŞ VE İŞ DENEYİMİ KARTLARI
    ========================================================================== */
-.card-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-    gap: 1.2rem; 
-}
-.work-card, .cert-card { 
-    cursor: pointer; 
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; 
-    padding: 1.3rem; 
-    border-radius: 8px; 
-    border: 1px solid var(--border); 
-    background: var(--card-bg); 
-}
-.work-card:hover, .cert-card:hover { 
-    transform: translateY(-3px); 
-    border-color: var(--primary); 
-    box-shadow: var(--shadow); 
-}
-.work-card h3, .cert-card h3 { 
-    color: var(--primary); 
-    font-size: 1.1rem; 
-    margin-bottom: 6px; 
-}
-.job-meta { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
-
-/* Kişi & WhatsApp Butonları */
-.contacts-container { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
-.contact-person-card { 
-    background: var(--bg); 
-    border: 1px solid var(--border); 
-    border-left: 4px solid var(--primary); 
-    padding: 8px 12px; 
-    border-radius: 6px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-}
-.contact-wa-btn { 
-    background: #25D366; 
-    color: white !important; 
-    padding: 5px 12px; 
-    border-radius: 20px; 
-    font-size: 0.8rem; 
-    font-weight: 600; 
-    text-decoration: none; 
-    display: flex; 
-    align-items: center; 
-    gap: 5px; 
-}
-
-/* ==========================================================================
-   7. BUTONLAR
-   ========================================================================== */
-.btn { 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 6px; 
-    padding: 0.6rem 1.3rem; 
-    border-radius: 20px; 
-    font-weight: 600; 
-    font-size: 0.9rem; 
-    text-decoration: none; 
-    cursor: pointer; 
-    border: 1px solid transparent; 
-}
-.btn-primary { background: var(--primary); color: #fff; }
-.btn-primary:hover { background: var(--primary-hover); }
-.btn-outline { border-color: var(--primary); color: var(--primary); }
-.btn-outline:hover { background: var(--badge-bg); }
-.btn-whatsapp { background: #25D366; color: white; margin-top: 15px; border-radius: 6px; }
-
-/* ==========================================================================
-   8. MODALLAR (AÇILIR PENCERELER)
-   ========================================================================== */
-.modal { 
-    display: none; 
-    position: fixed; 
-    z-index: 4000; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0,0,0,0.75); 
-    backdrop-filter: blur(4px); 
-    overflow-y: auto; 
-}
-.modal-content { 
-    background: var(--card-bg); 
-    max-width: 680px; 
-    margin: 4% auto; 
-    padding: 2rem; 
-    border-radius: 12px; 
-    border: 1px solid var(--border); 
-    position: relative; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
-}
-.close-btn { 
-    position: absolute; 
-    right: 20px; 
-    top: 15px; 
-    font-size: 1.8rem; 
-    cursor: pointer; 
-    color: var(--text-muted); 
-}
-.close-btn:hover { color: var(--primary); }
-
-/* RTL (Arapça) Desteği */
-[dir="rtl"] { text-align: right; }
-[dir="rtl"] .page-title { border-left: none; border-right: 4px solid var(--primary); padding-left: 0; padding-right: 12px; }
-[dir="rtl"] .profile-dropdown { right: auto; left: 0; }
-
-/* ==========================================================================
-   9. MOBİL SOSYAL MEDYA MENÜ & DRAWER (FACEBOOK APP STİLİ)
-   ========================================================================== */
-
-/* Arka Plan Karartma Perdesi */
-.drawer-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 2000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.drawer-backdrop.show {
-    display: block;
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .container { padding: 0 0.8rem; }
-    .contact-grid { grid-template-columns: 1fr; }
-
-    /* Mobilde Logoyu Gizle */
-    .brand-logo {
-        display: none !important;
-    }
-
-    .navbar {
-        justify-content: space-between;
-        padding: 0 0.8rem;
-    }
-
-    /* Facebook İkonik Menü */
-    .nav-links {
-        display: flex !important;
-        flex: 1;
-        justify-content: space-around;
-        gap: 0 !important;
-    }
-
-    .nav-links a {
-        padding: 0 15px;
-        font-size: 0.7rem;
-    }
-
-    .nav-links a span {
-        display: none;
-    }
-
-    .nav-links a i {
-        font-size: 1.45rem;
-        margin-bottom: 0;
-    }
-
-    .nav-links a.active {
-        color: var(--primary);
-        border-bottom: 3px solid var(--primary);
-    }
-
-    .user-menu-wrapper {
-        padding-left: 10px;
-    }
-
-    /* Alttan Açılan Drawer Menü */
-    .profile-dropdown {
-        position: fixed !important;
-        top: auto !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        background: var(--card-bg) !important;
-        border-radius: 20px 20px 0 0 !important;
-        border: none !important;
-        border-top: 1px solid var(--border) !important;
-        padding: 1.2rem 1.2rem 2.2rem 1.2rem !important;
-        box-shadow: 0 -10px 40px rgba(0,0,0,0.6) !important;
-        transform: translateY(100%);
-        transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
-        z-index: 3000 !important; /* Perdenin kesinlikle üstünde */
-        display: block !important;
-        visibility: hidden;
-    }
-
-    .profile-dropdown.show {
-        transform: translateY(0) !important;
-        visibility: visible;
-    }
-
-    .drawer-handle {
-        width: 40px;
-        height: 5px;
-        background: var(--border);
-        border-radius: 10px;
-        margin: -4px auto 14px auto;
-        display: block;
-    }
-}
-
-@media (min-width: 769px) {
-    .drawer-handle {
-        display: none;
-    }
-    .drawer-backdrop {
-        display: none !important;
-    }
-}
-
-/* ==========================================================================
-   SOSYAL MEDYA ZAMAN TÜNELİ & AKIŞ (LINKEDIN CAREER TIMELINE)
-   ========================================================================== */
-
-/* 1. Üst Filtreleme Butonları (Social Filter Chips) */
 .timeline-filters {
     display: flex;
     gap: 8px;
     overflow-x: auto;
     padding-bottom: 12px;
     margin-bottom: 1.5rem;
-    scrollbar-width: none; /* Firefox */
-}
-.timeline-filters::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-
-.filter-chip {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.filter-chip:hover {
-    border-color: var(--primary);
-    color: var(--text);
-}
-.filter-chip.active {
-    background: var(--primary);
-    color: white !important;
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
-}
-
-/* 2. Dikey Zaman Çizgisi Akışı */
-.timeline-container {
-    position: relative;
-    max-width: 850px;
-    margin: 0 auto;
-    padding-left: 20px;
-}
-
-/* Sol Dikey Çizgi */
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    bottom: 20px;
-    left: 20px;
-    width: 3px;
-    background: var(--border);
-    border-radius: 2px;
-}
-
-/* Her Bir Gönderi / Deneyim Kartı */
-.timeline-item {
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding-left: 35px;
-    transition: transform 0.2s ease, opacity 0.3s ease;
-}
-
-/* Çizgi Üstündeki Yuvarlak İkon Noktası */
-.timeline-dot {
-    position: absolute;
-    left: 8px;
-    top: 16px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--card-bg);
-    border: 2px solid var(--primary);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: var(--primary);
-    font-size: 0.75rem;
-    z-index: 2;
-    box-shadow: var(--shadow);
-}
-
-/* LinkedIn Tarzı Gönderi Kartı */
-.timeline-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.4rem;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.timeline-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-/* Kart Üst Bilgisi */
-.timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-.timeline-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 0;
-}
-.timeline-date-badge {
-    background: var(--badge-bg);
-    color: var(--primary);
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 12px;
-    white-space: nowrap;
-}
-
-.timeline-subtitle {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-}
-.timeline-location {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* Görev Açıklaması */
-.timeline-body {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    border-top: 1px dashed var(--border);
-    padding-top: 10px;
-}
-
-/* Kart Altı Sosyal Butonlar */
-.timeline-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 12px;
-    padding-top: 8px;
-    border-top: 1px solid var(--border);
-}
-.timeline-tag {
-    font-size: 0.75rem;
-    color: var(--primary);
-    background: var(--bg);
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-weight: 600;
-}
-.timeline-more-btn {
-    color: var(--primary);
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Mobilde Çizgi ve Boşluk Ayarı */
-@media (max-width: 768px) {
-    .timeline-container { padding-left: 10px; }
-    .timeline-container::before { left: 12px; }
-    .timeline-item { padding-left: 28px; }
-    .timeline-dot { left: 0px; width: 24px; height: 24px; }
-    .timeline-header { flex-direction: column; gap: 4px; }
-}
-
-/* RTL (Arapça) Desteği */
-[dir="rtl"] .timeline-container { padding-left: 0; padding-right: 20px; }
-[dir="rtl"] .timeline-container::before { left: auto; right: 20px; }
-[dir="rtl"] .timeline-item { padding-left: 0; padding-right: 35px; }
-[dir="rtl"] .timeline-dot { left: auto; right: 8px; }
-
-/* ==========================================================================
-   SERTİFİKALAR & REFERANSLAR MODERN KARTLARI
-   ========================================================================== */
-.cert-badge-type {
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-}
-
-.cert-badge-qualification {
-    background: #e8f3fc;
-    color: #0a66c2;
-    border: 1px solid rgba(10, 102, 194, 0.2);
-}
-
-.cert-badge-reference {
-    background: #e6f7ed;
-    color: #107c41;
-    border: 1px solid rgba(16, 124, 65, 0.2);
-}
-
-[data-theme="dark"] .cert-badge-qualification {
-    background: #1e3a5f;
-    color: #70b5f9;
-}
-
-[data-theme="dark"] .cert-badge-reference {
-    background: #0e3d23;
-    color: #4cd98b;
-}
-
-.cert-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.cert-icon-wrapper {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--primary);
-}
-
-.cert-preview-wrapper {
-    position: relative;
-    width: 100%;
-    height: 140px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 10px 0;
-    background: var(--bg);
-    border: 1px solid var(--border);
-}
-
-.cert-preview-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.cert-card:hover .cert-preview-img {
-    transform: scale(1.04);
-}
-
-.cert-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    gap: 6px;
-}
-
-.cert-card:hover .cert-overlay {
-    opacity: 1;
-}
-
-/* ==========================================================================
-   SOSYAL MEDYA AKIŞI (FACEBOOK / LINKEDIN FEED STYLE)
-   ========================================================================== */
-
-/* Üst Kategori Filtreleri */
-.timeline-filters {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 12px;
-    margin-bottom: 1.5rem;
-    justify-content: center; /* Ortalanmış filtre çipleri */
     scrollbar-width: none;
 }
 .timeline-filters::-webkit-scrollbar { display: none; }
@@ -905,10 +328,6 @@ body {
     align-items: center;
     gap: 6px;
 }
-.filter-chip:hover {
-    border-color: var(--primary);
-    color: var(--text);
-}
 .filter-chip.active {
     background: var(--primary);
     color: #fff !important;
@@ -916,7 +335,6 @@ body {
     box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
 }
 
-/* Orta Akış Kolonu (Facebook / LinkedIn Feed Kolonu) */
 .feed-container {
     max-width: 720px;
     margin: 0 auto;
@@ -924,18 +342,6 @@ body {
     flex-direction: column;
     gap: 12px;
 }
-
-.feed-container .timeline-item {
-    margin-bottom: 0 !important;
-    padding-left: 0 !important; /* Varsa eski sol boşluğu da sıfırlar */
-}
-
-.feed-container .feed-card {
-    margin-bottom: 0 !important;
-    padding: 1.1rem 1.3rem; /* Kart içini de biraz daha derli toplu yapar */
-}
-
-/* Tekil Gönderi / Deneyim Kartı */
 .feed-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -943,10 +349,10 @@ body {
     padding: 1.4rem;
     box-shadow: var(--shadow);
     cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .feed-card:hover {
     transform: translateY(-2px);
@@ -954,51 +360,43 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Facebook Tarzı Üst Başlık (Header) */
 .feed-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
 }
-
 .feed-header-left {
     display: flex;
     align-items: center;
     gap: 12px;
     flex: 1;
 }
-
-/* Şirket / Sektör İkon Kutusu (Profil Avatarı Gibi) */
 .feed-avatar-icon {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     border-radius: 10px;
     background: var(--badge-bg);
     color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
 }
-
 .feed-header-text h3 {
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text);
-    margin: 0 0 2px 0;
+    margin: 0;
     line-height: 1.3;
 }
-
 .feed-company-sub {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--primary);
     margin: 0;
 }
-
-/* Tarih Rozeti */
 .feed-date-badge {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -1009,8 +407,6 @@ body {
     border-radius: 12px;
     white-space: nowrap;
 }
-
-/* Proje & Lokasyon Bilgi Satırı */
 .feed-meta-row {
     display: flex;
     flex-wrap: wrap;
@@ -1022,23 +418,10 @@ body {
     padding: 8px 12px;
     border-radius: 8px;
 }
-.feed-meta-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.feed-meta-item i {
-    color: var(--primary);
-}
+.feed-meta-item { display: flex; align-items: center; gap: 5px; }
+.feed-meta-item i { color: var(--primary); }
+.feed-body { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
 
-/* Görev Açıklama Metni */
-.feed-body {
-    font-size: 0.9rem;
-    color: var(--text);
-    line-height: 1.6;
-}
-
-/* Alt Bar (Hashtag & Detay Butonu) */
 .feed-footer {
     display: flex;
     justify-content: space-between;
@@ -1061,16 +444,274 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: gap 0.2s;
-}
-.feed-card:hover .feed-btn-more {
-    gap: 9px;
 }
 
-/* Mobil İyileştirmeleri */
+/* ==========================================================================
+   7. SERTİFİKA VE REFERANS GRİDİ
+   ========================================================================== */
+.card-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 1.2rem; 
+}
+.cert-card { 
+    cursor: pointer; 
+    padding: 1.3rem; 
+    border-radius: 10px; 
+    border: 1px solid var(--border); 
+    background: var(--card-bg); 
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.cert-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+.cert-card h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; }
+
+.cert-badge-type {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+.cert-badge-qualification { background: #e8f3fc; color: #0a66c2; border: 1px solid rgba(10, 102, 194, 0.2); }
+.cert-badge-reference { background: #e6f7ed; color: #107c41; border: 1px solid rgba(16, 124, 65, 0.2); }
+[data-theme="dark"] .cert-badge-qualification { background: #1e3a5f; color: #70b5f9; }
+[data-theme="dark"] .cert-badge-reference { background: #0e3d23; color: #4cd98b; }
+
+.cert-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.cert-preview-wrapper {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+}
+.cert-preview-img { width: 100%; height: 100%; object-fit: cover; }
+.cert-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.85rem; font-weight: 600;
+    opacity: 0; transition: opacity 0.2s ease; gap: 6px;
+}
+.cert-card:hover .cert-overlay { opacity: 1; }
+
+/* Butonlar & Modallar */
+.btn { 
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; 
+    padding: 0.6rem 1.3rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem; 
+    text-decoration: none; cursor: pointer; border: 1px solid transparent; 
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-outline { border-color: var(--primary); color: var(--primary); }
+.btn-whatsapp { background: #25D366; color: white; border-radius: 6px; }
+
+.modal { 
+    display: none; position: fixed; z-index: 4000; left: 0; top: 0; width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); overflow-y: auto; 
+}
+.modal-content { 
+    background: var(--card-bg); max-width: 680px; margin: 4% auto; padding: 2rem; 
+    border-radius: 12px; border: 1px solid var(--border); position: relative; 
+}
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 1.8rem; cursor: pointer; color: var(--text-muted); }
+
+/* İletişim Kartları */
+.contacts-container { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.contact-person-card { 
+    background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--primary); 
+    padding: 8px 12px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; 
+}
+.contact-wa-btn { 
+    background: #25D366; color: white !important; padding: 5px 12px; border-radius: 20px; 
+    font-size: 0.8rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 5px; 
+}
+
+/* RTL Desteği */
+[dir="rtl"] { text-align: right; }
+[dir="rtl"] .page-title { border-left: none; border-right: 4px solid var(--primary); padding-left: 0; padding-right: 12px; }
+[dir="rtl"] .profile-dropdown { right: auto; left: 0; }
+
+/* ==========================================================================
+   8. MOBİL FIRST & EDGE-TO-EDGE TAM EKRAN TASARIM (MAX-WIDTH: 768px)
+   ========================================================================== */
+.drawer-backdrop {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); z-index: 2000;
+}
+.drawer-backdrop.show { display: block; }
+
 @media (max-width: 768px) {
-    .feed-container { max-width: 100%; }
-    .feed-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .feed-date-badge { align-self: flex-start; }
-    .timeline-filters { justify-content: flex-start; }
+    /* 1. Tüm Dış Kenar Boşluklarını (Gap/Margin) Sıfırla - Edge-to-Edge */
+    .container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* 2. Kartları Ekrana Tam Yay (Sıfır Kenarlık, Tam Genişlik) */
+    .card,
+    .feed-card,
+    .timeline-item .card,
+    .profile-card {
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border) !important;
+        box-shadow: none !important;
+        margin: 0 0 8px 0 !important;
+        padding: 1.2rem 1rem !important;
+        width: 100% !important;
+    }
+
+    /* 3. Sayfa Başlıkları - Kenardan Düzgün Hizalanmış */
+    .page-title {
+        font-size: 1.35rem !important;
+        margin: 0.8rem 1rem !important;
+        padding-left: 10px !important;
+    }
+
+    /* 4. Filtreleme Çipleri - Yatayda Akıcı ve Tam Genişlik */
+    .timeline-filters {
+        justify-content: flex-start !important;
+        padding: 10px 1rem !important;
+        margin-bottom: 8px !important;
+        border-bottom: 1px solid var(--border);
+        background: var(--card-bg);
+    }
+
+    /* 5. İş Deneyimi Akışı */
+    .feed-container {
+        max-width: 100% !important;
+        gap: 0 !important;
+    }
+    .feed-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+    .feed-date-badge {
+        align-self: flex-start !important;
+    }
+
+    /* 6. İstatistik Sayaçları - Mobilde 3'lü Eşit Bar Olarak Ekranı Kaplar */
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0 !important;
+        margin-bottom: 8px !important;
+        border-top: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border) !important;
+        background: var(--card-bg);
+    }
+    .stat-box {
+        border-radius: 0 !important;
+        border: none !important;
+        border-right: 1px solid var(--border) !important;
+        padding: 0.9rem 0.2rem !important;
+        box-shadow: none !important;
+    }
+    .stat-box:last-child {
+        border-right: none !important;
+    }
+    .stat-box i {
+        font-size: 1.3rem !important;
+        margin-bottom: 4px !important;
+    }
+    .stat-box h2 {
+        font-size: 1.45rem !important;
+    }
+    .stat-box p {
+        font-size: 0.68rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 7. Sertifikalar Gridi - Tek Kolon, Ekranı Tam Kaplar */
+    .card-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+    .cert-card {
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        margin-bottom: 8px !important;
+        padding: 1.2rem 1rem !important;
+    }
+
+    /* 8. İletişim Alanı */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .contact-grid > div:last-child {
+        border-left: none !important;
+        border-top: 1px solid var(--border) !important;
+        padding-left: 0 !important;
+        padding-top: 1.5rem !important;
+    }
+
+    /* 9. Navbar & Mobil Drawer Menü */
+    .brand-logo { display: none !important; }
+    .navbar { padding: 0 0.8rem; }
+    .nav-links {
+        display: flex !important;
+        flex: 1;
+        justify-content: space-around;
+        gap: 0 !important;
+    }
+    .nav-links a { padding: 0 15px; }
+    .nav-links a span { display: none; }
+    .nav-links a i { font-size: 1.4rem; margin-bottom: 0; }
+    .nav-links a.active {
+        color: var(--primary);
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .profile-dropdown {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        border-radius: 20px 20px 0 0 !important;
+        border: none !important;
+        border-top: 1px solid var(--border) !important;
+        padding: 1.2rem 1.2rem 2.2rem 1.2rem !important;
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+        display: block !important;
+        visibility: hidden;
+    }
+    .profile-dropdown.show {
+        transform: translateY(0) !important;
+        visibility: visible;
+    }
+    .drawer-handle {
+        width: 40px;
+        height: 5px;
+        background: var(--border);
+        border-radius: 10px;
+        margin: -4px auto 14px auto;
+        display: block;
+    }
+
+    /* 10. Modallar - Mobilde Tam Ekran Sheet */
+    .modal-content {
+        max-width: 100% !important;
+        width: 100% !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding: 1.5rem 1rem !important;
+    }
 }
