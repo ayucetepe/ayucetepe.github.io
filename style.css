@@ -159,7 +159,7 @@ body {
     width: 290px;
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     padding: 1rem;
     display: none;
@@ -543,10 +543,24 @@ body {
    8. MOBİL FIRST & EDGE-TO-EDGE TAM EKRAN TASARIM (MAX-WIDTH: 768px)
    ========================================================================== */
 .drawer-backdrop {
-    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); z-index: 2000;
+    display: none !important; /* Masaüstünde perdeyi tamamen iptal ettik */
 }
-.drawer-backdrop.show { display: block; }
+
+@media (max-width: 768px) {
+    /* Sadece mobilde alttan çekmece açıldığında hafif gölge verir, buzlanma yapmaz */
+    .drawer-backdrop {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100vw; 
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4); /* Bulanıklık (blur) tamamen kaldırıldı */
+        z-index: 2000;
+    }
+    .drawer-backdrop.show { 
+        display: block !important; 
+    }
+}
 
 @media (max-width: 768px) {
     /* 1. Tüm Dış Kenar Boşluklarını (Gap/Margin) Sıfırla - Edge-to-Edge */
