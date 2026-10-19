@@ -1,6 +1,6 @@
 /**
  * Aziz Yucetepe Portfolio - i18n Translation Engine
- * Complete Auto-Translation for Badges, Dates, Filters, and Cards.
+ * Complete Auto-Translation for Badges, Dates, Filters, Modals and Cards.
  */
 
 (function () {
@@ -121,7 +121,7 @@
                 });
             }
 
-            // 5. SERTİFİKALAR (certificates.html) Kart, Başlık, Rozet ve Filtre Çevirileri
+            // 5. SERTİFİKALAR (certificates.html) Kart, Başlık, Rozet, Filtre ve MODAL Çevirileri
             if (currentTranslations.certs) {
                 // Sayfa Başlığı
                 const certPageTitle = document.querySelector("#certsList") ? document.querySelector("h1.page-title") : null;
@@ -142,16 +142,20 @@
                     certFilters[2].innerHTML = `<i class="fas fa-building"></i> ${window.t("certs_ui.filter_ref", "Company References (7)")}`;
                 }
 
-                // Kartların İçeriği & Rozetleri
+                // Kartların İçeriği & Rozetleri & MODAL İÇİN data-title / data-desc GÜNCELLEMESİ
                 document.querySelectorAll(".cert-card").forEach((card) => {
                     const id = card.getAttribute("data-id");
                     if (id && currentTranslations.certs[id]) {
                         const cert = currentTranslations.certs[id];
+                        
+                        // Modal tıklandığında okunacak verileri de seçilen dile güncelliyoruz:
                         if (cert.title) {
+                            card.setAttribute("data-title", cert.title);
                             const titleEl = card.querySelector("h3");
                             if (titleEl) titleEl.innerText = cert.title;
                         }
                         if (cert.desc) {
+                            card.setAttribute("data-desc", cert.desc);
                             const descEl = card.querySelector(".cert-desc");
                             if (descEl) descEl.innerText = cert.desc;
                         }
@@ -173,6 +177,15 @@
                         overlay.innerHTML = `<i class="fas fa-search-plus"></i> ${window.t("certs_ui.view_doc", "View Document")}`;
                     }
                 });
+
+                // Eğer bir modal o esnada açık kalmışsa onu da dinamik yenile
+                const cTitle = document.getElementById("cert-title");
+                const cDesc = document.getElementById("cert-desc");
+                const activeCertCard = document.querySelector(".cert-card[data-active='true']");
+                if (activeCertCard && cTitle && cDesc) {
+                    cTitle.innerText = activeCertCard.getAttribute("data-title");
+                    cDesc.innerText = activeCertCard.getAttribute("data-desc");
+                }
             }
 
             // 6. Sayfadaki Tüm Dil Seçicilerini Senkronize Et
