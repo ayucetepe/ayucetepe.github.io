@@ -18,6 +18,25 @@
     "details_gallery": "Detaylar & Galeri",
     "view_details": "Detayları Gör"
   },
+  "modal": {
+    "project": "Proje:",
+    "client": "Müşteri / İşveren:",
+    "contacts": "Proje Yetkilileri & Referanslar:",
+    "view_gallery": "Proje Galerisini Görüntüle"
+  },
+  "certs_ui": {
+    "filter_all": "Tümü (11)",
+    "filter_qual": "Yeterlilik Belgeleri (4)",
+    "filter_ref": "Şirket Referansları (7)",
+    "badge_qual": "Yeterlilik",
+    "badge_ref": "Şirket Referansı",
+    "view_doc": "Belgeyi Görüntüle"
+  },
+  "contact_ui": {
+    "lbl_email": "E-posta",
+    "lbl_phone": "Telefon",
+    "lbl_location": "Konum"
+  },
   "about": {
     "title": "Mesleki Özet",
     "subtitle": "Petrol ve Gaz Endüstrisi - Enerji - Petrokimya",
@@ -101,66 +120,21 @@
       "title": "Kaynak Süpervizörü",
       "desc": "Şah Deniz Aşama 2 (SD2) açık deniz platformu boru imalat ve montaj kaynağı denetimi. BP ve EEMUA 158 şartnamelerine tam uyumun sağlanması."
     },
-    "8": {
-      "title": "Kaynak Formeni",
-      "desc": "Bakü Olimpiyat Stadyumu ağır çelik konstrüksiyon ve borulama kaynağı denetimi. Kaynakçı yeterliliklerinin takibi ve günlük imalat kontrolü."
-    },
-    "9": {
-      "title": "Kaynak Formeni",
-      "desc": "COP-WC-PDQ Platform Topsides açık deniz imalatı kaynak denetimi. NDE faaliyetlerinin koordinasyonu ve İSG kurallarına uyum."
-    },
-    "10": {
-      "title": "Borulama ve Kaynak Süpervizörü",
-      "desc": "OGB Su Boru Hattı derin sondaj kuyusu boru imalatı ve montaj denetimi. Malzeme lojistiği, hidrotest süreçleri ve kalite kontrol takibi."
-    },
-    "11": {
-      "title": "Borulama ve Kaynak Süpervizörü",
-      "desc": "OGB Su Boru Hattı iletim hattı borulama imalatı ve montaj denetimi."
-    },
-    "12": {
-      "title": "Kaynak Süpervizörü",
-      "desc": "Sangaçal Terminali 21.000 m³ Üretilmiş Su Tankının montaj kaynağı denetimi (SMAW, GTAW, SAW)."
-    },
-    "13": {
-      "title": "Multi-Coded Kaynakçı",
-      "desc": "TPG 500 açık deniz platformu Dubleks, Süper Dubleks, Cu-Ni borularda (GTAW/FCAW/SMAW) korozyon testli kaynaklar."
-    },
-    "14": {
-      "title": "Multi-Coded Kaynakçı",
-      "desc": "TPG 500 platformu özel alaşımlı proses borularda (GTAW/FCAW/SMAW) kaynak işlemleri."
-    },
-    "15": {
-      "title": "Boru Hattı Kaynakçısı",
-      "desc": "AGT Boru Hattı API borularda Yokuş Yukarı ve Yokuş Aşağı (GTAW / SMAW) kaynakları."
-    },
-    "16": {
-      "title": "Uzman Kaynakçı",
-      "desc": "Sangaçal Terminali Genişletme Projesinde Paslanmaz ve Dubleks borularda (GTAW / SMAW) kaynak işlemleri."
-    },
-    "17": {
-      "title": "Santral Kaynakçısı",
-      "desc": "Severnaya 400 MW Santrali P91, P22, P11 alaşımlı çeliklerde (GTAW / SMAW) buhar borusu kaynağı."
-    },
-    "18": {
-      "title": "Rafineri Kaynakçısı",
-      "desc": "Tüpraş İzomerizasyon Ünitesi P91, P22, P11 ve Paslanmaz borularda (GTAW / SMAW) kaynak işlemleri."
-    },
-    "19": {
-      "title": "Rafineri Kaynakçısı",
-      "desc": "Tüpraş CCR & İzomerizasyon Üniteleri proses borulama kaynağı."
-    },
-    "20": {
-      "title": "Rafineri Kaynakçısı",
-      "desc": "Fergana Petrol Rafinerisi boru imalat ve yüksek basınç montaj kaynağı."
-    },
-    "21": {
-      "title": "Petrokimya Kaynakçısı",
-      "desc": "Petkim Etilen Polietilen tesisinde proses borulama kaynağı."
-    },
-    "22": {
-      "title": "Rafineri Kaynakçısı",
-      "desc": "Tüpraş CCR & ISO Ünitesi rafineri genişletme işlerinde yüksek basınç boru kaynağı."
-    }
+    "8": { "title": "Kaynak Formeni", "desc": "Bakü Olimpiyat Stadyumu ağır çelik konstrüksiyon ve borulama kaynağı denetimi. Kaynakçı yeterliliklerinin takibi ve günlük imalat kontrolü." },
+    "9": { "title": "Kaynak Formeni", "desc": "COP-WC-PDQ Platform Topsides açık deniz imalatı kaynak denetimi. NDE faaliyetlerinin koordinasyonu ve İSG kurallarına uyum." },
+    "10": { "title": "Borulama ve Kaynak Süpervizörü", "desc": "OGB Su Boru Hattı derin sondaj kuyusu boru imalatı ve montaj denetimi. Malzeme lojistiği, hidrotest süreçleri ve kalite kontrol takibi." },
+    "11": { "title": "Borulama ve Kaynak Süpervizörü", "desc": "OGB Su Boru Hattı iletim hattı borulama imalatı ve montaj denetimi." },
+    "12": { "title": "Kaynak Süpervizörü", "desc": "Sangaçal Terminali 21.000 m³ Üretilmiş Su Tankının montaj kaynağı denetimi (SMAW, GTAW, SAW)." },
+    "13": { "title": "Multi-Coded Kaynakçı", "desc": "TPG 500 açık deniz platformu Dubleks, Süper Dubleks, Cu-Ni borularda (GTAW/FCAW/SMAW) korozyon testli kaynaklar." },
+    "14": { "title": "Multi-Coded Kaynakçı", "desc": "TPG 500 platformu özel alaşımlı proses borularda (GTAW/FCAW/SMAW) kaynak işlemleri." },
+    "15": { "title": "Boru Hattı Kaynakçısı", "desc": "AGT Boru Hattı API borularda Yokuş Yukarı ve Yokuş Aşağı (GTAW / SMAW) kaynakları." },
+    "16": { "title": "Uzman Kaynakçı", "desc": "Sangaçal Terminali Genişletme Projesinde Paslanmaz ve Dubleks borularda (GTAW / SMAW) kaynak işlemleri." },
+    "17": { "title": "Santral Kaynakçısı", "desc": "Severnaya 400 MW Santrali P91, P22, P11 alaşımlı çeliklerde (GTAW / SMAW) buhar borusu kaynağı." },
+    "18": { "title": "Rafineri Kaynakçısı", "desc": "Tüpraş İzomerizasyon Ünitesi P91, P22, P11 ve Paslanmaz borularda (GTAW / SMAW) kaynak işlemleri." },
+    "19": { "title": "Rafineri Kaynakçısı", "desc": "Tüpraş CCR & İzomerizasyon Üniteleri proses borulama kaynağı." },
+    "20": { "title": "Rafineri Kaynakçısı", "desc": "Fergana Petrol Rafinerisi boru imalat ve yüksek basınç montaj kaynağı." },
+    "21": { "title": "Petrokimya Kaynakçısı", "desc": "Petkim Etilen Polietilen tesisinde proses borulama kaynağı." },
+    "22": { "title": "Rafineri Kaynakçısı", "desc": "Tüpraş CCR & ISO Ünitesi rafineri genişletme işlerinde yüksek basınç boru kaynağı." }
   },
   "certs": {
     "c1": { "title": "YETERLİLİK SERTİFİKASI", "desc": "CSWIP 3.1 Uluslararası Kaynak Enspektörü Kimlik Kartı (2021)" },
