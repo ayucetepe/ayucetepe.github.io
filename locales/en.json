@@ -63,10 +63,11 @@
   },
   "profile": {
     "title": "Profile & Contact",
-    "subtitle": "Welding Supervisor & Certified Inspector (33+ Years)",
+    "subtitle": "Welding Supervisor & Inspector",
     "stat_years": "Years Field Experience",
     "stat_projects": "Major Projects Completed",
     "stat_countries": "Countries Worked Worldwide"
+    
   },
   "form": {
     "header": "Send a Message",

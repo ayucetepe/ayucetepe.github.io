@@ -63,10 +63,11 @@
   },
   "profile": {
     "title": "Profil ve İletişim",
-    "subtitle": "Kaynak Süpervizörü & Sertifikalı Enspektör (33+ Yıl)",
+    "subtitle": "Kaynak Süpervizör & Enspektörü",
     "stat_years": "Yıllık Saha Tecrübesi",
     "stat_projects": "Tamamlanan Büyük Proje",
     "stat_countries": "Çalışılan Farklı Ülke"
+    
   },
   "form": {
     "header": "Mesaj Gönderin",
