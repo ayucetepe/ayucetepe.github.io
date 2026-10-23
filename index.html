@@ -5,45 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aziz Yucetepe | Welding Supervisor & Inspector</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aziz Yücetepe - Senior Welding Supervisor, Inspector & Trainer with 33+ years of expertise in oil & gas, petrochemical, offshore, and refinery installations. CSWIP 3.1 certified.">
+    <meta name="author" content="Aziz Yücetepe">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aziz Yucetepe | Welding Supervisor & Inspector">
+    <meta property="og:description" content="Senior Welding Supervisor, Inspector & Trainer with 33+ years of experience across international energy and petrochemical mega-projects.">
+    <meta property="og:image" content="images/aziz.jpeg">
+    <meta property="og:url" content="index.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aziz Yucetepe | Welding Supervisor & Inspector">
+    <meta name="twitter:description" content="Senior Welding Supervisor, Inspector & Trainer with 33+ years of field experience in ASME, API, EN, and AWS standards.">
+    <meta name="twitter:image" content="images/aziz.jpeg">
+
     <!-- CSS & FontAwesome -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Favicon -->
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <style>
+        /* Erişilebilirlik ve Semantik İyileştirme Stilleri */
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 12px;
+            background: var(--primary, #0a66c2);
+            color: #ffffff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            z-index: 99999;
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 12px;
+        }
+        .about-lead {
+            font-weight: 700;
+            color: var(--primary, #0a66c2);
+            margin-bottom: 8px;
+        }
+        .about-content {
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+        .about-content p {
+            margin-bottom: 14px;
+        }
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+        .skills-title {
+            font-size: 1.4rem;
+        }
+        .skills-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.9;
+            font-size: 0.98rem;
+        }
+        .skills-list li {
+            margin-bottom: 8px;
+        }
+        .skills-list li:last-child {
+            margin-bottom: 0;
+        }
+        .dropdown-divider {
+            margin: 12px 0;
+            border: 0;
+            border-top: 1px solid var(--border, #e0e0e0);
+        }
+        .dropdown-cursor {
+            cursor: pointer;
+        }
+        .dropdown-icon-btn {
+            font-size: 1.1rem;
+        }
+        .dropdown-small-icon {
+            font-size: 0.85rem;
+        }
+        .lang-select-box {
+            padding: 4px 8px;
+            font-size: 0.85rem;
+        }
+        .site-footer {
+            border-top: 1px solid var(--border, #e0e0e0);
+            padding: 28px 16px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted, #666666);
+            margin-top: 40px;
+            background: var(--card-bg, #ffffff);
+        }
+        .site-footer .footer-links {
+            margin-top: 10px;
+        }
+        .site-footer a {
+            color: var(--primary, #0a66c2);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Erişilebilirlik: İçeriğe Atla -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- MOBİL KARARTMA PERDESİ (BACKDROP) -->
-    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 
     <!-- ÜST MENÜ (HEADER) -->
     <header class="site-header">
-        <div class="navbar">
+        <nav class="navbar" aria-label="Main Navigation">
             
             <!-- Masaüstü Logo (Mobilde Otomatik Gizlenir) -->
-            <a href="index.html" class="brand-logo">
-                <span class="brand-badge">AY</span>
+            <a href="index.html" class="brand-logo" aria-label="Aziz Yucetepe Home">
+                <span class="brand-badge" aria-hidden="true">AY</span>
                 <span>Aziz Yucetepe</span>
             </a>
             
             <!-- Facebook/LinkedIn Stili Sekme Menüsü -->
             <ul class="nav-links">
                 <li>
-                    <a href="index.html" class="active" title="Home">
-                        <i class="fas fa-house"></i>
+                    <a href="index.html" class="active" title="Home" aria-current="page">
+                        <i class="fas fa-house" aria-hidden="true"></i>
                         <span data-i18n="nav.about">About Me</span>
                     </a>
                 </li>
                 <li>
                     <a href="experience.html" title="Experience">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                         <span data-i18n="nav.experience">Work Experience</span>
                     </a>
                 </li>
                 <li>
                     <a href="certificates.html" title="Certificates">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
                         <span data-i18n="nav.certificates">Certificates</span>
                     </a>
                 </li>
@@ -51,13 +161,13 @@
 
             <!-- Sağ Taraf: Profil Avatarı & Açılır Drawer Menü -->
             <div class="user-menu-wrapper">
-                <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings">
+                <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings" aria-expanded="false" aria-haspopup="true" aria-controls="userDropdown" aria-label="Account and Settings">
                     <img src="images/aziz.jpeg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/42'" class="nav-avatar-img">
                 </button>
 
                 <!-- Açılır Profil Menüsü / Mobilde Kayan Drawer -->
-                <div class="profile-dropdown" id="userDropdown">
-                    <div class="drawer-handle"></div>
+                <div class="profile-dropdown" id="userDropdown" role="menu" aria-label="User menu">
+                    <div class="drawer-handle" aria-hidden="true"></div>
                     
                     <div class="dropdown-header">
                         <img src="images/aziz.jpeg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
@@ -66,20 +176,20 @@
                             <p data-i18n="common.user_role">Welding Supervisor</p>
                         </div>
                     </div>
-                    <a href="profile.html" class="btn-view-profile">
-                        <i class="fas fa-user-circle"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
+                    <a href="profile.html" class="btn-view-profile" role="menuitem">
+                        <i class="fas fa-user-circle" aria-hidden="true"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
                     </a>
 
-                    <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
+                    <hr class="dropdown-divider">
 
-                    <ul class="dropdown-section">
+                    <ul class="dropdown-section" role="none">
                         <!-- Dil Seçimi -->
-                        <li class="dropdown-item">
+                        <li class="dropdown-item" role="none">
                             <div class="dropdown-item-left">
-                                <i class="fas fa-globe"></i>
-                                <span data-i18n="common.language">Language</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                <label for="lang-select" data-i18n="common.language">Language</label>
                             </div>
-                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                            <select id="lang-select" class="lang-select lang-select-box" onchange="setLanguage(this.value)" aria-label="Select language">
                                 <option value="en">🇺🇸 EN</option>
                                 <option value="tr">🇹🇷 TR</option>
                                 <option value="az">🇦🇿 AZ</option>
@@ -91,71 +201,72 @@
                         </li>
 
                         <!-- Gece / Gündüz Modu -->
-                        <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
+                        <li class="dropdown-item dropdown-cursor" onclick="toggleTheme()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){toggleTheme();event.preventDefault();}">
                             <div class="dropdown-item-left">
-                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
                                 <span data-i18n="common.display_mode">Display Mode</span>
                             </div>
-                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
+                            <button type="button" class="theme-btn dropdown-icon-btn" aria-label="Toggle display theme"><i class="fas fa-circle-half-stroke" aria-hidden="true"></i></button>
                         </li>
 
                         <!-- CV İndir -->
-                        <li>
-                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item">
+                        <li role="none">
+                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item" role="menuitem">
                                 <div class="dropdown-item-left">
-                                    <i class="fas fa-file-pdf"></i>
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
                                     <span data-i18n="common.download_cv">Download CV</span>
                                 </div>
-                                <i class="fas fa-download" style="font-size: 0.85rem;"></i>
+                                <i class="fas fa-download dropdown-small-icon" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <div class="container">
+    <!-- ANA İÇERİK (MAIN) -->
+    <main id="main-content" class="container">
         
         <!-- 1. BÖLÜM: ABOUT ME (HAKKIMDA) -->
-        <div class="card">
-            <h1 class="page-title" data-i18n="about.title">About Me</h1>
+        <section class="card" aria-labelledby="about-heading">
+            <h1 id="about-heading" class="page-title" data-i18n="about.title">About Me</h1>
             
-            <div style="font-size: 1.02rem; line-height: 1.8;">
-                <p style="font-weight: 700; color: var(--primary); margin-bottom: 8px;" data-i18n="about.subtitle">
+            <div class="about-content">
+                <p class="about-lead" data-i18n="about.subtitle">
                     Petroleum & Gas - Power - Petrochemical Industry
                 </p>
-                <p style="margin-bottom: 14px;" data-i18n="about.p1">
+                <p data-i18n="about.p1">
                     Significant experience gained in the welding and fabrication industry. Working Offshore/Onshore Power stations, petrochemical plants, and oil refineries at fabrication yards on green field sites and live installations.
                 </p>
-                <p style="margin-bottom: 14px;" data-i18n="about.p2">
+                <p data-i18n="about.p2">
                     <strong>Welding Opr. / Inspector / Supervisor / Trainer (33 Years)</strong>, taking full responsibility for Production welds made on sites. Expert in deployment of welding crews and compliance with approved Welding Procedures and protocols. Overseeing and ensuring the quality of workmanship as per client specifications.
                 </p>
                 <p data-i18n="about.p3">
                     Proficient in calling up intermediate and final N.D.E, carrying out welder qualification tests using approved welding procedures in adherence to client specifications in conjunction with <strong>ASME IX / B31.3 / EN 287-288 / API 1104 / BS 4515</strong>.
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- 2. BÖLÜM: TECHNICAL SKILLS (TEKNİK BECERİLER) -->
-        <div class="card">
-            <h2 class="page-title" data-i18n="skills.title" style="font-size: 1.4rem;">Technical Skills</h2>
+        <section class="card" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="page-title skills-title" data-i18n="skills.title">Technical Skills</h2>
             
             <div>
-                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.9; font-size: 0.98rem;">
-                    <li style="margin-bottom: 8px;" data-i18n="skills.item1">
+                <ul class="skills-list">
+                    <li data-i18n="skills.item1">
                         Experience gained in power plants, refineries, oil & gas processes plants, on-shore gas & oil pipelines, process piping, low pressure & storage tanks, and heavy steel structures.
                     </li>
-                    <li style="margin-bottom: 8px;" data-i18n="skills.item2">
+                    <li data-i18n="skills.item2">
                         Deep experience in fabrication and erection of piping, boilers, pressure vessels, furnaces, tanks, heaters, and structural steels.
                     </li>
-                    <li style="margin-bottom: 8px;" data-i18n="skills.item3">
+                    <li data-i18n="skills.item3">
                         Expert skills in preparation of spooling, weld map, pressure test packs, piping & weld log books, and fabrication/erection progress follow-up records.
                     </li>
-                    <li style="margin-bottom: 8px;" data-i18n="skills.item4">
+                    <li data-i18n="skills.item4">
                         Sound experience with International codes and standards: <strong>ISO, DIN, EN, BS, ASME, ASTM, ANSI, ASNT & API</strong>.
                     </li>
-                    <li style="margin-bottom: 8px;" data-i18n="skills.item5">
+                    <li data-i18n="skills.item5">
                         Hands-on experience with <strong>SMAW, GTAW, GMAW / GS-FCAW, SAW</strong>, and fusion cutting processes.
                     </li>
                     <li data-i18n="skills.item6">
@@ -163,9 +274,22 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
 
-    </div>
+    </main>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Aziz Y&uuml;cetepe. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="index.html" data-i18n="nav.about">About Me</a> &bull;
+                <a href="experience.html" data-i18n="nav.experience">Work Experience</a> &bull;
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a> &bull;
+                <a href="profile.html" data-i18n="nav.profile">View Profile &amp; Contact</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- Sadece 2 Temiz Script: i18n Motoru ve Etkileşim Scripti -->
     <script src="i18n.js"></script>
