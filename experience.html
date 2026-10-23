@@ -5,39 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Experience | Aziz Yucetepe</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="33+ years of professional work experience of Aziz Yücetepe: refinery, offshore platform, power plant, pipelines and pressure vessels projects.">
+    <meta name="author" content="Aziz Yücetepe">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Work Experience | Aziz Yucetepe">
+    <meta property="og:description" content="Comprehensive work experience timeline covering major international mega-projects across Turkey, Azerbaijan, Iraq, and Uzbekistan.">
+    <meta property="og:image" content="images/aziz.jpeg">
+    <meta property="og:url" content="experience.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Work Experience | Aziz Yucetepe">
+    <meta name="twitter:description" content="33+ years of welding supervision, inspection and piping management experience.">
+    <meta name="twitter:image" content="images/aziz.jpeg">
+
     <!-- CSS & FontAwesome -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Favicon -->
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 12px;
+            background: var(--primary, #0a66c2);
+            color: #ffffff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            z-index: 99999;
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 12px;
+        }
+        .dropdown-divider {
+            margin: 12px 0;
+            border: 0;
+            border-top: 1px solid var(--border, #e0e0e0);
+        }
+        .dropdown-cursor {
+            cursor: pointer;
+        }
+        .dropdown-icon-btn {
+            font-size: 1.1rem;
+        }
+        .dropdown-small-icon {
+            font-size: 0.85rem;
+        }
+        .lang-select-box {
+            padding: 4px 8px;
+            font-size: 0.85rem;
+        }
+        .page-title-center {
+            text-align: center;
+            border-left: none;
+        }
+        .modal-exp-title {
+            color: var(--primary, #0a66c2);
+            margin-bottom: 8px;
+        }
+        .modal-exp-meta {
+            color: var(--text-muted, #666666);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .modal-gallery-wrap {
+            display: none;
+            margin-top: 18px;
+            border-top: 1px solid var(--border, #e0e0e0);
+            padding-top: 15px;
+            text-align: center;
+        }
+        .modal-gallery-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .lightbox-modal {
+            text-align: center;
+        }
+        .lightbox-close {
+            color: #ffffff;
+            z-index: 5000;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+        .lightbox-body {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            margin: 4% auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-nav-btn {
+            position: absolute;
+            color: #ffffff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            user-select: none;
+            background: transparent;
+            border: none;
+            padding: 10px;
+            line-height: 1;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+        .lightbox-nav-btn:hover {
+            transform: scale(1.15);
+            opacity: 0.9;
+        }
+        .lightbox-nav-btn:focus-visible {
+            outline: 2px solid #ffffff;
+            border-radius: 4px;
+        }
+        .lightbox-nav-btn.prev {
+            left: 10px;
+        }
+        .lightbox-nav-btn.next {
+            right: 10px;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            object-fit: contain;
+        }
+        .site-footer {
+            border-top: 1px solid var(--border, #e0e0e0);
+            padding: 28px 16px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted, #666666);
+            margin-top: 40px;
+            background: var(--card-bg, #ffffff);
+        }
+        .site-footer .footer-links {
+            margin-top: 10px;
+        }
+        .site-footer a {
+            color: var(--primary, #0a66c2);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Erişilebilirlik: İçeriğe Atla -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- MOBİL KARARTMA PERDESİ -->
-    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 
     <!-- ÜST MENÜ (HEADER) -->
     <header class="site-header">
-        <div class="navbar">
-            <a href="index.html" class="brand-logo">
-                <span class="brand-badge">AY</span>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="index.html" class="brand-logo" aria-label="Aziz Yucetepe Home">
+                <span class="brand-badge" aria-hidden="true">AY</span>
                 <span>Aziz Yucetepe</span>
             </a>
             
             <ul class="nav-links">
-                <li><a href="index.html" title="Home"><i class="fas fa-house"></i> <span data-i18n="nav.about">About Me</span></a></li>
-                <li><a href="experience.html" class="active" title="Experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Work Experience</span></a></li>
-                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificates</span></a></li>
+                <li><a href="index.html" title="Home"><i class="fas fa-house" aria-hidden="true"></i> <span data-i18n="nav.about">About Me</span></a></li>
+                <li><a href="experience.html" class="active" title="Experience" aria-current="page"><i class="fas fa-briefcase" aria-hidden="true"></i> <span data-i18n="nav.experience">Work Experience</span></a></li>
+                <li><a href="certificates.html" title="Certificates"><i class="fas fa-certificate" aria-hidden="true"></i> <span data-i18n="nav.certificates">Certificates</span></a></li>
             </ul>
 
             <div class="user-menu-wrapper">
-                <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings">
+                <button class="nav-avatar-btn" id="userMenuBtn" title="Account & Settings" aria-expanded="false" aria-haspopup="true" aria-controls="userDropdown" aria-label="Account and Settings">
                     <img src="images/aziz.jpeg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/42'" class="nav-avatar-img">
                 </button>
 
-                <div class="profile-dropdown" id="userDropdown">
-                    <div class="drawer-handle"></div>
+                <div class="profile-dropdown" id="userDropdown" role="menu" aria-label="User menu">
+                    <div class="drawer-handle" aria-hidden="true"></div>
                     <div class="dropdown-header">
                         <img src="images/aziz.jpeg" alt="Aziz Yucetepe" onerror="this.src='https://via.placeholder.com/46'" class="dropdown-avatar">
                         <div class="dropdown-user-info">
@@ -45,14 +202,17 @@
                             <p data-i18n="common.user_role">Welding Supervisor</p>
                         </div>
                     </div>
-                    <a href="profile.html" class="btn-view-profile">
-                        <i class="fas fa-user-circle"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
+                    <a href="profile.html" class="btn-view-profile" role="menuitem">
+                        <i class="fas fa-user-circle" aria-hidden="true"></i> <span data-i18n="nav.profile">View Profile & Contact</span>
                     </a>
-                    <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border);">
-                    <ul class="dropdown-section">
-                        <li class="dropdown-item">
-                            <div class="dropdown-item-left"><i class="fas fa-globe"></i> <span data-i18n="common.language">Language</span></div>
-                            <select class="lang-select" onchange="setLanguage(this.value)" style="padding: 4px 8px; font-size: 0.85rem;">
+                    <hr class="dropdown-divider">
+                    <ul class="dropdown-section" role="none">
+                        <li class="dropdown-item" role="none">
+                            <div class="dropdown-item-left">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                <label for="lang-select" data-i18n="common.language">Language</label>
+                            </div>
+                            <select id="lang-select" class="lang-select lang-select-box" onchange="setLanguage(this.value)" aria-label="Select language">
                                 <option value="en">🇺🇸 EN</option>
                                 <option value="tr">🇹🇷 TR</option>
                                 <option value="az">🇦🇿 AZ</option>
@@ -62,40 +222,41 @@
                                 <option value="ar">🇦🇪 AR</option>
                             </select>
                         </li>
-                        <li class="dropdown-item" onclick="toggleTheme()" style="cursor: pointer;">
-                            <div class="dropdown-item-left"><i class="fas fa-moon"></i> <span data-i18n="common.display_mode">Display Mode</span></div>
-                            <button class="theme-btn" style="font-size: 1.1rem;"><i class="fas fa-circle-half-stroke"></i></button>
+                        <li class="dropdown-item dropdown-cursor" onclick="toggleTheme()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){toggleTheme();event.preventDefault();}">
+                            <div class="dropdown-item-left"><i class="fas fa-moon" aria-hidden="true"></i> <span data-i18n="common.display_mode">Display Mode</span></div>
+                            <button type="button" class="theme-btn dropdown-icon-btn" aria-label="Toggle display theme"><i class="fas fa-circle-half-stroke" aria-hidden="true"></i></button>
                         </li>
-                        <li>
-                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item">
-                                <div class="dropdown-item-left"><i class="fas fa-file-pdf"></i> <span data-i18n="common.download_cv">Download CV</span></div>
-                                <i class="fas fa-download" style="font-size: 0.85rem;"></i>
+                        <li role="none">
+                            <a href="Aziz Yucetepe CV English.pdf" download class="dropdown-item" role="menuitem">
+                                <div class="dropdown-item-left"><i class="fas fa-file-pdf" aria-hidden="true"></i> <span data-i18n="common.download_cv">Download CV</span></div>
+                                <i class="fas fa-download dropdown-small-icon" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <h1 class="page-title" data-i18n="experience.page_title" style="text-align: center; border-left: none;">Work Experience</h1>
+    <!-- ANA İÇERİK (MAIN) -->
+    <main id="main-content" class="container">
+        <h1 class="page-title page-title-center" data-i18n="experience.page_title">Work Experience</h1>
         
         <!-- FİLTRELEME ÇİPLERİ -->
-        <div class="timeline-filters">
-            <button class="filter-chip active" onclick="filterTimeline('all', this)"><i class="fas fa-layer-group"></i> <span data-i18n="experience.filter_all">All (24)</span></button>
-            <button class="filter-chip" onclick="filterTimeline('refinery', this)"><i class="fas fa-oil-well"></i> <span data-i18n="experience.filter_refinery">Oil & Gas / Refinery</span></button>
-            <button class="filter-chip" onclick="filterTimeline('offshore', this)"><i class="fas fa-water"></i> <span data-i18n="experience.filter_offshore">Offshore Platforms</span></button>
-            <button class="filter-chip" onclick="filterTimeline('power', this)"><i class="fas fa-bolt"></i> <span data-i18n="experience.filter_power">Power Plants</span></button>
-            <button class="filter-chip" onclick="filterTimeline('pipeline', this)"><i class="fas fa-route"></i> <span data-i18n="experience.filter_pipeline">Pipelines & Tanks</span></button>
-        </div>
+        <nav class="timeline-filters" aria-label="Filter experiences by sector">
+            <button class="filter-chip active" onclick="filterTimeline('all', this)"><i class="fas fa-layer-group" aria-hidden="true"></i> <span data-i18n="experience.filter_all">All (24)</span></button>
+            <button class="filter-chip" onclick="filterTimeline('refinery', this)"><i class="fas fa-oil-well" aria-hidden="true"></i> <span data-i18n="experience.filter_refinery">Oil & Gas / Refinery</span></button>
+            <button class="filter-chip" onclick="filterTimeline('offshore', this)"><i class="fas fa-water" aria-hidden="true"></i> <span data-i18n="experience.filter_offshore">Offshore Platforms</span></button>
+            <button class="filter-chip" onclick="filterTimeline('power', this)"><i class="fas fa-bolt" aria-hidden="true"></i> <span data-i18n="experience.filter_power">Power Plants</span></button>
+            <button class="filter-chip" onclick="filterTimeline('pipeline', this)"><i class="fas fa-route" aria-hidden="true"></i> <span data-i18n="experience.filter_pipeline">Pipelines & Tanks</span></button>
+        </nav>
 
-        <!-- TEK KOLONLU FACEBOOK / LINKEDIN GÖNDERİ AKIŞI -->
+        <!-- TEK KOLONLU GÖNDERİ AKIŞI -->
         <div class="feed-container" id="timelineList">
 
             <!-- 23. SITALCAY S1 (2026 - PRESENT) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="23"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="23"
                      data-gallery="photos/sitalchay1/s1 1.jpeg, photos/sitalchay1/s1 2.jpeg, photos/sitalchay1/s1 3.jpeg"
                      data-title="Piping Supervisor"
                      data-project="Sitalchay S1 Project"
@@ -130,7 +291,7 @@
 
             <!-- 0. LACIN (2025) -->
             <div class="timeline-item" data-category="power">
-                <div class="card feed-card work-card" data-id="0"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="0"
                      data-gallery="photos/hes/hes1.jpg, photos/hes/hes2.jpg, photos/hes/hes3.jpg, photos/hes/hes4.png"
                      data-title="Mechanical Works Manager"
                      data-project="Malibey, Minkend, Qalaca, Terter HPP"
@@ -163,7 +324,7 @@
 
             <!-- 1. BASRAH (2024-2025) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="1"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="1"
                      data-gallery="https://www.oilandgasmiddleeast.com/cloud/2021/08/09/14jgc_1.jpg, https://www.jgc.com/en/projects/img/projects_im021.jpg, https://www.jgc.com/en/projects/img/075_im03.jpg"
                      data-title="Welding Supervisor"
                      data-project="Basrah Refinery Upgrading Project (GC2)"
@@ -196,7 +357,7 @@
 
             <!-- 2. HAOR ILK (2022-2024) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="2"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="2"
                      data-gallery="photos/haorilk/haorilk1.jpg, photos/haorilk/haorilk2.jpg"
                      data-title="Welding Supervisor"
                      data-project="HAOR Modernization Project"
@@ -229,7 +390,7 @@
 
             <!-- 3. HAOR GOMAG (2021-2022) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="3"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="3"
                      data-gallery="photos/haorgomag/haorgomag1.jpg, photos/haorgomag/haorgomag2.jpeg, photos/haorgomag/haorgomag3.jpeg"
                      data-title="Welding Supervisor"
                      data-project="HAOR Modernization Project"
@@ -262,7 +423,7 @@
 
             <!-- 4. MNPZ (2020-2021) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="4"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="4"
                      data-gallery="photos/mozyr/mnpz1.jpg, photos/mozyr/mnpz2.jpeg, photos/mozyr/mnpz3.jpg"
                      data-title="Welding Supervisor"
                      data-project="MNPZ HydroCracker Unit"
@@ -295,7 +456,7 @@
 
             <!-- 5. EP300 (2019-2020) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="5"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="5"
                      data-gallery="photos/socarep300/ep3001.jpg, photos/socarep300/ep3002.jpg, photos/socarep300/ep3003.jpg"
                      data-title="Welding Supervisor"
                      data-project="Azerikimya – EP300"
@@ -328,7 +489,7 @@
 
             <!-- 6. SOCAR POLYMER (2017-2019) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="6"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="6"
                      data-gallery="photos/socarpolymr/polymr1.jpg, photos/socarpolymr/polymr2.jpg, photos/socarpolymr/polymr3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Socar Polymer – PP / HDPE"
@@ -361,7 +522,7 @@
 
             <!-- 7. SHAH DENIZ (2015-2017) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="card feed-card work-card" data-id="7"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="7"
                      data-gallery="photos/shahdeniz2/ata1.jpg, photos/shahdeniz2/ata2.jpg, photos/shahdeniz2/ata3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Shah-Deniz-Stage-2 (SD2)"
@@ -394,7 +555,7 @@
 
             <!-- 8. STADIUM (2013-2015) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="8"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="8"
                      data-gallery="photos/stadiom/olimpic1.jpg, photos/stadiom/olimpic2.jpg, photos/stadiom/olimpic3.jpg"
                      data-title="Welding Foreman"
                      data-project="Baku Olympic Stadium Project"
@@ -427,7 +588,7 @@
 
             <!-- 9. COP-WC (2011-2013) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="card feed-card work-card" data-id="9"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="9"
                      data-gallery="photos/COP-WC-PDQ/atayard1.jpg, photos/COP-WC-PDQ/atayard2.jpg, photos/COP-WC-PDQ/atayard3.jpg"
                      data-title="Welding Foreman"
                      data-project="COP-WC-PDQ Fabrication"
@@ -460,7 +621,7 @@
 
             <!-- 10. OGB DRILLING (2010-2011) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="10"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="10"
                      data-gallery="photos/ogb/ogb1.jpg, photos/ogb/ogb2.jpg"
                      data-title="Piping & Welding Supervisor"
                      data-project="OGB Water Pipeline Drilling"
@@ -493,7 +654,7 @@
 
             <!-- 11. OGB PIPELINE (2008-2010) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="11"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="11"
                      data-gallery="photos/ogb/ogb1.jpg, photos/ogb/ogb2.jpg"
                      data-title="Piping & Welding Supervisor"
                      data-project="OGB Water Pipeline Transmission Line"
@@ -526,7 +687,7 @@
 
             <!-- 12. SANGACHAL TANK (2007-2008) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="12"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="12"
                      data-gallery="photos/Entrepose/tml1.jpg, photos/Entrepose/tml2.jpg, photos/Entrepose/tml3.jpg"
                      data-title="Welding Supervisor"
                      data-project="Sangachal Terminal Water Tank"
@@ -559,7 +720,7 @@
 
             <!-- 13. COP-WC WELDER (2006-2007) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="card feed-card work-card" data-id="13"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="13"
                      data-title="Multi-Coded Welder"
                      data-project="COP-WC-PDQ Offshore Platforms"
                      data-company="AIOC | Tekfen Construction"
@@ -589,7 +750,7 @@
 
             <!-- 14. TPG 500 (2005-2006) -->
             <div class="timeline-item" data-category="offshore">
-                <div class="card feed-card work-card" data-id="14"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="14"
                      data-title="Multi-Coded Welder"
                      data-project="TPG 500 outside North Sea"
                      data-company="AIOC | Technip, MQS"
@@ -619,7 +780,7 @@
 
             <!-- 15. AGT PIPELINE (2004-2005) -->
             <div class="timeline-item" data-category="pipeline">
-                <div class="card feed-card work-card" data-id="15"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="15"
                      data-title="Pipeline Welder"
                      data-project="AGT Cross-Country Pipeline"
                      data-company="BTC & SCP | CCC"
@@ -649,7 +810,7 @@
 
             <!-- 16. SANGACHAL EXP (2003-2004) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="16"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="16"
                      data-title="Specialist Welder"
                      data-project="Sangachal Terminal Expansion"
                      data-company="BP Exploration | Tekfen Construction"
@@ -679,7 +840,7 @@
 
             <!-- 17. SEVERNAYA (2001-2003) -->
             <div class="timeline-item" data-category="power">
-                <div class="card feed-card work-card" data-id="17"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="17"
                      data-title="Power Plant Welder"
                      data-project="Severnaya 400 MW Combined Cycle Power Plant"
                      data-company="Azerenergy | Epro Energy / TML"
@@ -709,7 +870,7 @@
 
             <!-- 18. TUPRAS ISOM (2000-2001) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="18"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="18"
                      data-title="Refinery Welder"
                      data-project="Isomerization Unit"
                      data-company="Tüpraş | Epro Energy / Entes"
@@ -739,7 +900,7 @@
 
             <!-- 19. TUPRAS CCR (1999-2000) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="19"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="19"
                      data-title="Refinery Welder"
                      data-project="CCR & Isomerization units"
                      data-company="Tüpraş | FWI & Gama"
@@ -769,7 +930,7 @@
 
             <!-- 20. FERGANA (1997-1998) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="20"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="20"
                      data-title="Refinery Welder"
                      data-project="Fergana Oil Refinery"
                      data-company="Uzbekneftegas | Tekfen Construction"
@@ -799,7 +960,7 @@
 
             <!-- 21. PETKIM (1995-1997) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="21"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="21"
                      data-title="Petrochemical Welder"
                      data-project="Etilen Polietilen Petkim"
                      data-company="Petkim | Engin Makina"
@@ -829,7 +990,7 @@
 
             <!-- 22. TUPRAS 1991 (1991-1993) -->
             <div class="timeline-item" data-category="refinery">
-                <div class="card feed-card work-card" data-id="22"
+                <div class="card feed-card work-card" tabindex="0" role="button" aria-haspopup="dialog" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}" data-id="22"
                      data-title="Refinery Welder"
                      data-project="CCR & ISO Unit Tüpraş"
                      data-company="Tüpraş | Atilla Dogan"
@@ -860,32 +1021,49 @@
         </div>
     </div>
 
+    
+
+    </main>
+
     <!-- DETAY VE FOTOĞRAF GALERİSİ MODALI -->
-    <div id="experienceModal" class="modal">
+    <div id="experienceModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="modal-title" style="color:var(--primary); margin-bottom: 8px;"></h2>
-            <p id="modal-meta" style="color:var(--text-muted); font-size:0.9rem; margin-bottom: 15px;"></p>
+            <button type="button" class="close-btn" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title" class="modal-exp-title"></h2>
+            <p id="modal-meta" class="modal-exp-meta"></p>
             <div id="modal-description"></div>
 
             <!-- Galeri Butonu -->
-            <div id="modal-gallery-section" style="display:none; margin-top: 18px; border-top: 1px solid var(--border); padding-top: 15px; text-align: center;">
-                <button id="open-gallery-btn" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-images"></i> <span data-i18n="common.view_gallery">View Project Gallery</span>
+            <div id="modal-gallery-section" class="modal-gallery-wrap">
+                <button type="button" id="open-gallery-btn" class="btn btn-primary modal-gallery-btn">
+                    <i class="fas fa-images" aria-hidden="true"></i> <span data-i18n="common.view_gallery">View Project Gallery</span>
                 </button>
             </div>
         </div>
     </div>
 
     <!-- LIGHTBOX -->
-    <div id="lightbox" class="modal" style="text-align: center;">
-        <span class="close-btn" onclick="closeLightbox()" style="color:#fff; z-index:5000;">&times;</span>
-        <div style="position: relative; max-width: 90%; max-height: 85vh; margin: 4% auto; display: flex; align-items: center; justify-content: center;">
-            <a onclick="changeSlide(-1)" style="position:absolute; left:10px; color:#fff; font-size:2.5rem; cursor:pointer; user-select:none;">&#10094;</a>
-            <img id="lightbox-img" src="" style="max-width: 100%; max-height: 80vh; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); object-fit: contain;">
-            <a onclick="changeSlide(1)" style="position:absolute; right:10px; color:#fff; font-size:2.5rem; cursor:pointer; user-select:none;">&#10095;</a>
+    <div id="lightbox" class="modal lightbox-modal" role="dialog" aria-modal="true" aria-label="Project gallery lightbox">
+        <button type="button" class="close-btn lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-body">
+            <button type="button" class="lightbox-nav-btn prev" onclick="changeSlide(-1)" aria-label="Previous image">&#10094;</button>
+            <img id="lightbox-img" src="" alt="Project gallery image preview" class="lightbox-img">
+            <button type="button" class="lightbox-nav-btn next" onclick="changeSlide(1)" aria-label="Next image">&#10095;</button>
         </div>
     </div>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Aziz Y&uuml;cetepe. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="index.html" data-i18n="nav.about">About Me</a> &bull;
+                <a href="experience.html" data-i18n="nav.experience">Work Experience</a> &bull;
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a> &bull;
+                <a href="profile.html" data-i18n="nav.profile">View Profile &amp; Contact</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- Temiz ve Optimize Scriptler -->
     <script src="i18n.js"></script>
